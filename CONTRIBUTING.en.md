@@ -14,6 +14,8 @@ Suggestions, corrections, and link fixes are welcome. A clear use case with supp
 
 Commercial products, self-hostable projects, and developer components are all eligible. A public repository does not make every part of a product open source. Check hosted, community, and historical editions separately.
 
+Categories follow the work problems teams need to solve, such as moving context, handing off tasks, reusing experience, or diagnosing execution. Place a multipurpose project under its primary use case and clarify its form and boundaries in the description. Categories are independent discovery paths; teams do not need a component from every category.
+
 ## Suggesting or changing an entry
 
 1. Search the README for existing names, former names, and alternative links. Choose the closest existing category.

@@ -37,6 +37,7 @@ Browse by the work you need to do. Each entry links to the project and briefly e
 Unify model access, routing, and usage management across providers, or use existing cloud model services.
 
 - [Amazon Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html) - Access hosted foundation models and knowledge bases within AWS resource and access management.
+- [Bifrost](https://github.com/maximhq/bifrost) - Access multiple model providers through one gateway with fallbacks, load balancing, and request logs; clustering and some governance features require the enterprise edition.
 - [Gemini Enterprise Agent Platform (Vertex AI)](https://docs.cloud.google.com/gemini-enterprise-agent-platform/vertex-ai-name-changes) - Manage model access, deployment, and agent runtimes on Google Cloud under the platform name replacing Vertex AI.
 - [Helicone](https://docs.helicone.ai/getting-started/quick-start) - Observe model requests and usage through a gateway or asynchronous logging, with routing and request controls in the gateway path.
 - [LiteLLM](https://github.com/BerriAI/litellm) - Access multiple model providers through an SDK or proxy, with application keys, routing, and usage management in the proxy.
@@ -57,6 +58,7 @@ Convert PDFs, office files, scans, and other source material into content suitab
 
 Use assistants to execute tasks, manage multiple sessions, and continue work across sessions or tools.
 
+- [Aider](https://github.com/Aider-AI/aider) - Edit projects from the terminal using repository maps and Git, with lint and test feedback to help teams inspect and revert AI-generated changes.
 - [Apache Maka (Incubating)](https://github.com/apache/maka) - Run agent tasks through desktop or terminal interfaces with event records for tool calls and completion states; no official Apache release yet.
 - [Claude Code](https://code.claude.com/docs/en/overview) - Read a project, edit files, and run development commands to investigate problems and implement changes with execution feedback.
 - [Clay Studio (chadbyte)](https://github.com/chadbyte/clay) - Expose local coding agents through a browser workspace for cross-device access, shared sessions, and handoffs.
@@ -71,7 +73,9 @@ Use assistants to execute tasks, manage multiple sessions, and continue work acr
 - [Letta](https://github.com/letta-ai/letta-code) - Run persistent agents with versioned file-based memory through a CLI or application interfaces.
 - [OpenClaw](https://github.com/openclaw/openclaw) - Run a persistent assistant gateway that accepts tasks from messaging platforms and devices and manages tools, sessions, and workspace memory.
 - [OpenCode](https://github.com/anomalyco/opencode) - Choose model providers and reuse project rules, tools, and agent roles in a coding assistant.
+- [OpenHands Agent Canvas](https://github.com/OpenHands/OpenHands) - Manage coding agent sessions in a self-hostable console, switch between local and remote backends, and automate development tasks through schedules and events.
 - [OpenMemory (Mem0)](https://github.com/mem0ai/openmemory) - Convert and import coding sessions across Claude Code, Codex, and OpenCode; the current beta differs from the archived memory service of the same name.
+- [Tabby](https://github.com/TabbyML/tabby) - Self-host code completion and chat backed by repositories and internal documentation, giving team editors shared development context.
 
 ## Chat and Meeting Integrations
 
@@ -85,10 +89,12 @@ Bring assistants into existing chat and meeting channels to reduce manual transf
 - [Feishu (豆包工作伙伴, formerly aily)](https://www.feishu.cn/community/article?id=7605435352983014344) - Connect knowledge, skills, and business workflows within Feishu for workplace questions and tasks; formerly aily.
 - [LangBot](https://github.com/langbot-app/LangBot) - Connect AI assistants to chat platforms such as Feishu and WeCom, using built-in capabilities or existing Dify and n8n workflows.
 - [Mattermost Agents](https://docs.mattermost.com/administration-guide/configure/agents-admin-guide) - Configure AI assistants in Mattermost channels and direct messages, managing model and tool access within existing discussions.
+- [Meetily](https://github.com/Zackriya-Solutions/meetily) - Capture and transcribe meetings locally, then summarize them with a local or cloud model; export and team features differ between Community and Pro editions.
 - [Microsoft Teams Agents](https://support.microsoft.com/en-us/teams/platform/frequently-asked-questions-about-agents-in-microsoft-teams) - Use built-in or custom agents in meetings, channels, and chats for notes, project questions, and business tasks, depending on agent type and licensing.
 - [Nextcloud Assistant Talk Bot](https://github.com/nextcloud/talk_bot_ai) - Connect Nextcloud Assistant to Talk conversations so participants can ask the configured model through @assistant.
 - [Rocket.Chat AI App](https://docs.rocket.chat/docs/rocketchat-ai-app-setup-guide) - Add knowledge answers and conversation summaries to team chat and customer support; the AI app is a licensed beta feature.
 - [Slack AI Agents](https://slack.com/help/articles/33076000248851-Work-with-AI-agents-in-Slack) - Use Slackbot or installed agent applications from channels and dedicated sessions, keeping requests and results in team discussions.
+- [Vexa](https://github.com/Vexa-ai/vexa) - Send bots into Google Meet, Teams, or Zoom and access live transcripts through an API for meeting notes and downstream knowledge workflows.
 - [WeCom AI Bot](https://github.com/WecomTeam/aibot-node-sdk) - Use the official SDK for messages, card events, and streaming replies to connect custom AI services to WeCom.
 - [ZoomMate](https://news.zoom.com/zoom-launches-zoommate/) - Use meeting and chat context to prepare artifacts and carry out CRM or ticket follow-up through configured workflows.
 
@@ -97,12 +103,15 @@ Bring assistants into existing chat and meeting channels to reduce manual transf
 Let people and agents continue work around shared discussions, material, and artifacts instead of disconnected sessions.
 
 - [Agenta](https://github.com/Agenta-AI/agenta) - Bring assistant configuration, shared files, triggers, and execution traces into a workspace for teams to maintain and reuse.
+- [AgentTeams](https://github.com/agentscope-ai/AgentTeams) - Coordinate people and agents from different runtimes in Matrix rooms, sharing files and visible task progress while the platform manages agent containers.
+- [AppFlowy](https://github.com/AppFlowy-IO/AppFlowy) - Bring documents, wikis, and projects into a shared workspace with AI search and writing assistance; verify self-hosting and enterprise features for the chosen edition.
 - [Buzz (Block)](https://github.com/block/buzz) - Connect people and agents in self-hosted channels using signed identities and shared event records for discussion and results.
 - [Cloudflare OS](https://github.com/cloudflare/cloudflare-os) - Create and share stateful AI-built applications for ongoing collaboration on Cloudflare infrastructure; currently in early access.
 - [Lemma](https://github.com/lemma-work/lemma-platform) - Provide tables, files, permissions, workflows, and human input steps for business applications used by people and agents.
 - [Macro](https://github.com/macro-inc/macro) - Link email, messages, tasks, and documents in one workspace for people and agents to retrieve context and follow up on work.
 - [Manor AI](https://github.com/manor-os/manor-ai) - Combine knowledge retrieval, agent tasks, tool bindings, and approvals in a self-hosted workspace with execution and artifact records.
 - [Octo](https://github.com/Mininglamp-OSS/octo-server) - Connect organizational chat, files, and agent runtimes in a backend whose companion clients show replies, status, and tool activity.
+- [Open WebUI](https://github.com/open-webui/open-webui) - Connect models, knowledge bases, and tools in a self-hosted interface where members collaborate through shared channels and notes with group-based permissions.
 - [QM](https://github.com/yc-software/qm) - Organize assistants, files, memory, and execution by personal and room scope for internal collaboration experiments; labeled early experimental software.
 - [Synapse (Z.ai)](https://github.com/zai-org/Synapse) - Connect members, native actors, and external agents through shared sessions with resource grants and handoffs; still in early development.
 - [team9](https://github.com/team9ai/team9) - Collaborate with OpenClaw-based agents through channels, threads, and shared documents that retain discussion and artifacts.
@@ -114,10 +123,13 @@ Let people and agents continue work around shared discussions, material, and art
 Make task ownership, progress, deliverables, and review handoffs visible; completion and acceptance semantics differ by tool.
 
 - [Asana AI Teammates](https://asana.com/product/ai/ai-teammates) - Take assignments in Asana projects, use project context to prepare material and drafts, and return work for team review.
+- [Backlog.md](https://github.com/MrLesk/Backlog.md) - Store tasks, dependencies, and acceptance criteria as repository Markdown, with CLI, MCP, and board interfaces for people and coding agents to maintain delivery plans.
 - [GitHub Agent HQ](https://docs.github.com/en/copilot/concepts/agents/about-third-party-coding-agents) - Select coding agents, inspect sessions, and review their pull requests within existing GitHub delivery workflows.
 - [Linear Agents](https://linear.app/docs/agents-in-linear) - Delegate to agents from issues and track progress and artifacts there while retaining a human assignee.
 - [monday.com Agents](https://support.monday.com/hc/en-us/articles/33347027353746-AI-Agents-on-monday-com) - Process board assignments or triggers with contextual classification, updates, handoffs, and execution records.
+- [Multica](https://github.com/multica-ai/multica) - Assign issues to existing coding agents on your own runtimes and return progress, blockers, and results to the same issue for team review.
 - [Open Tag](https://github.com/fancyboi999/open-tag) - Turn channel messages into claimable, assignable, and transferable agent tasks with thread context; intended for self-hosted evaluation.
+- [PR-Agent](https://github.com/The-PR-Agent/pr-agent) - Generate PR descriptions, reviews, and improvement suggestions through CLI, CI, or code-host events; now community-maintained and distinct from the commercial Qodo product.
 - [Raft (formerly Slock)](https://raft.build/) - Connect team channels with agent task claims and review states so teammates can hand off work and inspect deliverables.
 - [Solo (solo-agent)](https://github.com/solo-agent/solo) - Link agent task ownership, execution records, delivery versions, and reviews in submission and revision workflows.
 
@@ -136,14 +148,23 @@ Help teammates and assistants reuse organizational knowledge, rules, skills, and
 
 ### Shared Knowledge and Assistants
 
+- [53AI Hub](https://github.com/53AI/53AIHub) - Publish agents, prompts, and AI tools from multiple platforms through a team portal with grouping and access controls; organizational directory integrations depend on the edition.
+- [AnythingLLM](https://github.com/Mintplex-Labs/anything-llm) - Organize document chat, agents, and tools in workspaces with local or cloud models; multi-user accounts and permissions require the Docker edition.
 - [Atlassian Rovo](https://www.atlassian.com/software/rovo) - Search Jira, Confluence, and connected work knowledge, and configure agents to organize and act on project information.
 - [Dust](https://dust.tt/) - Connect company knowledge and business tools to shared agents so teammates can reuse common answers and working methods.
 - [Glean Independent Agents](https://www.glean.com/blog/introducing-independent-agents) - Use connected company knowledge for ongoing investigations, feedback processing, and follow-up with human review.
+- [LibreChat](https://github.com/danny-avila/LibreChat) - Use multiple model providers in a self-hostable chat platform and share assistants with tools and file search with selected users and groups.
+- [MaxKB](https://github.com/1Panel-dev/MaxKB) - Build internal assistants from document ingestion, knowledge retrieval, and workflows, then embed them in existing business systems for colleagues.
 - [Notion Agent](https://www.notion.com/help/notion-agent) - Find workspace information and create or edit pages and databases to carry out document-based tasks.
 - [Notion Custom Agents](https://www.notion.com/help/custom-agents) - Configure shared assistants for recurring questions, feedback triage, and reports triggered by schedules or events.
+- [Onyx](https://github.com/onyx-dot-app/onyx) - Connect organizational knowledge and share chats and custom agents; standard deployments include document sync and retrieval, while Lite and enterprise capabilities differ.
+- [PandaWiki](https://github.com/chaitin/PandaWiki) - Publish product documentation, technical material, and FAQs as wikis with AI writing, search, and answers, including integrations with team chat channels.
+- [WeKnora](https://github.com/Tencent/WeKnora) - Sync sources such as Feishu and GitLab into shared knowledge bases for retrieval and answers, and organize documents into editable wikis with revision history.
 
 ### Shared Rules and Experience
 
+- [MEX](https://github.com/mex-memory/mex) - Keep architecture, decisions, and handoffs in the code repository for teammates and coding agents to retrieve and reuse; share through Git while maintaining local indexes separately.
+- [skillshare](https://github.com/runkids/skillshare) - Sync skills, rules, and agent definitions across AI coding tools from one source, distributing them through project configuration and team Git repositories.
 - [TeamAI CLI](https://github.com/Tencent/teamai-cli) - Distribute team skills, rules, and MCP configuration through Git and retrieve shared lessons across agent clients.
 - [TencentDB Agent Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) - Capture conversations through a proxy and derive memories, skills, and knowledge assets for later agent context retrieval.
 
@@ -171,16 +192,20 @@ Store, organize, and retrieve information for later agent tasks; coverage of doc
 
 Connect models, tools, and multiple steps into usable applications or business workflows.
 
+- [Activepieces](https://github.com/activepieces/activepieces) - Connect AI, business applications, and human approval steps in visual workflows using extensible integration components; enterprise features are offered separately.
 - [AgentScope](https://github.com/agentscope-ai/agentscope) - Compose models, tools, and agent collaboration components in Python to build custom assistant applications.
 - [AutoGen](https://github.com/microsoft/autogen) - Build message-driven agent teams with turn-taking and handoffs; in maintenance mode, with official migration guidance for new projects.
 - [Coze Studio](https://github.com/coze-dev/coze-studio) - Build and publish assistants with visual knowledge, plugin, and workflow tools; this entry covers the self-hostable Studio.
 - [CrewAI](https://github.com/crewAIInc/crewAI) - Organize agent collaboration through roles, tasks, and workflows with explicit handoffs.
 - [Dify](https://github.com/langgenius/dify) - Combine knowledge retrieval, prompts, and tool calls into AI applications published as web interfaces or APIs.
 - [Elastic Agent Builder](https://www.elastic.co/docs/explore-analyze/ai-features/elastic-agent-builder) - Configure models, instructions, and tools over Elasticsearch data to build assistants that query organizational information.
+- [Haystack](https://github.com/deepset-ai/haystack) - Compose document indexing, retrieval, and agent workflows from replaceable Python components with explicit control over context preparation, routing, and generation.
 - [LangGraph](https://github.com/langchain-ai/langgraph) - Build multi-step agents with explicit state and branching, adding persistence and human review to resume work.
 - [Lindy](https://docs.lindy.ai/) - Connect email, calendars, and CRM from Slack and save follow-up work or recurring reports as reusable routines.
+- [Mastra](https://github.com/mastra-ai/mastra) - Build TypeScript agents with tools, memory, and evaluation, organizing multi-step work into workflows that can pause for human input.
 - [n8n](https://github.com/n8n-io/n8n) - Connect forms, email, business APIs, and AI nodes to automate data processing and follow-up actions across systems.
 - [Salesforce Agentforce](https://www.salesforce.com/agentforce/) - Connect natural-language requests to Salesforce data and configured business actions for sales and service agents.
+- [Sim](https://github.com/simstudioai/sim) - Build agents with visual workflows, shared files, and knowledge bases, connect business systems, and inspect run logs; chat uses a Sim-managed service.
 - [Temporal](https://docs.temporal.io/evaluate/understanding-temporal) - Use durable workflows for model calls, external operations, and long human waits, with recovery and retries that still require idempotent business operations.
 
 ## Execution Environments and Managed Runtimes
@@ -190,6 +215,7 @@ Provide environments for code and files, or host agent execution loops; sandboxe
 - [Claude Managed Agents](https://platform.claude.com/docs/en/managed-agents/overview) - Host Claude execution loops, sessions, and environments, exposing progress and artifacts through events; currently in beta.
 - [Daytona](https://www.daytona.io/docs/) - Manage project sandboxes, files, and processes through APIs to provide working environments for coding agents.
 - [E2B](https://github.com/e2b-dev/E2B) - Create Linux sandboxes on demand to run agent-generated code and retrieve outputs and files.
+- [OpenSandbox](https://github.com/opensandbox-group/OpenSandbox) - Manage Docker or Kubernetes sandboxes through unified APIs, providing command execution, file operations, and code environments for agents.
 
 ## Evaluation, Observability, and Content Checks
 
@@ -202,7 +228,9 @@ Evaluate changes with test cases, investigate execution problems, or add special
 - [Grafana Cloud Agent Observability](https://grafana.com/docs/grafana-cloud/observe-and-act/agent-observability/introduction/) - Inspect agent sessions, model calls, and online evaluations in Grafana Cloud, distinct from deploying Tempo and Loki alone.
 - [Langfuse](https://github.com/langfuse/langfuse) - Connect traces, prompt versions, test cases, and scores to debug and improve AI applications collaboratively.
 - [LangSmith](https://docs.langchain.com/langsmith/observability) - Trace agent execution and compare application versions using datasets, human feedback, and evaluation experiments.
+- [LangWatch](https://github.com/langwatch/langwatch) - Combine tracing, agent simulation tests, and evaluations to inspect applications and coding-assistant sessions and usage; enterprise modules require separate licensing.
 - [Llama Guard](https://github.com/meta-llama/PurpleLlama/tree/main/Llama-Guard4) - Classify content risks in model inputs and outputs for application review policies; classification does not authorize business actions.
+- [MLflow](https://github.com/mlflow/mlflow) - Track agent traces, evaluation data, and prompt versions in a shared platform to compare experiments, investigate regressions, and monitor deployed applications.
 - [New Relic AI Monitoring](https://docs.newrelic.com/docs/ai-monitoring/intro-to-ai-monitoring/) - Bring supported model, agent, and tool calls into application monitoring with latency, errors, and usage data.
 - [OpenLLMetry](https://github.com/traceloop/openllmetry) - Instrument supported models, vector databases, and frameworks with OpenTelemetry and export traces to observability backends.
 - [OpenTelemetry eBPF Instrumentation (OBI)](https://github.com/open-telemetry/opentelemetry-ebpf-instrumentation) - Collect application and model-related telemetry on supported Linux systems with less per-application instrumentation; check version-specific coverage.
@@ -217,6 +245,7 @@ Explore protocols, engineering practices, tutorials, and research, with director
 ### Protocols and Conventions
 
 - [A2A](https://a2a-protocol.org/latest/) - Define capability discovery, messages, task states, and artifact handoffs between independent agent services.
+- [AG-UI](https://github.com/ag-ui-protocol/ag-ui) - Connect agent backends and user interfaces through an event protocol for streaming messages, tool activity, state changes, and human input.
 - [Agent Skills](https://agentskills.io/specification) - Package procedures, references, and scripts as skills that agents can load on demand to reuse team practices.
 - [AGENTS.md](https://agents.md/) - Provide coding agents with project context, development conventions, and verification commands in repository Markdown files.
 - [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) - Provide a shared protocol for connecting agent applications to tools, data resources, and prompt templates.
@@ -224,6 +253,7 @@ Explore protocols, engineering practices, tutorials, and research, with director
 
 ### Practical Guides
 
+- [12-Factor Agents](https://github.com/humanlayer/12-factor-agents) - Use engineering principles for context management, persisted state, tool calls, and human interaction to design and review agent applications.
 - [Claude Code Project Settings](https://code.claude.com/docs/en/settings) - Use project settings and personal overrides to version team configuration and understand where it takes effect.
 - [Claude Code Subagents](https://code.claude.com/docs/en/sub-agents) - Learn to delegate bounded tasks into separate contexts and configure tools, permissions, and result handoffs.
 - [Context Compaction (Anthropic)](https://platform.claude.com/docs/en/build-with-claude/compaction) - Learn how long-running tasks compact conversation context and what progress and evidence still need separate storage.
@@ -252,6 +282,8 @@ Explore protocols, engineering practices, tutorials, and research, with director
 ## Contributing
 
 Read the [English contribution guide](CONTRIBUTING.en.md) or [Chinese guide](CONTRIBUTING.md), then open an issue or pull request to suggest a project, explain a use case, or fix descriptions and links. Both lists contain the same entries and categories. You can request translation help when contributing in one language.
+
+Discovery notes: [GitHub AI additions, 2026-09-21](docs/research/2026-09-21-github-ai-projects.md) (Chinese).
 
 ## License
 

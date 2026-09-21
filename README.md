@@ -40,9 +40,11 @@
 - [Bifrost](https://github.com/maximhq/bifrost) - 通过统一网关接入多家模型，集中配置备用路由、负载分配和调用日志；集群与部分治理能力属于企业版。
 - [Gemini Enterprise Agent Platform (Vertex AI)](https://docs.cloud.google.com/gemini-enterprise-agent-platform/vertex-ai-name-changes) - 在 Google Cloud 中管理模型接入、部署和 Agent 运行；原 Vertex AI 平台的现行名称。
 - [Helicone](https://docs.helicone.ai/getting-started/quick-start) - 通过网关或异步日志集中观察模型调用与用量，网关路线还能参与路由和请求控制。
+- [Higress](https://github.com/higress-group/higress) - 统一管理团队的模型 API 与 MCP 工具入口，集中配置鉴权、限流、调用日志和观测，供不同项目复用。
 - [LiteLLM](https://github.com/BerriAI/litellm) - 通过 SDK 或代理统一接入多家模型服务，并在代理中管理应用密钥、路由和用量。
 - [Microsoft Foundry](https://learn.microsoft.com/en-us/azure/foundry/what-is-foundry) - 在 Azure 中按项目组织模型、Agent、工具与评估资产，接入托管运行和观测能力。
 - [OpenRouter](https://openrouter.ai/docs/quickstart) - 通过托管入口调用多家模型，配置供应商选择与备用模型，并集中查看用量。
+- [Plano](https://github.com/katanemo/plano) - 将模型与 Agent 路由、过滤和追踪集中到代理层，让团队的不同应用复用同一套运行配置。
 - [Portkey AI Gateway](https://github.com/Portkey-AI/gateway) - 将模型调用的重试、备用路由和负载分配集中到网关；完整管理平台需另行评估。
 
 ## 文档解析与资料准备
@@ -94,6 +96,7 @@
 - [Nextcloud Assistant Talk Bot](https://github.com/nextcloud/talk_bot_ai) - 将 Nextcloud Assistant 接入 Talk 对话，通过 @assistant 使用已配置的模型回答问题。
 - [Rocket.Chat AI App](https://docs.rocket.chat/docs/rocketchat-ai-app-setup-guide) - 在团队聊天和客服接待中提供知识问答与对话摘要；AI App 为需相应许可的 Beta 功能。
 - [Slack AI Agents](https://slack.com/help/articles/33076000248851-Work-with-AI-agents-in-Slack) - 从频道和专门会话使用 Slackbot 或已安装的 Agent 应用，让请求与结果留在团队讨论中。
+- [Tentix](https://github.com/labring/tentix) - 在客服工单中结合 AI 回复、知识检索和人工交接，让客服团队共同维护服务流程；部分员工管理和分析功能仍在规划中。
 - [Vexa](https://github.com/Vexa-ai/vexa) - 让机器人加入 Google Meet、Teams 或 Zoom，通过 API 提供实时转写，供团队接入会议纪要和后续知识处理。
 - [企业微信智能机器人 (WeCom)](https://github.com/WecomTeam/aibot-node-sdk) - 用官方 SDK 接收消息和卡片事件、发送流式回复，将自建 AI 服务接入企业微信。
 - [ZoomMate](https://news.zoom.com/zoom-launches-zoommate/) - 根据会议和聊天背景生成材料，并通过配置的工作流推进 CRM、工单等会后跟进。
@@ -107,6 +110,7 @@
 - [AppFlowy](https://github.com/AppFlowy-IO/AppFlowy) - 将文档、Wiki 和项目放在共同工作区，结合 AI 搜索与写作辅助团队整理资料；自托管与企业功能需按部署版本核对。
 - [Buzz (Block)](https://github.com/block/buzz) - 在自托管频道中连接人和 Agent，以签名身份和共享事件记录组织讨论与执行结果。
 - [Cloudflare OS](https://github.com/cloudflare/cloudflare-os) - 让团队通过 AI 创建并共享有状态的小应用，在 Cloudflare 运行环境中继续协作；目前为 Early Access。
+- [HQBase](https://github.com/HQBase/hqbase) - 在自有 Cloudflare 账户中运行团队共享邮箱，通过成员访问控制、审计记录和 MCP 接入，让同事与助手围绕共同邮件工作。
 - [Lemma](https://github.com/lemma-work/lemma-platform) - 为人和 Agent 共用的业务应用提供数据表、文件、权限、工作流与人工等待节点。
 - [Macro](https://github.com/macro-inc/macro) - 将邮件、消息、任务和文档关联到共同工作区，让团队和 Agent 查询背景、整理资料并跟进事项。
 - [Manor AI](https://github.com/manor-os/manor-ai) - 在自托管工作区组合知识检索、Agent 任务、工具绑定和审批，跟踪业务工作的执行与产物。
@@ -124,11 +128,14 @@
 
 - [Asana AI Teammates](https://asana.com/product/ai/ai-teammates) - 在 Asana 项目中接收具体任务，利用项目背景整理材料和产出草稿，再交回团队审阅。
 - [Backlog.md](https://github.com/MrLesk/Backlog.md) - 把任务、依赖和验收条件保存为仓库中的 Markdown，通过 CLI、MCP 和看板让人与编码 Agent 共同维护交付计划。
+- [Chorus](https://github.com/Chorus-AIDLC/Chorus) - 将需求提案、文档、任务执行和人工验证关联起来，集中管理编码 Agent 的权限、会话与进展，供团队审阅交付结果。
 - [GitHub Agent HQ](https://docs.github.com/en/copilot/concepts/agents/about-third-party-coding-agents) - 在 GitHub 中选择编码 Agent、观察会话并审阅其 PR，让异步任务进入现有代码交付流程。
 - [Linear Agents](https://linear.app/docs/agents-in-linear) - 从任务单委托 Agent 并在原处跟进进度和产物，同时保留人的任务负责人。
+- [Markplane](https://github.com/zerowand01/markplane) - 将任务、计划和依赖保存为随 Git 分享的 Markdown，并生成项目状态摘要，让成员的助手通过 MCP 接续共同工作。
 - [monday.com Agents](https://support.monday.com/hc/en-us/articles/33347027353746-AI-Agents-on-monday-com) - 接收看板事项或触发事件，结合资料进行分类、更新和交接，并留下运行记录。
 - [Multica](https://github.com/multica-ai/multica) - 把任务单分配给已有编码 Agent，在自有运行环境执行，并将进展、阻塞和结果交回同一任务单供团队审阅。
 - [Open Tag](https://github.com/fancyboi999/open-tag) - 把频道消息转为可认领、指派和转交的 Agent 任务，保留线程与执行背景；适合自托管评估。
+- [Paca](https://github.com/Paca-AI/paca) - 让人与 Agent 在同一 Scrum 看板和迭代中认领任务、维护需求与设计文档，结合成员角色和实时进展组织团队交付。
 - [PR-Agent](https://github.com/The-PR-Agent/pr-agent) - 通过 CLI、CI 或代码平台事件生成 PR 说明、审阅意见和修改建议；现为社区维护项目，区别于 Qodo 商业产品。
 - [Raft (formerly Slock)](https://raft.build/) - 把团队频道、Agent 任务认领与待审阅状态连接起来，让同事共同交接和检查产物。
 - [Solo (solo-agent)](https://github.com/solo-agent/solo) - 将 Agent 任务的负责人、执行记录、交付版本和评审结果关联起来，支持提交与退回流程。
@@ -140,6 +147,7 @@
 - [Excalidraw MCP App](https://github.com/excalidraw/excalidraw-mcp) - 在支持 MCP Apps 的客户端中生成和交互编辑 Excalidraw 图，让团队继续修改 AI 草稿。
 - [FigJam AI](https://help.figma.com/hc/en-us/articles/16822138920343-Use-AI-tools-in-FigJam) - 为工作坊生成白板和图表，并对讨论中的便签分类、生成摘要。
 - [Miro AI](https://miro.com/ai/ai-overview/) - 围绕团队白板中的材料整理想法、生成文档和图表，辅助产品探索与设计讨论。
+- [OpenPencil](https://github.com/open-pencil/open-pencil) - 在支持多人实时共同编辑的设计画布中接入 AI 与 MCP，让设计成员和 Agent 修改、检查并导出同一份设计稿；仍在积极开发。
 - [tldraw Agent Starter Kit](https://tldraw.dev/starter-kits/agent) - 为开发者提供让 Agent 读取、创建和修改画布图形的应用模板，用于构建视觉协作产品。
 
 ## 团队知识与工作方法共享
@@ -158,12 +166,15 @@
 - [Notion Agent](https://www.notion.com/help/notion-agent) - 根据工作区资料查找信息、整理内容并修改页面和数据库，协助完成多步文档工作。
 - [Notion Custom Agents](https://www.notion.com/help/custom-agents) - 将答疑、反馈分流和周期报告配置成团队维护的助手，按时间或事件触发运行。
 - [Onyx](https://github.com/onyx-dot-app/onyx) - 连接组织资料并共享问答与自定义 Agent；标准部署提供资料同步和检索，Lite 与企业版的能力需分别核对。
+- [OpenKnowledge](https://github.com/inkeep/open-knowledge) - 通过 Git/GitHub 共享和同步 Markdown 知识库、规范与笔记，在编辑器中结合 Agent 检索和修改团队资料。
 - [PandaWiki](https://github.com/chaitin/PandaWiki) - 将产品文档、技术资料与 FAQ 发布为 Wiki，结合 AI 创作、搜索和问答，并接入团队聊天入口。
 - [WeKnora](https://github.com/Tencent/WeKnora) - 同步飞书、GitLab 等资料，在共享知识库中检索问答，并将文档整理为可编辑、有修订记录的 Wiki。
 
 ### 共享规则与经验
 
+- [Knowns](https://github.com/knowns-dev/knowns) - 将需求、任务、验收条件和决策保存在仓库中，通过 CLI 与 MCP 供成员及不同助手复用；独立团队同步服务仍在计划中。
 - [MEX](https://github.com/mex-memory/mex) - 将架构、决策和交接记录保存在代码仓库中，供同事与编码 Agent 检索复用；通过 Git 分享，各自维护本地索引。
+- [Potpie](https://github.com/potpie-ai/potpie) - 将代码、PR、任务和团队决策组织为可检索的上下文图，让不同编码助手复用项目背景与工程经验。
 - [skillshare](https://github.com/runkids/skillshare) - 从统一来源同步多种 AI 编程工具的技能、规则与 Agent 定义，并通过项目配置和团队 Git 仓库分发。
 - [TeamAI CLI](https://github.com/Tencent/teamai-cli) - 通过 Git 分发团队技能、规则和 MCP 配置，并检索共享经验，减少不同 Agent 客户端之间的重复配置。
 - [TencentDB Agent Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) - 通过代理采集会话并提炼记忆、技能与知识资产，为后续 Agent 任务检索和装配上下文。
@@ -259,6 +270,7 @@
 - [Context Compaction (Anthropic)](https://platform.claude.com/docs/en/build-with-claude/compaction) - 了解长任务如何压缩对话并继续工作，以及哪些进度和证据仍需另外保存。
 - [Function Calling (OpenAI)](https://developers.openai.com/api/docs/guides/function-calling) - 学习模型请求工具、应用执行和结果回传的流程，为业务接口设计明确的调用边界。
 - [Human-in-the-loop (LangChain)](https://docs.langchain.com/oss/python/langchain/human-in-the-loop) - 学习如何在工具执行前暂停、接收批准或修改，再用持久化状态继续任务。
+- [My Git Handbook](https://github.com/xirong/my-git) - 通过 Agent 变更审查、PR、worktree、CI 和发布案例，帮助团队制定 AI 编程下的版本管理与交付约定。
 - [Prompt Caching (Anthropic)](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) - 了解如何组织稳定的提示词前缀并核对缓存命中，优化重复背景的处理开销。
 - [Workload Identity Federation (Google Cloud)](https://docs.cloud.google.com/iam/docs/workload-identity-federation) - 学习用运行环境的身份换取短期访问凭据，减少 Agent 服务部署时分发长期密钥的工作。
 
@@ -283,7 +295,7 @@
 
 请阅读[中文贡献指南](CONTRIBUTING.md)或[英文贡献指南](CONTRIBUTING.en.md)，通过 Issue 或 Pull Request 推荐项目、补充使用场景、修正介绍和失效链接。中英文清单保持相同条目与分类；不熟悉另一种语言时，可以注明需要翻译协助。
 
-收录调研记录：[2026-09-21 GitHub AI 项目补充](docs/research/2026-09-21-github-ai-projects.md)。
+收录调研记录：[2026-09-21 GitHub AI 项目补充](docs/research/2026-09-21-github-ai-projects.md)、[AI Native 团队项目补充](docs/research/2026-09-21-ai-native-projects.md)。
 
 ## 许可
 

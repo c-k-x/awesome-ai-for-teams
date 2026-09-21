@@ -40,9 +40,11 @@ Unify model access, routing, and usage management across providers, or use exist
 - [Bifrost](https://github.com/maximhq/bifrost) - Access multiple model providers through one gateway with fallbacks, load balancing, and request logs; clustering and some governance features require the enterprise edition.
 - [Gemini Enterprise Agent Platform (Vertex AI)](https://docs.cloud.google.com/gemini-enterprise-agent-platform/vertex-ai-name-changes) - Manage model access, deployment, and agent runtimes on Google Cloud under the platform name replacing Vertex AI.
 - [Helicone](https://docs.helicone.ai/getting-started/quick-start) - Observe model requests and usage through a gateway or asynchronous logging, with routing and request controls in the gateway path.
+- [Higress](https://github.com/higress-group/higress) - Centralize model APIs and MCP tools with authentication, rate limits, request logs, and observability so team projects can reuse common access infrastructure.
 - [LiteLLM](https://github.com/BerriAI/litellm) - Access multiple model providers through an SDK or proxy, with application keys, routing, and usage management in the proxy.
 - [Microsoft Foundry](https://learn.microsoft.com/en-us/azure/foundry/what-is-foundry) - Organize models, agents, tools, and evaluation assets by project on Azure with managed execution and observability.
 - [OpenRouter](https://openrouter.ai/docs/quickstart) - Access models through a hosted endpoint with provider selection, model fallbacks, and centralized usage records.
+- [Plano](https://github.com/katanemo/plano) - Centralize model and agent routing, filters, and tracing in a proxy layer so team applications can reuse shared runtime configuration.
 - [Portkey AI Gateway](https://github.com/Portkey-AI/gateway) - Centralize model retries, fallback routing, and load balancing in a gateway; assess the full management platform separately.
 
 ## Document Parsing and Preparation
@@ -94,6 +96,7 @@ Bring assistants into existing chat and meeting channels to reduce manual transf
 - [Nextcloud Assistant Talk Bot](https://github.com/nextcloud/talk_bot_ai) - Connect Nextcloud Assistant to Talk conversations so participants can ask the configured model through @assistant.
 - [Rocket.Chat AI App](https://docs.rocket.chat/docs/rocketchat-ai-app-setup-guide) - Add knowledge answers and conversation summaries to team chat and customer support; the AI app is a licensed beta feature.
 - [Slack AI Agents](https://slack.com/help/articles/33076000248851-Work-with-AI-agents-in-Slack) - Use Slackbot or installed agent applications from channels and dedicated sessions, keeping requests and results in team discussions.
+- [Tentix](https://github.com/labring/tentix) - Combine AI replies, knowledge retrieval, and human handoffs in support tickets for shared customer service workflows; some staff management and analytics features remain planned.
 - [Vexa](https://github.com/Vexa-ai/vexa) - Send bots into Google Meet, Teams, or Zoom and access live transcripts through an API for meeting notes and downstream knowledge workflows.
 - [WeCom AI Bot](https://github.com/WecomTeam/aibot-node-sdk) - Use the official SDK for messages, card events, and streaming replies to connect custom AI services to WeCom.
 - [ZoomMate](https://news.zoom.com/zoom-launches-zoommate/) - Use meeting and chat context to prepare artifacts and carry out CRM or ticket follow-up through configured workflows.
@@ -107,6 +110,7 @@ Let people and agents continue work around shared discussions, material, and art
 - [AppFlowy](https://github.com/AppFlowy-IO/AppFlowy) - Bring documents, wikis, and projects into a shared workspace with AI search and writing assistance; verify self-hosting and enterprise features for the chosen edition.
 - [Buzz (Block)](https://github.com/block/buzz) - Connect people and agents in self-hosted channels using signed identities and shared event records for discussion and results.
 - [Cloudflare OS](https://github.com/cloudflare/cloudflare-os) - Create and share stateful AI-built applications for ongoing collaboration on Cloudflare infrastructure; currently in early access.
+- [HQBase](https://github.com/HQBase/hqbase) - Run shared team mailboxes in your own Cloudflare account, using member access controls, audit history, and MCP access so colleagues and assistants can work with the same email.
 - [Lemma](https://github.com/lemma-work/lemma-platform) - Provide tables, files, permissions, workflows, and human input steps for business applications used by people and agents.
 - [Macro](https://github.com/macro-inc/macro) - Link email, messages, tasks, and documents in one workspace for people and agents to retrieve context and follow up on work.
 - [Manor AI](https://github.com/manor-os/manor-ai) - Combine knowledge retrieval, agent tasks, tool bindings, and approvals in a self-hosted workspace with execution and artifact records.
@@ -124,11 +128,14 @@ Make task ownership, progress, deliverables, and review handoffs visible; comple
 
 - [Asana AI Teammates](https://asana.com/product/ai/ai-teammates) - Take assignments in Asana projects, use project context to prepare material and drafts, and return work for team review.
 - [Backlog.md](https://github.com/MrLesk/Backlog.md) - Store tasks, dependencies, and acceptance criteria as repository Markdown, with CLI, MCP, and board interfaces for people and coding agents to maintain delivery plans.
+- [Chorus](https://github.com/Chorus-AIDLC/Chorus) - Link proposals, documents, task execution, and human verification while managing coding agent permissions, sessions, and progress for team delivery review.
 - [GitHub Agent HQ](https://docs.github.com/en/copilot/concepts/agents/about-third-party-coding-agents) - Select coding agents, inspect sessions, and review their pull requests within existing GitHub delivery workflows.
 - [Linear Agents](https://linear.app/docs/agents-in-linear) - Delegate to agents from issues and track progress and artifacts there while retaining a human assignee.
+- [Markplane](https://github.com/zerowand01/markplane) - Keep tasks, plans, and dependencies in Markdown shared through Git, generating project summaries that teammates' assistants can access through MCP to continue work.
 - [monday.com Agents](https://support.monday.com/hc/en-us/articles/33347027353746-AI-Agents-on-monday-com) - Process board assignments or triggers with contextual classification, updates, handoffs, and execution records.
 - [Multica](https://github.com/multica-ai/multica) - Assign issues to existing coding agents on your own runtimes and return progress, blockers, and results to the same issue for team review.
 - [Open Tag](https://github.com/fancyboi999/open-tag) - Turn channel messages into claimable, assignable, and transferable agent tasks with thread context; intended for self-hosted evaluation.
+- [Paca](https://github.com/Paca-AI/paca) - Let people and agents claim tasks and maintain requirements and design documents on the same Scrum board and sprints, with member roles and live progress for team delivery.
 - [PR-Agent](https://github.com/The-PR-Agent/pr-agent) - Generate PR descriptions, reviews, and improvement suggestions through CLI, CI, or code-host events; now community-maintained and distinct from the commercial Qodo product.
 - [Raft (formerly Slock)](https://raft.build/) - Connect team channels with agent task claims and review states so teammates can hand off work and inspect deliverables.
 - [Solo (solo-agent)](https://github.com/solo-agent/solo) - Link agent task ownership, execution records, delivery versions, and reviews in submission and revision workflows.
@@ -140,6 +147,7 @@ Turn AI drafts into visual artifacts that teams can discuss, edit, or embed in p
 - [Excalidraw MCP App](https://github.com/excalidraw/excalidraw-mcp) - Generate and interactively edit Excalidraw diagrams in MCP Apps clients so teams can refine AI drafts.
 - [FigJam AI](https://help.figma.com/hc/en-us/articles/16822138920343-Use-AI-tools-in-FigJam) - Generate workshop boards and diagrams, then sort and summarize the sticky notes from team discussions.
 - [Miro AI](https://miro.com/ai/ai-overview/) - Use material on a shared canvas to organize ideas and generate documents and diagrams for product and design discussions.
+- [OpenPencil](https://github.com/open-pencil/open-pencil) - Combine real-time collaborative design editing with AI and MCP so teammates and agents can modify, inspect, and export the same design; under active development.
 - [tldraw Agent Starter Kit](https://tldraw.dev/starter-kits/agent) - Provide an application template for agents to read, create, and modify canvas shapes in visual collaboration products.
 
 ## Team Knowledge and Shared Practices
@@ -158,12 +166,15 @@ Help teammates and assistants reuse organizational knowledge, rules, skills, and
 - [Notion Agent](https://www.notion.com/help/notion-agent) - Find workspace information and create or edit pages and databases to carry out document-based tasks.
 - [Notion Custom Agents](https://www.notion.com/help/custom-agents) - Configure shared assistants for recurring questions, feedback triage, and reports triggered by schedules or events.
 - [Onyx](https://github.com/onyx-dot-app/onyx) - Connect organizational knowledge and share chats and custom agents; standard deployments include document sync and retrieval, while Lite and enterprise capabilities differ.
+- [OpenKnowledge](https://github.com/inkeep/open-knowledge) - Share and sync Markdown knowledge bases, specifications, and notes through Git/GitHub, with agents searching and editing team material inside the editor.
 - [PandaWiki](https://github.com/chaitin/PandaWiki) - Publish product documentation, technical material, and FAQs as wikis with AI writing, search, and answers, including integrations with team chat channels.
 - [WeKnora](https://github.com/Tencent/WeKnora) - Sync sources such as Feishu and GitLab into shared knowledge bases for retrieval and answers, and organize documents into editable wikis with revision history.
 
 ### Shared Rules and Experience
 
+- [Knowns](https://github.com/knowns-dev/knowns) - Store requirements, tasks, acceptance criteria, and decisions in the repository for teammates and assistants to reuse through CLI and MCP; a dedicated team sync service remains planned.
 - [MEX](https://github.com/mex-memory/mex) - Keep architecture, decisions, and handoffs in the code repository for teammates and coding agents to retrieve and reuse; share through Git while maintaining local indexes separately.
+- [Potpie](https://github.com/potpie-ai/potpie) - Organize code, pull requests, tasks, and team decisions into a searchable context graph so coding assistants can reuse project background and engineering knowledge.
 - [skillshare](https://github.com/runkids/skillshare) - Sync skills, rules, and agent definitions across AI coding tools from one source, distributing them through project configuration and team Git repositories.
 - [TeamAI CLI](https://github.com/Tencent/teamai-cli) - Distribute team skills, rules, and MCP configuration through Git and retrieve shared lessons across agent clients.
 - [TencentDB Agent Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) - Capture conversations through a proxy and derive memories, skills, and knowledge assets for later agent context retrieval.
@@ -259,6 +270,7 @@ Explore protocols, engineering practices, tutorials, and research, with director
 - [Context Compaction (Anthropic)](https://platform.claude.com/docs/en/build-with-claude/compaction) - Learn how long-running tasks compact conversation context and what progress and evidence still need separate storage.
 - [Function Calling (OpenAI)](https://developers.openai.com/api/docs/guides/function-calling) - Learn the model-request, application-execution, and result-return cycle for well-defined business tools.
 - [Human-in-the-loop (LangChain)](https://docs.langchain.com/oss/python/langchain/human-in-the-loop) - Learn to pause before tool execution, receive approval or edits, and resume using persisted state.
+- [My Git Handbook](https://github.com/xirong/my-git) - Use examples of agent change review, pull requests, worktrees, CI, and releases to establish team version-control and delivery practices for AI-assisted development.
 - [Prompt Caching (Anthropic)](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) - Learn to organize stable prompt prefixes and verify cache hits when optimizing repeated context processing.
 - [Workload Identity Federation (Google Cloud)](https://docs.cloud.google.com/iam/docs/workload-identity-federation) - Learn to exchange workload identities for short-lived access credentials instead of distributing long-lived keys to agent services.
 
@@ -283,7 +295,7 @@ Explore protocols, engineering practices, tutorials, and research, with director
 
 Read the [English contribution guide](CONTRIBUTING.en.md) or [Chinese guide](CONTRIBUTING.md), then open an issue or pull request to suggest a project, explain a use case, or fix descriptions and links. Both lists contain the same entries and categories. You can request translation help when contributing in one language.
 
-Discovery notes: [GitHub AI additions, 2026-09-21](docs/research/2026-09-21-github-ai-projects.md) (Chinese).
+Discovery notes: [GitHub AI additions, 2026-09-21](docs/research/2026-09-21-github-ai-projects.md) and [AI Native team additions](docs/research/2026-09-21-ai-native-projects.md) (Chinese).
 
 ## License
 

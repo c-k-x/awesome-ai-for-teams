@@ -36,16 +36,21 @@ Browse by the work you need to do. Each entry links to the project and briefly e
 
 Unify model access, routing, and usage management across providers, or use existing cloud model services.
 
+- [AIHelms](https://github.com/beizhu-1209/AIHelms) - Manage model quotas, cost attribution, and skill approvals by person, department, and project. GPL and commercial licensing options; A2A collaboration remains planned.
 - [Amazon Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html) - Access hosted foundation models and knowledge bases within AWS resource and access management.
 - [Bifrost](https://github.com/maximhq/bifrost) - Access multiple model providers through one gateway with fallbacks, load balancing, and request logs; clustering and some governance features require the enterprise edition.
 - [Gemini Enterprise Agent Platform (Vertex AI)](https://docs.cloud.google.com/gemini-enterprise-agent-platform/vertex-ai-name-changes) - Manage model access, deployment, and agent runtimes on Google Cloud under the platform name replacing Vertex AI.
 - [Helicone](https://docs.helicone.ai/getting-started/quick-start) - Observe model requests and usage through a gateway or asynchronous logging, with routing and request controls in the gateway path.
 - [Higress](https://github.com/higress-group/higress) - Centralize model APIs and MCP tools with authentication, rate limits, request logs, and observability so team projects can reuse common access infrastructure.
 - [LiteLLM](https://github.com/BerriAI/litellm) - Access multiple model providers through an SDK or proxy, with application keys, routing, and usage management in the proxy.
+- [MCPHub](https://github.com/samanhappy/mcphub) - Centralize MCP servers with per-user credentials, visibility controls, request logs, and health monitoring.
+- [MCPJungle](https://github.com/mcpjungle/MCPJungle) - Publish a shared MCP tool directory and control which servers each client can access, with centralized observability. OAuth flows remain planned.
 - [Microsoft Foundry](https://learn.microsoft.com/en-us/azure/foundry/what-is-foundry) - Organize models, agents, tools, and evaluation assets by project on Azure with managed execution and observability.
+- [Obot](https://github.com/obot-platform/obot) - Distribute approved models, MCP servers, and skills across an organization with shared identity, access, and audit infrastructure for different AI clients. Device-side and server-side auditing require their respective components.
 - [OpenRouter](https://openrouter.ai/docs/quickstart) - Access models through a hosted endpoint with provider selection, model fallbacks, and centralized usage records.
 - [Plano](https://github.com/katanemo/plano) - Centralize model and agent routing, filters, and tracing in a proxy layer so team applications can reuse shared runtime configuration.
 - [Portkey AI Gateway](https://github.com/Portkey-AI/gateway) - Centralize model retries, fallback routing, and load balancing in a gateway; assess the full management platform separately.
+- [TokenHub](https://github.com/astaxie/TokenHub) - Allocate model access and project keys by team role, track usage by project and cost center, and compare internal records with provider bills.
 
 ## Document Parsing and Preparation
 
@@ -84,6 +89,7 @@ Use assistants to execute tasks, manage multiple sessions, and continue work acr
 Bring assistants into existing chat and meeting channels to reduce manual transfer of requests, context, and results.
 
 - [AgentConnect](https://github.com/agentconnect-md/agentconnect) - Connect agents on execution machines to Slack, Feishu, and code platforms for tasks triggered by messages, events, or schedules.
+- [Agentic Inbox](https://github.com/cloudflare/agentic-inbox) - Share an email interface with AI-assisted conversation search and reply drafting on Cloudflare Workers. Intended for trusted groups: authorized users can access every mailbox.
 - [Ask Gemini in Google Chat](https://support.google.com/chat/answer/17036303) - Use work context in Google Chat to find information, prepare content, and act through connected applications; currently available only in English.
 - [Centaur (Paradigm)](https://github.com/paradigmxyz/centaur) - Delegate engineering tasks from Slack to Kubernetes sandboxes and return progress and results to the originating thread.
 - [Claude Tag](https://www.anthropic.com/news/introducing-claude-tag) - Let teammates jointly delegate and follow Claude tasks in Slack threads; currently a beta for Team and Enterprise.
@@ -94,6 +100,7 @@ Bring assistants into existing chat and meeting channels to reduce manual transf
 - [Meetily](https://github.com/Zackriya-Solutions/meetily) - Capture and transcribe meetings locally, then summarize them with a local or cloud model; export and team features differ between Community and Pro editions.
 - [Microsoft Teams Agents](https://support.microsoft.com/en-us/teams/platform/frequently-asked-questions-about-agents-in-microsoft-teams) - Use built-in or custom agents in meetings, channels, and chats for notes, project questions, and business tasks, depending on agent type and licensing.
 - [Nextcloud Assistant Talk Bot](https://github.com/nextcloud/talk_bot_ai) - Connect Nextcloud Assistant to Talk conversations so participants can ask the configured model through @assistant.
+- [OpenTag (Amplift)](https://github.com/amplifthq/opentag) - Queue coding work from Slack, request approval for key actions, and return progress and delivery evidence to the originating thread. Slack is the supported team entry point; distinct from Open Tag by fancyboi999.
 - [Rocket.Chat AI App](https://docs.rocket.chat/docs/rocketchat-ai-app-setup-guide) - Add knowledge answers and conversation summaries to team chat and customer support; the AI app is a licensed beta feature.
 - [Slack AI Agents](https://slack.com/help/articles/33076000248851-Work-with-AI-agents-in-Slack) - Use Slackbot or installed agent applications from channels and dedicated sessions, keeping requests and results in team discussions.
 - [Tentix](https://github.com/labring/tentix) - Combine AI replies, knowledge retrieval, and human handoffs in support tickets for shared customer service workflows; some staff management and analytics features remain planned.
@@ -106,17 +113,26 @@ Bring assistants into existing chat and meeting channels to reduce manual transf
 Let people and agents continue work around shared discussions, material, and artifacts instead of disconnected sessions.
 
 - [Agenta](https://github.com/Agenta-AI/agenta) - Bring assistant configuration, shared files, triggers, and execution traces into a workspace for teams to maintain and reuse.
+- [agentchattr](https://github.com/bcurts/agentchattr) - Coordinate people and coding agents in shared local channels, using mentions to hand off tasks and context; intended for local or trusted networks.
 - [AgentTeams](https://github.com/agentscope-ai/AgentTeams) - Coordinate people and agents from different runtimes in Matrix rooms, sharing files and visible task progress while the platform manages agent containers.
+- [Alook](https://github.com/alookai/alook) - Invite colleagues into shared rooms, channels, and direct messages with persistent coding agents running on connected machines.
 - [AppFlowy](https://github.com/AppFlowy-IO/AppFlowy) - Bring documents, wikis, and projects into a shared workspace with AI search and writing assistance; verify self-hosting and enterprise features for the chosen edition.
 - [Buzz (Block)](https://github.com/block/buzz) - Connect people and agents in self-hosted channels using signed identities and shared event records for discussion and results.
 - [Cloudflare OS](https://github.com/cloudflare/cloudflare-os) - Create and share stateful AI-built applications for ongoing collaboration on Cloudflare infrastructure; currently in early access.
+- [Commonly](https://github.com/Team-Commonly/commonly) - Let people and agents share persistent rooms, task boards, memory, and artifacts, with GitHub task synchronization and reviewable activity. The project is still early.
+- [Cumora](https://github.com/yetone/cumora) - Bring people and persistent agents into the same group chats, direct messages, task boards, and calendars for shared assignments and handoffs. Mobile support varies by platform.
 - [HQBase](https://github.com/HQBase/hqbase) - Run shared team mailboxes in your own Cloudflare account, using member access controls, audit history, and MCP access so colleagues and assistants can work with the same email.
 - [Lemma](https://github.com/lemma-work/lemma-platform) - Provide tables, files, permissions, workflows, and human input steps for business applications used by people and agents.
+- [Lody](https://github.com/LodyAI/Lody) - Share coding-agent conversations, files, and diffs with teammates and review permission requests across devices; document workspaces remain planned.
 - [Macro](https://github.com/macro-inc/macro) - Link email, messages, tasks, and documents in one workspace for people and agents to retrieve context and follow up on work.
 - [Manor AI](https://github.com/manor-os/manor-ai) - Combine knowledge retrieval, agent tasks, tool bindings, and approvals in a self-hosted workspace with execution and artifact records.
 - [Octo](https://github.com/Mininglamp-OSS/octo-server) - Connect organizational chat, files, and agent runtimes in a backend whose companion clients show replies, status, and tool activity.
+- [Omnigent](https://github.com/omnigent-ai/omnigent) - Invite teammates to share, co-drive, or fork live agent sessions for pairing and handoffs; co-driving executes on the original owner’s machine.
 - [Open WebUI](https://github.com/open-webui/open-webui) - Connect models, knowledge bases, and tools in a self-hosted interface where members collaborate through shared channels and notes with group-based permissions.
+- [OpenAgents Workspace](https://github.com/openagents-org/openagents) - Invite teammates into a workspace where people and agents share threads, files, and a browser; headless Goose uses automatic tool execution.
 - [QM](https://github.com/yc-software/qm) - Organize assistants, files, memory, and execution by personal and room scope for internal collaboration experiments; labeled early experimental software.
+- [Relaticle](https://github.com/relaticle/relaticle) - Share customer data in a self-hosted CRM and expose MCP tools to agents within workspace-scoped access controls. Licensed under AGPL.
+- [Rowboat](https://github.com/rowboatlabs/rowboat) - Share threads, files, whiteboards, and version history while each teammate’s local agent brings results from personal context back for review.
 - [Synapse (Z.ai)](https://github.com/zai-org/Synapse) - Connect members, native actors, and external agents through shared sessions with resource grants and handoffs; still in early development.
 - [team9](https://github.com/team9ai/team9) - Collaborate with OpenClaw-based agents through channels, threads, and shared documents that retain discussion and artifacts.
 - [Tutti](https://github.com/tutti-os/tutti) - Link agent sessions, tasks, and files to reduce handoff work; evaluate the local edition and multiplayer VM rooms separately.
@@ -126,16 +142,23 @@ Let people and agents continue work around shared discussions, material, and art
 
 Make task ownership, progress, deliverables, and review handoffs visible; completion and acceptance semantics differ by tool.
 
+- [AgentRQ](https://github.com/agentrq/agentrq) - Assign tasks to people and agents through a shared workspace, synchronize progress, and review permission requests for sensitive actions.
 - [Asana AI Teammates](https://asana.com/product/ai/ai-teammates) - Take assignments in Asana projects, use project context to prepare material and drafts, and return work for team review.
 - [Backlog.md](https://github.com/MrLesk/Backlog.md) - Store tasks, dependencies, and acceptance criteria as repository Markdown, with CLI, MCP, and board interfaces for people and coding agents to maintain delivery plans.
 - [Chorus](https://github.com/Chorus-AIDLC/Chorus) - Link proposals, documents, task execution, and human verification while managing coding agent permissions, sessions, and progress for team delivery review.
 - [GitHub Agent HQ](https://docs.github.com/en/copilot/concepts/agents/about-third-party-coding-agents) - Select coding agents, inspect sessions, and review their pull requests within existing GitHub delivery workflows.
+- [Kaneo](https://github.com/usekaneo/kaneo) - Let people and agents work with the same projects, tasks, and labels through a self-hosted project workspace and its official MCP interface.
 - [Linear Agents](https://linear.app/docs/agents-in-linear) - Delegate to agents from issues and track progress and artifacts there while retaining a human assignee.
 - [Markplane](https://github.com/zerowand01/markplane) - Keep tasks, plans, and dependencies in Markdown shared through Git, generating project summaries that teammates' assistants can access through MCP to continue work.
+- [Mission Control by Builderz](https://github.com/builderz-labs/mission-control) - Centralize agent task assignments, reviews, costs, roles, and approvals in a self-hosted operations dashboard. Currently alpha software.
 - [monday.com Agents](https://support.monday.com/hc/en-us/articles/33347027353746-AI-Agents-on-monday-com) - Process board assignments or triggers with contextual classification, updates, handoffs, and execution records.
+- [MonkeyCode](https://github.com/chaitin/MonkeyCode) - Manage requirements, coding tasks, models, and development environments in a shared AI development platform that can run inside an enterprise network.
 - [Multica](https://github.com/multica-ai/multica) - Assign issues to existing coding agents on your own runtimes and return progress, blockers, and results to the same issue for team review.
 - [Open Tag](https://github.com/fancyboi999/open-tag) - Turn channel messages into claimable, assignable, and transferable agent tasks with thread context; intended for self-hosted evaluation.
+- [Open-Inspect](https://github.com/ColeMurray/background-agents) - Collaborate in background coding sessions and hand work through Slack, tickets, and pull requests while retaining contribution attribution. Intended for a trusted single organization; repository access is not checked per user.
+- [Optio](https://github.com/jonwiggins/optio) - Assign ticket, scheduled, and event-triggered work to agents on team machines or Kubernetes, with workspace roles, OAuth/OIDC, and execution visibility.
 - [Paca](https://github.com/Paca-AI/paca) - Let people and agents claim tasks and maintain requirements and design documents on the same Scrum board and sprints, with member roles and live progress for team delivery.
+- [Paperclip](https://github.com/paperclipai/paperclip) - Coordinate human users and agents through organization-scoped tasks, approvals, roles, budgets, and execution records.
 - [PR-Agent](https://github.com/The-PR-Agent/pr-agent) - Generate PR descriptions, reviews, and improvement suggestions through CLI, CI, or code-host events; now community-maintained and distinct from the commercial Qodo product.
 - [Raft (formerly Slock)](https://raft.build/) - Connect team channels with agent task claims and review states so teammates can hand off work and inspect deliverables.
 - [Solo (solo-agent)](https://github.com/solo-agent/solo) - Link agent task ownership, execution records, delivery versions, and reviews in submission and revision workflows.
@@ -159,22 +182,35 @@ Help teammates and assistants reuse organizational knowledge, rules, skills, and
 - [53AI Hub](https://github.com/53AI/53AIHub) - Publish agents, prompts, and AI tools from multiple platforms through a team portal with grouping and access controls; organizational directory integrations depend on the edition.
 - [AnythingLLM](https://github.com/Mintplex-Labs/anything-llm) - Organize document chat, agents, and tools in workspaces with local or cloud models; multi-user accounts and permissions require the Docker edition.
 - [Atlassian Rovo](https://www.atlassian.com/software/rovo) - Search Jira, Confluence, and connected work knowledge, and configure agents to organize and act on project information.
+- [Bionic](https://github.com/bionic-gpt/bionic-gpt) - Provide internal teams with approved models, knowledge, and tools in a self-hosted AI workspace with permissions, usage controls, and audit records.
+- [DataHub](https://github.com/datahub-project/datahub) - Maintain shared data ownership, lineage, and discussions in a metadata graph that supports human discovery and AI context. DataHub Cloud is a separate managed service.
+- [DocsGPT](https://github.com/arc53/DocsGPT) - Turn shared documents and meeting material into searchable knowledge with agents, member roles, and team-scoped sharing.
 - [Dust](https://dust.tt/) - Connect company knowledge and business tools to shared agents so teammates can reuse common answers and working methods.
 - [Glean Independent Agents](https://www.glean.com/blog/introducing-independent-agents) - Use connected company knowledge for ongoing investigations, feedback processing, and follow-up with human review.
 - [LibreChat](https://github.com/danny-avila/LibreChat) - Use multiple model providers in a self-hostable chat platform and share assistants with tools and file search with selected users and groups.
 - [MaxKB](https://github.com/1Panel-dev/MaxKB) - Build internal assistants from document ingestion, knowledge retrieval, and workflows, then embed them in existing business systems for colleagues.
+- [Nexent](https://github.com/ModelEngine-Group/nexent) - Share agent tools, skills, and memory through a no-code platform with multi-tenancy and role-based resource access.
 - [Notion Agent](https://www.notion.com/help/notion-agent) - Find workspace information and create or edit pages and databases to carry out document-based tasks.
 - [Notion Custom Agents](https://www.notion.com/help/custom-agents) - Configure shared assistants for recurring questions, feedback triage, and reports triggered by schedules or events.
+- [Octop](https://github.com/TencentCloud/Octop) - Share one assistant deployment across a small team, with per-user agents and workspaces, JWT authentication, and workplace messaging integrations. Shared resource pools and autonomous AgentTeams remain planned.
+- [OmniBox](https://github.com/import-ai/omnibox) - Collect documents and share knowledge-based questions and answers in multi-tenant spaces with team permissions; RSS support remains planned.
 - [Onyx](https://github.com/onyx-dot-app/onyx) - Connect organizational knowledge and share chats and custom agents; standard deployments include document sync and retrieval, while Lite and enterprise capabilities differ.
+- [OpenContracts](https://github.com/Open-Source-Legal/OpenContracts) - Let teams annotate documents, maintain citation graphs, and review agent-assisted findings through corpus permissions, version history, and discussions.
 - [OpenKnowledge](https://github.com/inkeep/open-knowledge) - Share and sync Markdown knowledge bases, specifications, and notes through Git/GitHub, with agents searching and editing team material inside the editor.
+- [OpenMetadata](https://github.com/open-metadata/OpenMetadata) - Link data ownership, lineage, quality, business terms, and organizational knowledge into shared context for people and AI agents. Enterprise AI capabilities such as AI Studio are offered separately through Collate.
 - [PandaWiki](https://github.com/chaitin/PandaWiki) - Publish product documentation, technical material, and FAQs as wikis with AI writing, search, and answers, including integrations with team chat channels.
 - [WeKnora](https://github.com/Tencent/WeKnora) - Sync sources such as Feishu and GitLab into shared knowledge bases for retrieval and answers, and organize documents into editable wikis with revision history.
+- [Yuxi](https://github.com/xerrors/Yuxi) - Share knowledge bases, agents, and skills by tenant, department, and user in a self-hosted platform with resource permissions and approvals.
 
 ### Shared Rules and Experience
 
+- [Agent Package Manager](https://github.com/microsoft/apm) - Version and distribute team skills, prompts, and plugins with manifests, lockfiles, organization policies, and CI checks for configuration drift.
+- [Agent Skills Platform](https://github.com/FrancyJGLisboa/agent-skills-platform) - Package reusable skills with ownership, approvals, versions, and validation evidence for colleagues to install through a governed marketplace.
 - [Knowns](https://github.com/knowns-dev/knowns) - Store requirements, tasks, acceptance criteria, and decisions in the repository for teammates and assistants to reuse through CLI and MCP; a dedicated team sync service remains planned.
 - [MEX](https://github.com/mex-memory/mex) - Keep architecture, decisions, and handoffs in the code repository for teammates and coding agents to retrieve and reuse; share through Git while maintaining local indexes separately.
+- [Observal](https://github.com/Observal/Observal) - Register internal agents, skills, and MCP tools, review versions, and use adoption and session feedback to improve shared assets.
 - [Potpie](https://github.com/potpie-ai/potpie) - Organize code, pull requests, tasks, and team decisions into a searchable context graph so coding assistants can reuse project background and engineering knowledge.
+- [SkillHub](https://github.com/iflytek/skillhub) - Publish and distribute organizational skills through team namespaces, owner/admin/member roles, versioning, and promotion reviews. Distributed skills retain their own licenses.
 - [skillshare](https://github.com/runkids/skillshare) - Sync skills, rules, and agent definitions across AI coding tools from one source, distributing them through project configuration and team Git repositories.
 - [TeamAI CLI](https://github.com/Tencent/teamai-cli) - Distribute team skills, rules, and MCP configuration through Git and retrieve shared lessons across agent clients.
 - [TencentDB Agent Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) - Capture conversations through a proxy and derive memories, skills, and knowledge assets for later agent context retrieval.
@@ -224,6 +260,7 @@ Connect models, tools, and multiple steps into usable applications or business w
 Provide environments for code and files, or host agent execution loops; sandboxes and managed agent runtimes serve different roles.
 
 - [Claude Managed Agents](https://platform.claude.com/docs/en/managed-agents/overview) - Host Claude execution loops, sessions, and environments, exposing progress and artifacts through events; currently in beta.
+- [ClawManager](https://github.com/Yuan-lab-LLM/ClawManager) - Manage multi-user agent runtimes on Kubernetes with centralized identity, model access, costs, and reusable resources. Team orchestration also includes agent groups, not only human collaboration.
 - [Daytona](https://www.daytona.io/docs/) - Manage project sandboxes, files, and processes through APIs to provide working environments for coding agents.
 - [E2B](https://github.com/e2b-dev/E2B) - Create Linux sandboxes on demand to run agent-generated code and retrieve outputs and files.
 - [OpenSandbox](https://github.com/opensandbox-group/OpenSandbox) - Manage Docker or Kubernetes sandboxes through unified APIs, providing command execution, file operations, and code environments for agents.
@@ -234,9 +271,11 @@ Evaluate changes with test cases, investigate execution problems, or add special
 
 - [Arize Phoenix](https://github.com/Arize-ai/phoenix) - Inspect AI traces, maintain datasets, and compare evaluation experiments in a self-hostable platform.
 - [Braintrust](https://www.braintrust.dev/docs/evaluate) - Turn production traces into test data and compare prompts, models, and agents with shared tasks and evaluators.
+- [Coze Loop](https://github.com/coze-dev/coze-loop) - Maintain shared prompt versions, evaluation datasets, and agent execution traces for development and operations. Distinguish the open-source core from commercial features.
 - [Datadog Agent Observability](https://docs.datadoghq.com/llm_observability/) - Connect model calls, tool calls, and application traces to investigate agents within an existing Datadog environment.
 - [DeepEval](https://deepeval.com/docs/getting-started) - Test AI answers and execution with cases, metrics, and thresholds, integrating quality regression checks into Python development.
 - [Grafana Cloud Agent Observability](https://grafana.com/docs/grafana-cloud/observe-and-act/agent-observability/introduction/) - Inspect agent sessions, model calls, and online evaluations in Grafana Cloud, distinct from deploying Tempo and Loki alone.
+- [Laminar](https://github.com/lmnr-ai/lmnr) - Share agent traces, evaluation results, and dashboards, and route configured behavioral alerts to Slack for investigation.
 - [Langfuse](https://github.com/langfuse/langfuse) - Connect traces, prompt versions, test cases, and scores to debug and improve AI applications collaboratively.
 - [LangSmith](https://docs.langchain.com/langsmith/observability) - Trace agent execution and compare application versions using datasets, human feedback, and evaluation experiments.
 - [LangWatch](https://github.com/langwatch/langwatch) - Combine tracing, agent simulation tests, and evaluations to inspect applications and coding-assistant sessions and usage; enterprise modules require separate licensing.
@@ -245,8 +284,10 @@ Evaluate changes with test cases, investigate execution problems, or add special
 - [New Relic AI Monitoring](https://docs.newrelic.com/docs/ai-monitoring/intro-to-ai-monitoring/) - Bring supported model, agent, and tool calls into application monitoring with latency, errors, and usage data.
 - [OpenLLMetry](https://github.com/traceloop/openllmetry) - Instrument supported models, vector databases, and frameworks with OpenTelemetry and export traces to observability backends.
 - [OpenTelemetry eBPF Instrumentation (OBI)](https://github.com/open-telemetry/opentelemetry-ebpf-instrumentation) - Collect application and model-related telemetry on supported Linux systems with less per-application instrumentation; check version-specific coverage.
+- [Opik](https://github.com/comet-ml/opik) - Share agent traces, evaluation datasets, experiments, and prompt versions to compare changes and investigate production failures.
 - [Promptfoo](https://github.com/promptfoo/promptfoo) - Compare prompts, models, or agents with configuration-based test cases, CI integration, and red teaming.
 - [Ragas](https://github.com/vibrantlabsai/ragas) - Evaluate retrieval coverage, answer grounding, and agent behavior through metrics and repeatable experiments.
+- [Tracely](https://github.com/Jwuthri/Tracely-ai) - Turn production agent failures into shared issues, replayable regression cases, and CI gates within organizations and workspaces. Development mode has no authentication; teams must configure an appropriate identity mode.
 - [W&B Weave](https://docs.wandb.ai/weave) - Track AI application calls and versions and compare changes using datasets and scorers.
 
 ## Protocols and Learning Resources
@@ -296,6 +337,8 @@ Explore protocols, engineering practices, tutorials, and research, with director
 Read the [English contribution guide](CONTRIBUTING.en.md) or [Chinese guide](CONTRIBUTING.md), then open an issue or pull request to suggest a project, explain a use case, or fix descriptions and links. Both lists contain the same entries and categories. You can request translation help when contributing in one language.
 
 Discovery notes: [GitHub AI additions, 2026-09-21](docs/research/2026-09-21-github-ai-projects.md) and [AI Native team additions](docs/research/2026-09-21-ai-native-projects.md) (Chinese).
+
+[41 selected additions](docs/research/2026-09-22-selected-projects.md).
 
 ## License
 

@@ -1,6 +1,6 @@
-# 本轮确认收录：41 项
+# 本轮确认收录：46 项
 
-用户从 56 项建议审阅名单中选择以下固定 ID，已同步到中英文主清单。介绍为英文，团队关系和限制为中文转述，未部署实测。
+用户从建议审阅名单及 EverOS 生态深核结果中选择以下项目，已同步到中英文主清单。介绍为英文，团队关系和限制为中文转述，未部署实测。
 
 | ID | Project | Description (EN) | 跟 team 的关系 | 标签 | 限制 |
 | ---: | --- | --- | --- | --- | --- |
@@ -9,6 +9,11 @@
 | 3256 | [MCPHub](https://github.com/samanhappy/mcphub) | Operate MCP servers through a shared gateway with user-scoped access. | 团队集中连接工具，按用户提供凭据和可见范围，统一日志与健康管理。 | mcp, teams | 认证/隔离仍需配置，HA 等生产就绪未实测；不同于其他同名工具。 |
 | 5480 | [MCPJungle](https://github.com/mcpjungle/MCPJungle) | A self-hosted MCP gateway with shared discovery, access controls, and observability. | 团队集中注册工具，并按客户端分配可访问服务器。 | mcp, gateway, governance, collaboration | MPL-2.0；enterprise 是仓库运行模式，不自动意味着收费，但 OAuth flow 尚待完成；不能等同完整企业 SSO。 |
 | 6453 | [Obot](https://github.com/obot-platform/obot) | An organizational platform for AI gateways, approved tools, identity, and audit. | 团队统一模型/MCP/skills分发及使用治理，无需同一AI客户端。 | enterprise-ai, governance, mcp, collaboration | 当前 README 未收录 obot-platform/obot；恢复独立候选。Sentry 设备侧与服务端覆盖不同，需部署对应组件；治理效果未实测。 |
+| 773 | [EverOS](https://github.com/EverMind-AI/EverOS) | A local-first, Markdown-native long-term memory layer for agents, apps, and workflows. | 为不同 Agent、应用和工作流提供可读、可版本化的共享项目记忆；核心不是多人权限工作区。 | memory, knowledge, ai-native, self-hosted | Apache-2.0；生态案例中的团队协作能力不全部属于 EverOS 核心。 |
+| aden-hive/hive | [OpenHive (Aden)](https://github.com/aden-hive/hive) | A production multi-agent harness with Queen/worker colonies, persistent plans, recovery, and oversight. | 为团队业务流程提供多 Agent 运行、共享账本、故障恢复和人工监督；不是多人协作 SaaS。 | ai-native, multi-agent, workflow, production | Apache-2.0；README 定位为 Agent Harness，具体运行效果未实测。 |
+| tt-a1i/hive | [Hive (tt-a1i)](https://github.com/tt-a1i/hive) | A local browser workbench for coordinating CLI coding agents through PTYs and a shared Markdown task graph. | 把本机 CLI Agent 组成可见团队，支持任务派发、报告和交接；没有多人认证边界。 | ai-native, collaboration, coding, handoff | BUSL-1.1；本地工具、Alpha，不能写成多租户团队平台。 |
+| 2240 | [Golutra](https://github.com/golutra/golutra) | A desktop multi-agent workspace for parallel execution, workflows, result handoffs, and long-running memory. | 将现有 CLI Agent 组织成 AI 团队，EverOS 可作为长期记忆层；主要是人管理 Agent 团队。 | ai-native, multi-agent, workflow, memory | BSL-1.1；商业使用边界和自动化效果需按版本确认。 |
+| mco-org/mco | [MCO](https://github.com/mco-org/mco) | A MIT-licensed CLI-first orchestration layer for running and comparing coding agents. | 工程团队可并行运行多个编码 Agent、比较结果并选择只读或写入模式；不提供多人工作区。 | ai-native, coding, orchestration, cli | MIT；各 Provider CLI 的安装、认证、模型和沙箱边界独立。 |
 | 5257 | [Commonly](https://github.com/Team-Commonly/commonly) | A shared workspace where people and agents coordinate through persistent rooms, tasks, memory, and artifacts. | 人和智能体共用 pod、线程、任务板与知识；GitHub 双向任务同步、访问控制和审计记录。 | ai-native, collaboration, knowledge, self-hosted | 官方注明项目早期；本地 Compose 与公共 Kubernetes 部署边界不同，未实测。 |
 | 2263 | [Cumora](https://github.com/yetone/cumora) | Team chat where people and persistent AI agents share conversations, task boards, and calendars. | 真人与智能体使用同一成员表、群聊、私信、看板和日历，可以认领任务并延续记忆。 | ai-native, collaboration, agents, tasks | iOS beta；Android 未发布需自建；BYOA 各引擎沙箱边界不同，不能都描述成默认隔离。 |
 | 5784 | [Alook](https://github.com/alookai/alook) | Shared rooms that let teammates work with persistent AI agents running on their own machines. | 邀请同事进服务器、频道或私信，通过固定身份共同访问本地编码智能体，跨设备延续对话。 | ai-native, collaboration, agents | 自带已有智能体和模型服务；项目不供应或托管模型，未验证强多租户隔离。 |

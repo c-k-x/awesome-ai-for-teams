@@ -74,13 +74,17 @@
 - [Codex](https://github.com/openai/codex) - 在终端中读取和修改仓库、运行命令与检查，将编码任务接到实际开发环境。
 - [Cursor](https://cursor.com/) - 在编辑器中结合代码、终端和差异上下文完成修改，并让开发者审阅生成的变更。
 - [Gemini CLI](https://github.com/google-gemini/gemini-cli) - 在终端中调用 Gemini 处理仓库分析、文件修改和命令执行，也可通过无头模式接入自动化。
+- [Golutra](https://github.com/golutra/golutra) - 将现有 CLI Agent 组织成并行 AI 团队，提供工作流、结果交接和长期运行记忆；EverOS 可作为记忆层；项目采用 BSL-1.1。
 - [Herdr](https://github.com/herdrdev/herdr) - 集中管理多个 Agent 的终端会话，观察等待输入的状态，并通过 CLI 操作和接续工作现场。
 - [Hermes Agent (Nous Research)](https://github.com/NousResearch/hermes-agent) - 结合终端、聊天网关、定时任务和文件记忆，让长期使用的助手复用偏好与操作技能。
+- [Hive (tt-a1i)](https://github.com/tt-a1i/hive) - 在本机工作区中把 Claude Code、Codex、Gemini 等 CLI Agent 组织成可见团队，通过 PTY、共享 Markdown 任务图和浏览器工作台交接任务；BUSL-1.1，当前无多人认证。
 - [holaOS](https://github.com/holaboss-ai/holaOS) - 在桌面中并排使用应用与 Agent，并复用工具、技能和本地记忆；多人治理需区分产品版本。
 - [Letta](https://github.com/letta-ai/letta-code) - 让持续使用的 Agent 维护带版本的文件记忆，并通过 CLI 或应用接口继续项目工作。
+- [MCO](https://github.com/mco-org/mco) - 通过 CLI 并行调用多个编码 Agent，比较结果并在只读审查或写入模式下执行；适合工程团队的 Agent 编排，不提供多人工作区。
 - [OpenClaw](https://github.com/openclaw/openclaw) - 运行常驻助手网关，从聊天平台和设备接收任务，并管理工具执行、会话和工作区记忆。
 - [OpenCode](https://github.com/anomalyco/opencode) - 支持自选模型的编码助手，通过项目规则、工具和角色配置复用开发工作方式。
 - [OpenHands Agent Canvas](https://github.com/OpenHands/OpenHands) - 在可自托管的控制台中管理编码 Agent 会话，切换本地或远程执行后端，并配置定时和事件触发的开发任务。
+- [OpenHive (Aden)](https://github.com/aden-hive/hive) - 面向生产业务流程的多 Agent Harness，由 Queen 动态创建 Worker，使用共享账本、持久计划、故障恢复、观测和人工监督；Apache-2.0。
 - [OpenMemory (Mem0)](https://github.com/mem0ai/openmemory) - 在 Claude Code、Codex 与 OpenCode 之间转换和导入编码会话；当前 Beta 工具不同于已归档的同名记忆服务。
 - [Tabby](https://github.com/TabbyML/tabby) - 自行部署代码补全和问答服务，结合代码仓库与内部文档，为团队编辑器提供共同的开发背景。
 
@@ -221,6 +225,7 @@
 
 - [Basic Memory](https://github.com/basicmachines-co/basic-memory) - 以 Markdown 笔记保存知识，通过索引、关系和 MCP 让人和助手共同读写、检索与复用。
 - [Cognee](https://github.com/topoteretes/cognee) - 将分散资料加工为文本索引与知识图，帮助 Agent 检索相关内容及跨文档关系。
+- [EverOS](https://github.com/EverMind-AI/EverOS) - 提供 local-first、Markdown-native 的长期记忆层，让不同 Agent、应用和工作流共享可读、可版本化的项目上下文；核心是记忆基础设施，不是多人权限工作区。
 - [Graphiti](https://github.com/getzep/graphiti) - 从文本或结构化资料构建带时间与来源信息的知识图，帮助应用查询关系及其变化。
 - [LangMem](https://github.com/langchain-ai/langmem) - 为开发者提供记忆提取、更新和搜索组件，可接入 LangGraph Store 或自有存储。
 - [MCP Knowledge Graph Memory Server](https://github.com/modelcontextprotocol/servers/tree/main/src/memory) - 以本地文件保存实体、关系和观察，为兼容助手提供简单的结构化记忆工具；属于参考实现。
@@ -338,7 +343,7 @@
 
 收录调研记录：[2026-09-21 GitHub AI 项目补充](docs/research/2026-09-21-github-ai-projects.md)、[AI Native 团队项目补充](docs/research/2026-09-21-ai-native-projects.md)。
 
-[本轮确认收录 41 项](docs/research/2026-09-22-selected-projects.md)。
+[本轮确认收录 46 项](docs/research/2026-09-22-selected-projects.md)。
 
 ## 许可
 

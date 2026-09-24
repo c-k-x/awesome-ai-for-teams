@@ -74,13 +74,17 @@ Use assistants to execute tasks, manage multiple sessions, and continue work acr
 - [Codex](https://github.com/openai/codex) - Read and modify repositories and run commands and checks from a terminal-based coding agent.
 - [Cursor](https://cursor.com/) - Combine code, terminal output, and diffs in an editor to make changes that developers can review.
 - [Gemini CLI](https://github.com/google-gemini/gemini-cli) - Use Gemini from the terminal for repository analysis, file changes, and command execution, with headless automation support.
+- [Golutra](https://github.com/golutra/golutra) - Turn existing CLI agents into a parallel AI team with workflows, result handoffs, and long-running memory; EverOS can provide the memory layer; licensed under BSL-1.1.
 - [Herdr](https://github.com/herdrdev/herdr) - Manage multiple agent terminals, identify sessions waiting for input, and control workspaces through a CLI.
 - [Hermes Agent (Nous Research)](https://github.com/NousResearch/hermes-agent) - Combine a terminal, messaging gateway, scheduled tasks, and file-based memory to reuse preferences and procedures over time.
+- [Hive (tt-a1i)](https://github.com/tt-a1i/hive) - Organize Claude Code, Codex, Gemini, and other CLI agents into a visible local team with PTYs, a shared Markdown task graph, and a browser workbench; BUSL-1.1 with no multi-user authentication boundary.
 - [holaOS](https://github.com/holaboss-ai/holaOS) - Use applications and agents side by side on a desktop with reusable tools, skills, and local memory; team governance depends on the edition.
 - [Letta](https://github.com/letta-ai/letta-code) - Run persistent agents with versioned file-based memory through a CLI or application interfaces.
+- [MCO](https://github.com/mco-org/mco) - Run multiple coding agents in parallel from a CLI, compare their results, and execute in read-only or write modes; an engineering orchestration component rather than a multi-user workspace.
 - [OpenClaw](https://github.com/openclaw/openclaw) - Run a persistent assistant gateway that accepts tasks from messaging platforms and devices and manages tools, sessions, and workspace memory.
 - [OpenCode](https://github.com/anomalyco/opencode) - Choose model providers and reuse project rules, tools, and agent roles in a coding assistant.
 - [OpenHands Agent Canvas](https://github.com/OpenHands/OpenHands) - Manage coding agent sessions in a self-hostable console, switch between local and remote backends, and automate development tasks through schedules and events.
+- [OpenHive (Aden)](https://github.com/aden-hive/hive) - Run production business processes through a multi-agent harness where a Queen grows worker agents around a persistent plan, shared ledger, recovery, observability, and human oversight; Apache-2.0.
 - [OpenMemory (Mem0)](https://github.com/mem0ai/openmemory) - Convert and import coding sessions across Claude Code, Codex, and OpenCode; the current beta differs from the archived memory service of the same name.
 - [Tabby](https://github.com/TabbyML/tabby) - Self-host code completion and chat backed by repositories and internal documentation, giving team editors shared development context.
 
@@ -221,6 +225,7 @@ Store, organize, and retrieve information for later agent tasks; coverage of doc
 
 - [Basic Memory](https://github.com/basicmachines-co/basic-memory) - Keep knowledge in Markdown notes that people and assistants can edit, search, and reuse through indexes, relations, and MCP.
 - [Cognee](https://github.com/topoteretes/cognee) - Process scattered material into text indexes and knowledge graphs for retrieval across documents and relationships.
+- [EverOS](https://github.com/EverMind-AI/EverOS) - Provide a local-first, Markdown-native long-term memory layer that different agents, applications, and workflows can share; it is memory infrastructure rather than a multi-user permission workspace.
 - [Graphiti](https://github.com/getzep/graphiti) - Build temporal knowledge graphs from text or structured data to query relationships, changes, and source information.
 - [LangMem](https://github.com/langchain-ai/langmem) - Provide memory extraction, update, and search components for developers using LangGraph Store or their own storage.
 - [MCP Knowledge Graph Memory Server](https://github.com/modelcontextprotocol/servers/tree/main/src/memory) - Store entities, relations, and observations in a local file as a reference implementation of structured memory tools for MCP clients.
@@ -338,7 +343,7 @@ Read the [English contribution guide](CONTRIBUTING.en.md) or [Chinese guide](CON
 
 Discovery notes: [GitHub AI additions, 2026-09-21](docs/research/2026-09-21-github-ai-projects.md) and [AI Native team additions](docs/research/2026-09-21-ai-native-projects.md) (Chinese).
 
-[41 selected additions](docs/research/2026-09-22-selected-projects.md).
+[46 selected additions](docs/research/2026-09-22-selected-projects.md).
 
 ## License
 

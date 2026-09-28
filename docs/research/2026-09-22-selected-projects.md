@@ -1,4 +1,4 @@
-# 本轮确认收录：46 项
+# 本轮确认收录：47 项
 
 用户从建议审阅名单及 EverOS 生态深核结果中选择以下项目，已同步到中英文主清单。介绍为英文，团队关系和限制为中文转述，未部署实测。
 
@@ -14,6 +14,7 @@
 | tt-a1i/hive | [Hive (tt-a1i)](https://github.com/tt-a1i/hive) | A local browser workbench for coordinating CLI coding agents through PTYs and a shared Markdown task graph. | 把本机 CLI Agent 组成可见团队，支持任务派发、报告和交接；没有多人认证边界。 | ai-native, collaboration, coding, handoff | BUSL-1.1；本地工具、Alpha，不能写成多租户团队平台。 |
 | 2240 | [Golutra](https://github.com/golutra/golutra) | A desktop multi-agent workspace for parallel execution, workflows, result handoffs, and long-running memory. | 将现有 CLI Agent 组织成 AI 团队，EverOS 可作为长期记忆层；主要是人管理 Agent 团队。 | ai-native, multi-agent, workflow, memory | BSL-1.1；商业使用边界和自动化效果需按版本确认。 |
 | mco-org/mco | [MCO](https://github.com/mco-org/mco) | A MIT-licensed CLI-first orchestration layer for running and comparing coding agents. | 工程团队可并行运行多个编码 Agent、比较结果并选择只读或写入模式；不提供多人工作区。 | ai-native, coding, orchestration, cli | MIT；各 Provider CLI 的安装、认证、模型和沙箱边界独立。 |
+| jaylfc/taOS | [taOS](https://github.com/jaylfc/taOS) | A self-hosted AI agent OS combining chat, tasks, knowledge, memory, and multiple agent frameworks. | 支持群组、频道、Agent 身份、A2A 协作和跨设备运行；内置聊天不是 OpenIM 这类通用 IM Server。 | ai-native, self-hosted, collaboration, multi-agent, memory | AGPL-3.0；Beta，硬件集群、Agent 管理和模型路由尚未做生产部署验证。 |
 | 5257 | [Commonly](https://github.com/Team-Commonly/commonly) | A shared workspace where people and agents coordinate through persistent rooms, tasks, memory, and artifacts. | 人和智能体共用 pod、线程、任务板与知识；GitHub 双向任务同步、访问控制和审计记录。 | ai-native, collaboration, knowledge, self-hosted | 官方注明项目早期；本地 Compose 与公共 Kubernetes 部署边界不同，未实测。 |
 | 2263 | [Cumora](https://github.com/yetone/cumora) | Team chat where people and persistent AI agents share conversations, task boards, and calendars. | 真人与智能体使用同一成员表、群聊、私信、看板和日历，可以认领任务并延续记忆。 | ai-native, collaboration, agents, tasks | iOS beta；Android 未发布需自建；BYOA 各引擎沙箱边界不同，不能都描述成默认隔离。 |
 | 5784 | [Alook](https://github.com/alookai/alook) | Shared rooms that let teammates work with persistent AI agents running on their own machines. | 邀请同事进服务器、频道或私信，通过固定身份共同访问本地编码智能体，跨设备延续对话。 | ai-native, collaboration, agents | 自带已有智能体和模型服务；项目不供应或托管模型，未验证强多租户隔离。 |

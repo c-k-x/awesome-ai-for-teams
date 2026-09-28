@@ -138,6 +138,7 @@ Let people and agents continue work around shared discussions, material, and art
 - [Relaticle](https://github.com/relaticle/relaticle) - Share customer data in a self-hosted CRM and expose MCP tools to agents within workspace-scoped access controls. Licensed under AGPL.
 - [Rowboat](https://github.com/rowboatlabs/rowboat) - Share threads, files, whiteboards, and version history while each teammate’s local agent brings results from personal context back for review.
 - [Synapse (Z.ai)](https://github.com/zai-org/Synapse) - Connect members, native actors, and external agents through shared sessions with resource grants and handoffs; still in early development.
+- [taOS](https://github.com/jaylfc/taOS) - Combine chat, tasks, knowledge, memory, and multiple agent frameworks in a self-hosted AI workspace with groups, channels, agent identities, A2A coordination, and distributed devices; currently in beta, and its built-in chat is not a general-purpose IM server.
 - [team9](https://github.com/team9ai/team9) - Collaborate with OpenClaw-based agents through channels, threads, and shared documents that retain discussion and artifacts.
 - [Tutti](https://github.com/tutti-os/tutti) - Link agent sessions, tasks, and files to reduce handoff work; evaluate the local edition and multiplayer VM rooms separately.
 - [XYNE Spaces](https://github.com/juspay/xyne-spaces) - Bring messages, email, and documents into organizational search and collaboration with permission-aware context for people and agents.
@@ -343,7 +344,7 @@ Read the [English contribution guide](CONTRIBUTING.en.md) or [Chinese guide](CON
 
 Discovery notes: [GitHub AI additions, 2026-09-21](docs/research/2026-09-21-github-ai-projects.md) and [AI Native team additions](docs/research/2026-09-21-ai-native-projects.md) (Chinese).
 
-[46 selected additions](docs/research/2026-09-22-selected-projects.md).
+[47 selected additions](docs/research/2026-09-22-selected-projects.md).
 
 ## License
 

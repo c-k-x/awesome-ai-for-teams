@@ -138,6 +138,7 @@
 - [Relaticle](https://github.com/relaticle/relaticle) - 销售和业务团队可共享 CRM 数据，并按工作空间限制代理访问；采用 AGPL。
 - [Rowboat](https://github.com/rowboatlabs/rowboat) - 团队共用线程、文件、白板和版本历史，各成员的本地 Agent 将基于个人背景生成的产物带回共同审阅。
 - [Synapse (Z.ai)](https://github.com/zai-org/Synapse) - 以共享会话连接成员、原生 Actor 和外部 Agent，管理资源授权、唤醒与交接；仍处于早期开发。
+- [taOS](https://github.com/jaylfc/taOS) - 将聊天、任务、知识、记忆和多种 Agent Framework 放进可自托管的 AI 工作台，支持群组、频道、Agent 身份、A2A 协作和跨设备运行；当前为 Beta，内置聊天不是通用 IM Server。
 - [team9](https://github.com/team9ai/team9) - 在频道、线程和共享文档中与基于 OpenClaw 的 Agent 协作，集中保留团队讨论与产物。
 - [Tutti](https://github.com/tutti-os/tutti) - 关联多个 Agent 的会话、任务和文件以减少交接搬运；本地版与多人 VM 房间版本需分别评估。
 - [XYNE Spaces](https://github.com/juspay/xyne-spaces) - 将消息、邮件和文档纳入组织检索与协作空间，为人和 Agent 提供按权限获取的上下文。
@@ -343,7 +344,7 @@
 
 收录调研记录：[2026-09-21 GitHub AI 项目补充](docs/research/2026-09-21-github-ai-projects.md)、[AI Native 团队项目补充](docs/research/2026-09-21-ai-native-projects.md)。
 
-[本轮确认收录 46 项](docs/research/2026-09-22-selected-projects.md)。
+[本轮确认收录 47 项](docs/research/2026-09-22-selected-projects.md)。
 
 ## 许可
 

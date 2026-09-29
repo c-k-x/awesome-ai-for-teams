@@ -2,14 +2,28 @@
 
 English | [简体中文](README.zh-CN.md)
 
-A curated list of AI tools and practical resources to help teams discover and choose ways to collaborate, develop software, and build, operate, and improve AI applications.
+**AI tools and practical resources for small engineering teams and tech leads.**
 
-Browse by the work you need to do. Each entry links to the project and briefly explains its purpose. The list includes ready-to-use products and developer components; ordering is not a ranking. Descriptions summarize official material, not standardized hands-on testing or production certification.
+Find tools to share project knowledge, coordinate coding agents, reuse team practices, and manage model access and usage. Includes hosted products, self-hostable tools, developer components, and learning resources.
 
-[Suggest a resource or correct an entry](CONTRIBUTING.md).
+## Start with a team problem
+
+| What does your team need? | Where to look |
+| --- | --- |
+| Work with coding agents and hand off tasks | [Assistants and sessions](#agent-assistants-sessions-and-handoffs) · [Task delegation](#task-delegation-and-delivery) |
+| Share project knowledge and working practices | [Shared knowledge](#shared-knowledge-and-assistants) · [Rules and experience](#shared-rules-and-experience) |
+| Collaborate in a shared AI workspace | [Shared collaboration spaces](#shared-collaboration-spaces) |
+| Bring AI into chat and meetings | [Chat and meeting integrations](#chat-and-meeting-integrations) |
+| Manage model access and usage | [Model access](#model-access) |
+| Evaluate results and investigate failures | [Evaluation and observability](#evaluation-observability-and-content-checks) |
+
+Each entry explains its purpose and relevant limits. Descriptions summarize official sources; inclusion does not imply hands-on testing or production certification. Ordering is not a ranking.
+
+Star this list to keep it handy for your next tool search, or [suggest a resource or correction](CONTRIBUTING.md).
 
 ## Contents
 
+- [Start with a Team Problem](#start-with-a-team-problem)
 - [Model Access](#model-access)
 - [Document Parsing and Preparation](#document-parsing-and-preparation)
 - [Agent Assistants, Sessions, and Handoffs](#agent-assistants-sessions-and-handoffs)

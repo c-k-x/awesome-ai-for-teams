@@ -1,54 +1,54 @@
-# 贡献指南
+# Contributing
 
-简体中文 | [English](CONTRIBUTING.en.md)
+English | [简体中文](CONTRIBUTING.zh-CN.md)
 
-欢迎推荐工具、实践资源，或修正介绍和链接。无需先写长篇调研；一条有明确用途和依据的推荐即可。
+Suggestions, corrections, and link fixes are welcome. A clear use case with supporting sources is enough; a long research report is not required.
 
-## 收录范围
+## Scope
 
-- 帮助团队使用 AI 完成工作，或构建、运行和改进 AI 应用。
-- 能确认项目身份，具有可访问的官方产品、文档或维护者仓库；教程和论文链接到作者或出版入口。
-- 能用一句话说清它接管哪部分工作，以及适用的团队场景。
-- 优先提供可检查的使用说明；不以 stars、排名、价格或厂商性能宣传作为收录理由。
-- 通用聊天平台、数据库或绘图工具，只有明确的 AI 使用关联时才考虑收录；名称不明、链接无法核实的条目暂缓。
+- Help teams use AI to get work done, or build, operate, and improve AI applications.
+- Identify the project and provide an accessible official product page, documentation, or maintainer repository. Link tutorials and papers to their authors or publishers.
+- Explain the work the resource helps with and the team context in which it is useful.
+- Provide verifiable documentation. Stars, rankings, prices, and vendor performance claims are not reasons for inclusion.
+- General chat platforms, databases, and drawing tools need a specific AI use case. Defer entries whose identity or source cannot be verified.
 
-清单同时接纳商业产品、可自建项目和开发组件。有公开仓库不等于全部产品开源；托管版、社区版和历史版本的能力应分别核对。
+Commercial products, self-hostable projects, and developer components are all eligible. A public repository does not make every part of a product open source. Check hosted, community, and historical editions separately.
 
-分类依据是团队需要解决的工作问题，例如背景搬运、任务交接、经验复用或运行排障。多用途项目优先放在主要用途对应的分类，产品形态和能力边界在简介中说明。各分类是并列的发现入口，无需按每一类都引入组件。
+Categories follow the work problems teams need to solve, such as moving context, handing off tasks, reusing experience, or diagnosing execution. Place a multipurpose project under its primary use case and clarify its form and boundaries in the description. Categories are independent discovery paths; teams do not need a component from every category.
 
-## 推荐或修改条目
+## Suggesting or changing an entry
 
-1. 搜索 README，避免同名、改名或不同入口造成重复；选择最贴近用途的现有分类。
-2. 提供官方链接，用简短介绍概括具体用途。必要时说明产品形态，不使用「最强」「生产级」「完全安全」等无法由条目证明的措辞。
-3. 在 Issue 或 PR 中给出支撑描述的官方文档，以及一个团队使用场景；注明是否亲自使用、是否与项目有关联。未实测也可以推荐，请如实说明。
-4. 每个 PR 尽量聚焦一个项目或一组紧密相关的修正。若改名、迁移或移除条目，说明原链接和依据。
+1. Search the README for existing names, former names, and alternative links. Choose the closest existing category.
+2. Link to an official source and describe the purpose briefly. Clarify the product edition when useful. Avoid unsupported claims such as “best,” “production-ready,” or “completely secure.”
+3. Include documentation supporting the description and a team use case in the issue or pull request. Disclose whether you have used the project and any affiliation. Hands-on experience is welcome but not required.
+4. Keep each pull request focused on a project or a related set of corrections. Explain renames, migrations, and removals with sources.
 
-条目格式：
+Entry format:
 
 ```markdown
-- [项目名称](官方链接) - 一句话说明它能帮助团队完成什么工作。
+- [Project name](official-link) - One sentence explaining what it helps a team do.
 ```
 
-分类内按项目英文名排序，不区分大小写；只有中文名时使用拼音。中英文采用相同顺序，排序只便于查找，不代表推荐次序。工具放在用途分类；协议、教程、论文和资源索引放在对应资源分类。同一研究的论文与配套仓库可合并为一个条目。
+Sort entries by their English project names, ignoring case; use pinyin when only a Chinese name is available. Keep the same order in both languages. Ordering helps navigation and is not a ranking. Put tools in their use-case categories and protocols, tutorials, papers, and indexes in the resource sections. A paper and its companion repository can share one entry.
 
-## 中英文同步
+## Keeping both languages aligned
 
-- [README.md](README.md) 是中文主入口，[README.en.md](README.en.md) 是完整英文版，两者保持相同分类、条目和官方链接。
-- 新增、移除、改名或调整分类时同步修改两种语言；保持产品形态、预览状态和能力边界一致。
-- 翻译表达用途即可，不增加原文未证实的能力；使用官方英文名称，必要时保留原名帮助消歧。
-- 可以用中文或英文提交 Issue／PR。不熟悉另一种语言时，请注明需要翻译协助，维护者在合并前补齐。
+- [README.md](README.md) is the default English entry point; [README.zh-CN.md](README.zh-CN.md) is the complete Chinese list. Both contain the same categories, entries, and official links.
+- Update both versions for additions, removals, renames, and category changes. Preserve edition distinctions, preview status, and capability boundaries.
+- Translate the purpose without adding unverified capabilities. Use official English names and retain original names when needed to distinguish projects.
+- Issues and pull requests may be in Chinese or English. Request translation help if needed; maintainers will align both versions before merging.
 
-## 提交前检查
+## Before submitting
 
-- 确认名称、维护者与链接对应；优先使用最终官方地址，去掉跟踪参数、短链和推荐码。
-- 阅读来源，确认一句话介绍没有把计划功能、其他版本能力或推测写成事实。
-- 在 GitHub Markdown 预览中点击目录锚点、相对文件链接及新增外链，确认目标正确；遇到登录墙或自动访问限制时，在 PR 中注明。
-- 调整分类标题时同步修改目录；保持 UTF-8、段落间空行和一致的列表格式。
-- 对照两种语言检查项目名称、链接、顺序与条目数量；同时检查语言切换和贡献指南链接。
-- 运行 `git diff --check`，检查多余空白；确认没有个人路径、内部链接、凭据或未经许可的内容。
+- Confirm that names, maintainers, and links identify the intended projects. Prefer canonical official URLs without tracking parameters, short links, or referral codes.
+- Read the source and check that the description does not present planned features, another edition's capabilities, or speculation as facts.
+- Preview GitHub Markdown and check table-of-contents anchors, relative file links, and new external links. Note login walls or automated-access restrictions in the pull request.
+- Update the table of contents when headings change. Preserve UTF-8 encoding, blank lines, and consistent list formatting.
+- Compare project names, links, ordering, and entry counts across languages. Check language switches and contribution-guide links too.
+- Run `git diff --check` and remove stray whitespace, personal paths, internal URLs, credentials, and material you are not authorized to publish.
 
-本项目是文档清单，无需安装应用依赖或运行构建系统。维护者会结合用途、重复程度与证据决定收录；无需为覆盖所有候选而增加条目。
+This repository is a documentation list and requires no application dependencies or build system. Maintainers consider usefulness, overlap, and evidence; the list does not need to include every candidate.
 
-## 讨论与许可
+## Discussion and license
 
-请围绕用途、证据和可复现的问题讨论，尊重不同背景的贡献者。贡献内容须为原创或有权提交，并同意按本清单的 CC0 1.0 许可发布；链接指向的外部项目仍保留各自许可。
+Discuss use cases, evidence, and reproducible problems respectfully. Contributions must be original or authorized for submission and are published under this list's CC0 1.0 license. Linked projects retain their own licenses.

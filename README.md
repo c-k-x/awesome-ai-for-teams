@@ -101,7 +101,7 @@ Use assistants to execute tasks, manage multiple sessions, and continue work acr
 - [OpenHive (Aden)](https://github.com/aden-hive/hive) - Run production business processes through a multi-agent harness where a Queen grows worker agents around a persistent plan, shared ledger, recovery, observability, and human oversight; Apache-2.0.
 - [OpenMemory (Mem0)](https://github.com/mem0ai/openmemory) - Convert and import coding sessions across Claude Code, Codex, and OpenCode; the current beta differs from the archived memory service of the same name.
 - [Tabby](https://github.com/TabbyML/tabby) - Self-host code completion and chat backed by repositories and internal documentation, giving team editors shared development context.
-- [Vibe Kanban](https://github.com/BloopAI/vibe-kanban) - Plan local coding-agent tasks on a kanban board, run agents in separate workspaces, and review diffs and previews; the original hosted team service shut down in 2026, while the open-source project continues under community maintenance.
+- [Vibe Kanban](https://github.com/BloopAI/vibe-kanban) - Coordinate local coding-agent runs in isolated Git worktrees and review their diffs; the original hosted team service shut down in 2026, and v0.1.44's no-sign-in path is limited to local workspaces while community maintenance continues.
 
 ## Chat and Meeting Integrations
 

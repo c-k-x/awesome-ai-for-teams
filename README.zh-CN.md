@@ -101,7 +101,7 @@
 - [OpenHive (Aden)](https://github.com/aden-hive/hive) - 面向生产业务流程的多 Agent Harness，由 Queen 动态创建 Worker，使用共享账本、持久计划、故障恢复、观测和人工监督；Apache-2.0。
 - [OpenMemory (Mem0)](https://github.com/mem0ai/openmemory) - 在 Claude Code、Codex 与 OpenCode 之间转换和导入编码会话；当前 Beta 工具不同于已归档的同名记忆服务。
 - [Tabby](https://github.com/TabbyML/tabby) - 自行部署代码补全和问答服务，结合代码仓库与内部文档，为团队编辑器提供共同的开发背景。
-- [Vibe Kanban](https://github.com/BloopAI/vibe-kanban) - 在本地看板规划编码 Agent 任务，为执行创建独立工作区并审阅差异与预览；原托管团队服务已于 2026 年关闭，开源项目转由社区维护。
+- [Vibe Kanban](https://github.com/BloopAI/vibe-kanban) - 在独立 Git worktree 中协调本地编码 Agent 执行并审阅差异；原托管团队服务于 2026 年关闭，v0.1.44 未登录时仅能使用本地 Workspaces，开源项目仍由社区维护。
 
 ## 聊天与会议接入
 

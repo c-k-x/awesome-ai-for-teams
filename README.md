@@ -106,6 +106,7 @@ Use assistants to execute tasks, manage multiple sessions, and continue work acr
 ## Chat and Meeting Integrations
 
 Bring assistants into existing chat and meeting channels to reduce manual transfer of requests, context, and results.
+- [AI Group Call](https://aigroupcall.app) - Facilitate a live AI panel: agents answer one at a time, build on each other, and leave notes and action items after the call.
 
 - [AgentConnect](https://github.com/agentconnect-md/agentconnect) - Connect agents on execution machines to Slack, Feishu, and code platforms for tasks triggered by messages, events, or schedules.
 - [Agentic Inbox](https://github.com/cloudflare/agentic-inbox) - Share an email interface with AI-assisted conversation search and reply drafting on Cloudflare Workers. Intended for trusted groups: authorized users can access every mailbox.

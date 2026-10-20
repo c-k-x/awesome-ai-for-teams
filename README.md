@@ -184,6 +184,7 @@ Make task ownership, progress, deliverables, and review handoffs visible; comple
 - [PR-Agent](https://github.com/The-PR-Agent/pr-agent) - Generate PR descriptions, reviews, and improvement suggestions through CLI, CI, or code-host events; now community-maintained and distinct from the commercial Qodo product.
 - [Raft (formerly Slock)](https://raft.build/) - Connect team channels with agent task claims and review states so teammates can hand off work and inspect deliverables.
 - [Solo (solo-agent)](https://github.com/solo-agent/solo) - Link agent task ownership, execution records, delivery versions, and reviews in submission and revision workflows.
+- [yylo](https://github.com/yylo-dev/yylo) - Run Kanban, task, and merge loops for coding agents across isolated Git worktrees, with typed admission gates and strict-JSON output that teams can script and review.
 
 ## Whiteboards and Visual Collaboration
 

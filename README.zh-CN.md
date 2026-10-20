@@ -184,6 +184,7 @@
 - [PR-Agent](https://github.com/The-PR-Agent/pr-agent) - 通过 CLI、CI 或代码平台事件生成 PR 说明、审阅意见和修改建议；现为社区维护项目，区别于 Qodo 商业产品。
 - [Raft (formerly Slock)](https://raft.build/) - 把团队频道、Agent 任务认领与待审阅状态连接起来，让同事共同交接和检查产物。
 - [Solo (solo-agent)](https://github.com/solo-agent/solo) - 将 Agent 任务的负责人、执行记录、交付版本和评审结果关联起来，支持提交与退回流程。
+- [yylo](https://github.com/yylo-dev/yylo) - 在相互隔离的 Git worktree 中为编码 Agent 运行看板、任务与合并循环，配合类型化准入门槛和严格 JSON 输出，便于团队脚本化跟进与审阅。
 
 ## 白板与视觉协作
 

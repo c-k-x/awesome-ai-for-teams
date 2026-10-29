@@ -268,6 +268,7 @@ Connect models, tools, and multiple steps into usable applications or business w
 - [Budibase](https://github.com/Budibase/budibase) - Connect team data, internal apps, and automations to agents that handle requests and invoke configured tools, with human approval rules; Agents is in beta, and paid features are licensed separately.
 - [Coze Studio](https://github.com/coze-dev/coze-studio) - Build and publish assistants with visual knowledge, plugin, and workflow tools; this entry covers the self-hostable Studio.
 - [CrewAI](https://github.com/crewAIInc/crewAI) - Organize agent collaboration through roles, tasks, and workflows with explicit handoffs.
+- [Dagu](https://github.com/dagucloud/dagu) - Combine existing scripts, containers, coding agents, and human tasks in self-hosted YAML workflows, with scheduling, retries, logs, and run history for teams to track execution.
 - [Dify](https://github.com/langgenius/dify) - Combine knowledge retrieval, prompts, and tool calls into AI applications published as web interfaces or APIs.
 - [Elastic Agent Builder](https://www.elastic.co/docs/explore-analyze/ai-features/elastic-agent-builder) - Configure models, instructions, and tools over Elasticsearch data to build assistants that query organizational information.
 - [Haystack](https://github.com/deepset-ai/haystack) - Compose document indexing, retrieval, and agent workflows from replaceable Python components with explicit control over context preparation, routing, and generation.

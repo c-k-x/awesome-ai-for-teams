@@ -268,6 +268,7 @@
 - [Budibase](https://github.com/Budibase/budibase) - 将团队数据、内部应用和自动化连接到 Agent，处理业务请求并调用已配置的工具，支持人工批准规则；Agents 为 Beta，付费功能另行许可。
 - [Coze Studio](https://github.com/coze-dev/coze-studio) - 通过可视化界面组合知识库、插件与工作流，构建和发布助手应用；此处指可自建的 Studio。
 - [CrewAI](https://github.com/crewAIInc/crewAI) - 用角色、任务和流程组织多个 Agent 的分工与结果交接。
+- [Dagu](https://github.com/dagucloud/dagu) - 用可自托管的 YAML 工作流连接现有脚本、容器、编码 Agent 和人工任务，集中管理调度、重试、日志与运行历史，供团队跟进执行。
 - [Dify](https://github.com/langgenius/dify) - 将知识检索、提示词和工具调用编排为 AI 应用，并发布为网页或 API。
 - [Elastic Agent Builder](https://www.elastic.co/docs/explore-analyze/ai-features/elastic-agent-builder) - 在 Elasticsearch 数据之上配置模型、指令和工具，构建能查询组织资料的业务助手。
 - [Haystack](https://github.com/deepset-ai/haystack) - 用可替换的 Python 组件组合资料索引、检索与 Agent 流程，明确控制上下文准备、路由和生成步骤。

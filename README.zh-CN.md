@@ -124,6 +124,8 @@
 - [OpenTag (Amplift)](https://github.com/amplifthq/opentag) - 工程频道提交任务、查看队列、批准关键动作并接收执行证据；runner 离线时保持任务入口；当前团队入口仅 Slack，区别于 fancyboi999 的 Open Tag。
 - [Rocket.Chat AI App](https://docs.rocket.chat/docs/rocketchat-ai-app-setup-guide) - 在团队聊天和客服接待中提供知识问答与对话摘要；AI App 为需相应许可的 Beta 功能。
 - [Slack AI Agents](https://slack.com/help/articles/33076000248851-Work-with-AI-agents-in-Slack) - 从频道和专门会话使用 Slackbot 或已安装的 Agent 应用，让请求与结果留在团队讨论中。
+- [Spacebot](https://github.com/spacedriveapp/spacebot) - 在 Slack、Discord 等频道中运行自托管助手，支持并发对话、共享记忆、后台任务和频道权限；当前为 Beta，采用 FSL-1.1-ALv2。
+- [Switch](https://github.com/sandbox-quantum/switch) - 将已有 Agent 接入 Slack、Teams 等聊天平台，让同事与 Agent 在共享房间中基于共同上下文协作；采用附加 Commons Clause 的 Apache-2.0 许可。
 - [Tentix](https://github.com/labring/tentix) - 在客服工单中结合 AI 回复、知识检索和人工交接，让客服团队共同维护服务流程；部分员工管理和分析功能仍在规划中。
 - [Vexa](https://github.com/Vexa-ai/vexa) - 让机器人加入 Google Meet、Teams 或 Zoom，通过 API 提供实时转写，供团队接入会议纪要和后续知识处理。
 - [企业微信智能机器人 (WeCom)](https://github.com/WecomTeam/aibot-node-sdk) - 用官方 SDK 接收消息和卡片事件、发送流式回复，将自建 AI 服务接入企业微信。

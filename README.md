@@ -136,6 +136,7 @@ Let people and agents continue work around shared discussions, material, and art
 - [Agenta](https://github.com/Agenta-AI/agenta) - Bring assistant configuration, shared files, triggers, and execution traces into a workspace for teams to maintain and reuse.
 - [agentchattr](https://github.com/bcurts/agentchattr) - Coordinate people and coding agents in shared local channels, using mentions to hand off tasks and context; intended for local or trusted networks.
 - [AgentTeams](https://github.com/agentscope-ai/AgentTeams) - Coordinate people and agents from different runtimes in Matrix rooms, sharing files and visible task progress while the platform manages agent containers.
+- [Agor](https://github.com/preset-io/agor) - Collaborate on live boards and shared coding-agent sessions, with separate Git working directories per branch and shared knowledge; source-available under BUSL-1.1.
 - [Alook](https://github.com/alookai/alook) - Invite colleagues into shared rooms, channels, and direct messages with persistent coding agents running on connected machines.
 - [AppFlowy](https://github.com/AppFlowy-IO/AppFlowy) - Bring documents, wikis, and projects into a shared workspace with AI search and writing assistance; verify self-hosting and enterprise features for the chosen edition.
 - [Buzz (Block)](https://github.com/block/buzz) - Connect people and agents in self-hosted channels using signed identities and shared event records for discussion and results.

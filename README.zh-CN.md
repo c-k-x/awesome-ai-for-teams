@@ -136,6 +136,7 @@
 - [Agenta](https://github.com/Agenta-AI/agenta) - 将助手配置、共享文件、触发条件和运行轨迹放进团队工作台，供成员共同维护和复用。
 - [agentchattr](https://github.com/bcurts/agentchattr) - 人和多个编码智能体共处频道，通过提及传递任务与上下文，减少终端之间手工复制；适合本地或可信网络。
 - [AgentTeams](https://github.com/agentscope-ai/AgentTeams) - 在 Matrix 房间中组织人与不同运行环境的 Agent 协作，共享文件并查看任务过程；由平台管理各 Agent 容器。
+- [Agor](https://github.com/preset-io/agor) - 团队在实时看板和共享编码 Agent 会话中协作，各分支使用独立 Git 工作目录，并可复用共享知识；采用 BUSL-1.1，属于源码可用项目。
 - [Alook](https://github.com/alookai/alook) - 邀请同事进服务器、频道或私信，通过固定身份共同访问本地编码智能体，跨设备延续对话。
 - [AppFlowy](https://github.com/AppFlowy-IO/AppFlowy) - 将文档、Wiki 和项目放在共同工作区，结合 AI 搜索与写作辅助团队整理资料；自托管与企业功能需按部署版本核对。
 - [Buzz (Block)](https://github.com/block/buzz) - 在自托管频道中连接人和 Agent，以签名身份和共享事件记录组织讨论与执行结果。

@@ -67,6 +67,7 @@
 - [Plano](https://github.com/katanemo/plano) - 将模型与 Agent 路由、过滤和追踪集中到代理层，让团队的不同应用复用同一套运行配置。
 - [Portkey AI Gateway](https://github.com/Portkey-AI/gateway) - 将模型调用的重试、备用路由和负载分配集中到网关；完整管理平台需另行评估。
 - [TokenHub](https://github.com/astaxie/TokenHub) - 成员、组长和管理员按职责管理模型与费用，平台和财务共用按项目、团队和成本中心归因的数据。
+- [ToolHive](https://github.com/stacklok/toolhive) - 将 MCP 服务器放在隔离容器中本地或 Kubernetes 运行，通过目录集中注册可信服务器，并由网关统一访问策略和观测；身份与审计能力需对照开源版和 Stacklok 企业版分别核实。
 
 ## 文档解析与资料准备
 
@@ -172,6 +173,7 @@
 - [Backlog.md](https://github.com/MrLesk/Backlog.md) - 把任务、依赖和验收条件保存为仓库中的 Markdown，通过 CLI、MCP 和看板让人与编码 Agent 共同维护交付计划。
 - [Chorus](https://github.com/Chorus-AIDLC/Chorus) - 将需求提案、文档、任务执行和人工验证关联起来，集中管理编码 Agent 的权限、会话与进展，供团队审阅交付结果。
 - [GitHub Agent HQ](https://docs.github.com/en/copilot/concepts/agents/about-third-party-coding-agents) - 在 GitHub 中选择编码 Agent、观察会话并审阅其 PR，让异步任务进入现有代码交付流程。
+- [It's a Plan](https://github.com/croffasia/itsaplan) - 自托管任务跟踪器，Agent 作为具备角色和指派位的项目成员，可按提及、分配或定时触发领取任务，在实例模型或自有机器的编码 CLI 上执行；SSO、审计日志和 Agent 预算属于 Pro 版。
 - [Kaneo](https://github.com/usekaneo/kaneo) - 真人团队和 AI 共用现有任务与项目数据，智能体通过内建 MCP 接口减少手工搬运状态。
 - [Linear Agents](https://linear.app/docs/agents-in-linear) - 从任务单委托 Agent 并在原处跟进进度和产物，同时保留人的任务负责人。
 - [Markplane](https://github.com/zerowand01/markplane) - 将任务、计划和依赖保存为随 Git 分享的 Markdown，并生成项目状态摘要，让成员的助手通过 MCP 接续共同工作。
@@ -255,6 +257,7 @@
 - [Memora (Microsoft)](https://github.com/microsoft/Memora) - 用记忆正文、概括和检索线索分开组织长期资料，供开发者研究细节保留与召回效果。
 - [Memoria (Matrix Origin)](https://github.com/matrixorigin/Memoria) - 为 Agent 记忆提供检索、快照、分支与合并，让团队能够检查和修订记忆变更。
 - [MemOS](https://github.com/MemTensor/MemOS) - 通过记忆 API 或宿主插件保存、检索用户信息和任务经验，为已有 Agent 补充长期上下文。
+- [memsearch](https://github.com/zilliztech/memsearch) - 以 Markdown 文件保存记忆、用可重建的 Milvus 索引检索，让 Claude Code、Codex 等编码 Agent 跨会话复用同一份上下文，并把重复流程蒸馏为可安装技能；多用户或团队部署需专用 Milvus 实例，本身不提供权限体系。
 - [MemU](https://github.com/NevaMind-AI/memU) - 把个人会话经验整理为可检索的记忆和技能，供多个助手复用；不等同于多人知识权限平台。
 - [OpenViking](https://github.com/volcengine/OpenViking) - 以目录、摘要和语义检索组织资料、记忆与技能，让 Agent 按需深入读取上下文。
 - [ReMe (formerly MemoryScope)](https://github.com/agentscope-ai/ReMe) - 将对话和外部资料整理进可编辑的 Markdown 知识工作区，供 Agent 搜索、读取和更新。

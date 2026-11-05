@@ -67,6 +67,7 @@ Unify model access, routing, and usage management across providers, or use exist
 - [Plano](https://github.com/katanemo/plano) - Centralize model and agent routing, filters, and tracing in a proxy layer so team applications can reuse shared runtime configuration.
 - [Portkey AI Gateway](https://github.com/Portkey-AI/gateway) - Centralize model retries, fallback routing, and load balancing in a gateway; assess the full management platform separately.
 - [TokenHub](https://github.com/astaxie/TokenHub) - Allocate model access and project keys by team role, track usage by project and cost center, and compare internal records with provider bills.
+- [ToolHive](https://github.com/stacklok/toolhive) - Run MCP servers in isolated containers locally or on Kubernetes, with a curated registry and a gateway for access policies and observability; compare the open-source and Stacklok Enterprise editions for identity and audit features.
 
 ## Document Parsing and Preparation
 
@@ -172,6 +173,7 @@ Make task ownership, progress, deliverables, and review handoffs visible; comple
 - [Backlog.md](https://github.com/MrLesk/Backlog.md) - Store tasks, dependencies, and acceptance criteria as repository Markdown, with CLI, MCP, and board interfaces for people and coding agents to maintain delivery plans.
 - [Chorus](https://github.com/Chorus-AIDLC/Chorus) - Link proposals, documents, task execution, and human verification while managing coding agent permissions, sessions, and progress for team delivery review.
 - [GitHub Agent HQ](https://docs.github.com/en/copilot/concepts/agents/about-third-party-coding-agents) - Select coding agents, inspect sessions, and review their pull requests within existing GitHub delivery workflows.
+- [It's a Plan](https://github.com/croffasia/itsaplan) - Run a self-hosted issue tracker where agents are project members with roles and assignments, taking work from mentions, assignments, or schedules and running on an instance model or your own coding CLI; SSO, audit logs, and agent budgets require the Pro edition.
 - [Kaneo](https://github.com/usekaneo/kaneo) - Let people and agents work with the same projects, tasks, and labels through a self-hosted project workspace and its official MCP interface.
 - [Linear Agents](https://linear.app/docs/agents-in-linear) - Delegate to agents from issues and track progress and artifacts there while retaining a human assignee.
 - [Markplane](https://github.com/zerowand01/markplane) - Keep tasks, plans, and dependencies in Markdown shared through Git, generating project summaries that teammates' assistants can access through MCP to continue work.
@@ -255,6 +257,7 @@ Store, organize, and retrieve information for later agent tasks; coverage of doc
 - [Memora (Microsoft)](https://github.com/microsoft/Memora) - Separate memory content, abstracts, and retrieval cues for developers studying detail preservation and recall.
 - [Memoria (Matrix Origin)](https://github.com/matrixorigin/Memoria) - Add retrieval, snapshots, branches, and merging to agent memory so teams can inspect and revise changes.
 - [MemOS](https://github.com/MemTensor/MemOS) - Add long-term context to existing agents through memory APIs or host plugins for user information and task experience.
+- [memsearch](https://github.com/zilliztech/memsearch) - Keep memory as Markdown files with a rebuildable Milvus index so Claude Code, Codex, and other coding agents recall the same context across sessions, and distill repeated workflows into reusable skills; a dedicated Milvus instance is needed for multi-user or team deployments, and it is not a permission system.
 - [MemU](https://github.com/NevaMind-AI/memU) - Turn personal session experience into retrievable memories and skills across assistants; team access management is a separate concern.
 - [OpenViking](https://github.com/volcengine/OpenViking) - Organize resources, memories, and skills with directories, summaries, and semantic retrieval for progressive context access.
 - [ReMe (formerly MemoryScope)](https://github.com/agentscope-ai/ReMe) - Organize conversations and external material into an editable Markdown knowledge workspace that agents can search, read, and update.

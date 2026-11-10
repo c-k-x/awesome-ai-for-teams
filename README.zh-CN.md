@@ -237,10 +237,16 @@
 - [MEX](https://github.com/mex-memory/mex) - 将架构、决策和交接记录保存在代码仓库中，供同事与编码 Agent 检索复用；通过 Git 分享，各自维护本地索引。
 - [Observal](https://github.com/Observal/Observal) - 组织集中注册技能、代理和 MCP，审核版本并用使用反馈改善共享资产。
 - [Potpie](https://github.com/potpie-ai/potpie) - 将代码、PR、任务和团队决策组织为可检索的上下文图，让不同编码助手复用项目背景与工程经验。
+- [Rulesync](https://github.com/dyoshikawa/rulesync) - 从统一来源生成不同编码助手的技能、规则与 MCP 配置，让团队维护一套配置；支持的功能因目标客户端而异。
 - [SkillHub](https://github.com/iflytek/skillhub) - 团队命名空间、Owner/Admin/Member、技能版本和晋升审批，把个人技能沉淀成组织受控资产；被分发技能仍适用各自许可。
+- [SkillKit](https://github.com/rohitg00/skillkit) - 通过纳入 Git 管理的团队清单共享技能源，并为不同编码助手转换技能格式；目标客户端的兼容性需分别核对。
+- [SkillPort](https://github.com/gotalab/skillport) - 校验和管理技能包，通过 CLI 或 MCP 提供搜索与按需加载，供团队复用技能库；接口仍在开发中。
+- [Skills Manager](https://github.com/xingkongliang/skills-manager) - 通过桌面技能库管理不同编码助手的全局和项目技能，并用 Git 备份和跨设备同步；预设应用为一次性复制。
 - [skillshare](https://github.com/runkids/skillshare) - 从统一来源同步多种 AI 编程工具的技能、规则与 Agent 定义，并通过项目配置和团队 Git 仓库分发。
+- [sx](https://github.com/sleuth-io/sx) - 通过共享文件夹或 Git 技能库按团队、仓库等范围分发技能及 Agent 配置，并记录版本和使用情况；角色权限与变更审批仍在规划中。
 - [TeamAI CLI](https://github.com/Tencent/teamai-cli) - 通过 Git 分发团队技能、规则和 MCP 配置，并检索共享经验，减少不同 Agent 客户端之间的重复配置。
 - [TencentDB Agent Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) - 通过代理采集会话并提炼记忆、技能与知识资产，为后续 Agent 任务检索和装配上下文。
+- [Vercel Skills CLI](https://github.com/vercel-labs/skills) - 从共享仓库向不同编码助手安装、检查和更新团队技能；从项目锁文件恢复技能仍属实验功能。
 
 ## 知识检索与记忆管理
 

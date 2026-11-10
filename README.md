@@ -237,10 +237,16 @@ Help teammates and assistants reuse organizational knowledge, rules, skills, and
 - [MEX](https://github.com/mex-memory/mex) - Keep architecture, decisions, and handoffs in the code repository for teammates and coding agents to retrieve and reuse; share through Git while maintaining local indexes separately.
 - [Observal](https://github.com/Observal/Observal) - Register internal agents, skills, and MCP tools, review versions, and use adoption and session feedback to improve shared assets.
 - [Potpie](https://github.com/potpie-ai/potpie) - Organize code, pull requests, tasks, and team decisions into a searchable context graph so coding assistants can reuse project background and engineering knowledge.
+- [Rulesync](https://github.com/dyoshikawa/rulesync) - Generate agent-specific skills, rules, and MCP configuration from shared source files so teams can maintain one configuration set across coding tools; supported features vary by target.
 - [SkillHub](https://github.com/iflytek/skillhub) - Publish and distribute organizational skills through team namespaces, owner/admin/member roles, versioning, and promotion reviews. Distributed skills retain their own licenses.
+- [SkillKit](https://github.com/rohitg00/skillkit) - Share skill sources through a Git-tracked team manifest and translate skills for different coding agents; target-client compatibility needs separate verification.
+- [SkillPort](https://github.com/gotalab/skillport) - Validate and manage skill packages, then provide search and on-demand loading through CLI or MCP so teams can reuse their skill library; APIs remain under development.
+- [Skills Manager](https://github.com/xingkongliang/skills-manager) - Manage global and project skills across coding agents through a desktop library, with Git-backed backup and multi-device sync; applying presets makes a one-time copy.
 - [skillshare](https://github.com/runkids/skillshare) - Sync skills, rules, and agent definitions across AI coding tools from one source, distributing them through project configuration and team Git repositories.
+- [sx](https://github.com/sleuth-io/sx) - Share versioned skills and agent configuration through Git or shared-folder vaults, with scoped installation and usage records; role-based access control and change approvals remain planned.
 - [TeamAI CLI](https://github.com/Tencent/teamai-cli) - Distribute team skills, rules, and MCP configuration through Git and retrieve shared lessons across agent clients.
 - [TencentDB Agent Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) - Capture conversations through a proxy and derive memories, skills, and knowledge assets for later agent context retrieval.
+- [Vercel Skills CLI](https://github.com/vercel-labs/skills) - Install, check, and update team skills from shared repositories into supported coding agents; project lockfile restoration remains experimental.
 
 ## Knowledge Retrieval and Memory
 

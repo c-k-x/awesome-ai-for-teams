@@ -1,10 +1,16 @@
 # Awesome AI for Teams
 
+[![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](LICENSE)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.zh-CN.md)
+
 [English](README.md) | 简体中文
 
 **为小型开发团队和技术负责人精选 AI 工具与实践资源。**
 
 查找用于共享项目知识、协调编程 Agent、复用团队方法，以及管理模型接入与用量的工具。涵盖托管产品、可自建工具、开发组件和学习资源。
+
+> **清单之外的补充：** [www.goodthingure.com](https://www.goodthingure.com/zh/) 上有每个工具的详情页，附 GitHub Star 数、许可条款、限制与 open issue 编号——78 个工具、28 组逐对比较、5 个分步场景。每页都写明适用条件、不适用的情况，以及核实依据。英文版内容相同。
 
 ## 从团队要解决的问题开始
 

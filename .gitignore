@@ -1,1 +1,5 @@
 .DS_Store
+
+# 本机项目技能，不提交到公开仓库
+/.agents/skills/
+/.claude/skills/

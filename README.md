@@ -1,10 +1,16 @@
 # Awesome AI for Teams
 
+[![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](LICENSE)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
 English | [简体中文](README.zh-CN.md)
 
 **AI tools and practical resources for small engineering teams and tech leads.**
 
 Find tools to share project knowledge, coordinate coding agents, reuse team practices, and manage model access and usage. Includes hosted products, self-hostable tools, developer components, and learning resources.
+
+> **Beyond this list:** [www.goodthingure.com](https://www.goodthingure.com) carries per-tool pages with GitHub stars, licence terms, limitations and open issue numbers — 78 tools, 28 side-by-side comparisons, and 5 step-by-step scenarios. Every page states when it fits, when it does not, and the source it was verified against. There is also a [Chinese edition](https://www.goodthingure.com/zh/) with the same content.
 
 ## Start with a team problem
 

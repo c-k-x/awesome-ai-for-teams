@@ -16933,7 +16933,7 @@ var Server = class extends Protocol {
 };
 
 // node_modules/@modelcontextprotocol/sdk/dist/esm/server/stdio.js
-import process from "node:process";
+import process2 from "node:process";
 
 // node_modules/@modelcontextprotocol/sdk/dist/esm/shared/stdio.js
 var STDIO_DEFAULT_MAX_BUFFER_SIZE = 10 * 1024 * 1024;
@@ -16974,7 +16974,7 @@ function serializeMessage(message) {
 
 // node_modules/@modelcontextprotocol/sdk/dist/esm/server/stdio.js
 var StdioServerTransport = class {
-  constructor(_stdin = process.stdin, _stdout = process.stdout, options) {
+  constructor(_stdin = process2.stdin, _stdout = process2.stdout, options) {
     this._stdin = _stdin;
     this._stdout = _stdout;
     this._started = false;
@@ -17040,13 +17040,26 @@ var StdioServerTransport = class {
 };
 
 // src/server.js
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 var HERE = dirname(fileURLToPath(import.meta.url));
-var CATALOG = JSON.parse(
-  readFileSync(join(HERE, "..", "data", "catalog.json"), "utf8")
-);
+var CANDIDATES = [
+  join(HERE, "..", "data", "catalog.json"),
+  // src/server.js → ../data
+  join(HERE, "data", "catalog.json"),
+  // dist/server.mjs → ./data
+  join(HERE, "..", "..", "data", "catalog.json")
+  // 兜底：仓库根
+];
+var CATALOG_PATH = CANDIDATES.find((p) => existsSync(p));
+if (!CATALOG_PATH) {
+  console.error(
+    "Cannot find data/catalog.json. Looked in:\n  " + CANDIDATES.join("\n  ")
+  );
+  process.exit(1);
+}
+var CATALOG = JSON.parse(readFileSync(CATALOG_PATH, "utf8"));
 var TOOLS = CATALOG.tools;
 var COMPARISONS = CATALOG.comparisons;
 var SCENES = CATALOG.scenes;

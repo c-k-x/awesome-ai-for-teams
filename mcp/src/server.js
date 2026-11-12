@@ -13,14 +13,26 @@ import {
   CallToolRequestSchema,
   ListToolsRequestSchema,
 } from '@modelcontextprotocol/sdk/types.js';
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
+// 单文件打包后 import.meta.url 指向 dist/，源码模式指向 src/。
+// 两个布局下 catalog 的相对位置不同，按候选顺序找第一个存在的。
 const HERE = dirname(fileURLToPath(import.meta.url));
-const CATALOG = JSON.parse(
-  readFileSync(join(HERE, '..', 'data', 'catalog.json'), 'utf8')
-);
+const CANDIDATES = [
+  join(HERE, '..', 'data', 'catalog.json'),   // src/server.js → ../data
+  join(HERE, 'data', 'catalog.json'),          // dist/server.mjs → ./data
+  join(HERE, '..', '..', 'data', 'catalog.json'), // 兜底：仓库根
+];
+const CATALOG_PATH = CANDIDATES.find((p) => existsSync(p));
+if (!CATALOG_PATH) {
+  console.error(
+    'Cannot find data/catalog.json. Looked in:\n  ' + CANDIDATES.join('\n  ')
+  );
+  process.exit(1);
+}
+const CATALOG = JSON.parse(readFileSync(CATALOG_PATH, 'utf8'));
 const TOOLS = CATALOG.tools;
 const COMPARISONS = CATALOG.comparisons;
 const SCENES = CATALOG.scenes;

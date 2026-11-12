@@ -225,6 +225,7 @@
 - [DataHub](https://github.com/datahub-project/datahub) - 团队把数据责任、谱系与讨论汇成统一元数据图，为员工和智能体提供一致的可解释数据背景；DataHub Cloud 为独立托管服务。
 - [DocsGPT](https://github.com/arc53/DocsGPT) - 将团队文档和会议资料整理为可检索知识，结合 Agent、成员角色和团队范围共享控制供同事复用。
 - [Dust](https://dust.tt/) - 将公司资料和业务工具接到可共享的 Agent，让同事复用同一套问答与工作方法。
+- [Enhanciar](https://enhanciar.in/) - 跨已连接的 Slack、Gmail、Drive、Notion、Jira、Linear 和 GitHub 提问，每个回答附来源链接；起草的回复、工单和文档进入审批队列，经人确认后才执行；托管付费服务，需使用自己的模型 Key。
 - [Glean Independent Agents](https://www.glean.com/blog/introducing-independent-agents) - 结合连接的公司知识持续处理调查、反馈和跟进工作，并让负责人查看与审核结果。
 - [LibreChat](https://github.com/danny-avila/LibreChat) - 在可自托管的聊天平台中统一使用多家模型，将带工具和文件检索的助手共享给指定成员与用户组。
 - [MaxKB](https://github.com/1Panel-dev/MaxKB) - 通过文档导入、知识检索和工作流构建内部问答助手，并嵌入已有业务系统供同事使用。

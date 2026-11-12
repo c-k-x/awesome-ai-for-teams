@@ -3,6 +3,7 @@
 [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](LICENSE)
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![c-k-x/awesome-ai-for-teams MCP server](https://glama.ai/mcp/servers/c-k-x/awesome-ai-for-teams/badges/score.svg)](https://glama.ai/mcp/servers/c-k-x/awesome-ai-for-teams)
 
 English | [简体中文](README.zh-CN.md)
 

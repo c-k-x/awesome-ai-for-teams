@@ -1,0 +1,29 @@
+{
+  "name": "awesome-ai-for-teams",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MCP server for the awesome-ai-for-teams list: 78 verified AI tools with fit, limits, licence terms and open issue numbers.",
+  "license": "CC0-1.0",
+  "type": "module",
+  "bin": {
+    "awesome-ai-for-teams-mcp": "mcp/dist/server.mjs"
+  },
+  "files": [
+    "mcp/dist/server.mjs",
+    "mcp/README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c-k-x/awesome-ai-for-teams.git"
+  },
+  "homepage": "https://www.goodthingure.com/",
+  "keywords": [
+    "mcp",
+    "modelcontextprotocol",
+    "ai-tools",
+    "awesome-list"
+  ]
+}

@@ -5,6 +5,14 @@ var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __esm = (fn, res, err) => function __init() {
+  if (err) throw err[0];
+  try {
+    return fn && (res = (0, fn[__getOwnPropNames(fn)[0]])(fn = 0)), res;
+  } catch (e) {
+    throw err = [e], e;
+  }
+};
 var __commonJS = (cb, mod) => function __require() {
   try {
     return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
@@ -7252,6 +7260,4811 @@ var require_dist = __commonJS({
     module.exports = exports = formatsPlugin;
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = formatsPlugin;
+  }
+});
+
+// src/_inline-catalog.js
+var inline_catalog_exports = {};
+var init_inline_catalog = __esm({
+  "src/_inline-catalog.js"() {
+    globalThis.__INLINE_CATALOG__ = JSON.parse(`{
+ "generatedAt": "2026-11-10T21:00:00+08:00",
+ "source": "https://github.com/c-k-x/awesome-ai-for-teams",
+ "licence": "CC0-1.0",
+ "note": "Verified against each repository README, source tree and open issues. No ranking, no sponsored placement, no end-to-end testing.",
+ "tools": [
+  {
+   "id": "vibe-kanban",
+   "name": "Vibe Kanban",
+   "category": "Coding Agents & Sessions",
+   "url": "https://github.com/BloopAI/vibe-kanban",
+   "repo": "BloopAI/vibe-kanban",
+   "summary": "Plan work on a kanban board, run coding agents in workspaces with their own branch, terminal and dev server, then review the diffs in one place.",
+   "stars": 28631,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-11-09",
+   "topics": [
+    "agent",
+    "ai-agents",
+    "kanban",
+    "management",
+    "task-manager"
+   ],
+   "fitsWhen": [
+    "You want to plan with kanban issues, then hand tasks to agents in isolated workspaces",
+    "Each agent task needs its own branch, terminal and dev server so changes do not collide",
+    "You want to review diffs, leave inline comments and send feedback to the agent without leaving the UI",
+    "You switch between more than ten coding agents (Claude Code, Codex, Gemini CLI, Copilot, Amp, Cursor, OpenCode and others)"
+   ],
+   "notFor": [
+    "The project is sunsetting: the README carries a shutdown notice, so long-term work needs another home",
+    "Small single-agent edits: a terminal plus a Git branch is enough",
+    "Hosted multi-user collaboration with role management: this solves local workspace coordination"
+   ],
+   "limits": [
+    "The README states \\"Vibe Kanban is sunsetting\\"; read the shutdown announcement before adopting it for new work",
+    "Each workspace takes its own branch and terminal, so disk and branch management cost grows with task count",
+    "Agent runtimes still need configuring one by one; the tool itself supplies no model quota"
+   ],
+   "knownIssues": "#3482: logging in re-enables telemetry the user had disabled and identifies users by email; #3476: approved project decisions cannot be carried across workspaces",
+   "licenceNote": null,
+   "sources": "Verified against the README Overview and the shutdown notice at the top of the file.",
+   "page": "https://www.goodthingure.com/tools/vibe-kanban/"
+  },
+  {
+   "id": "cli-continues",
+   "name": "cli-continues",
+   "category": "Coding Agents & Sessions",
+   "url": "https://github.com/yigitkonur/cli-continues",
+   "repo": "yigitkonur/cli-continues",
+   "summary": "Pulls context out of the local sessions of 16 coding tools, writes a handoff document, and injects it into the target tool.",
+   "stars": 1596,
+   "licence": "MIT",
+   "licenceSpdx": "MIT",
+   "lastCommit": "2026-05-07",
+   "topics": [
+    "ai-coding-assistant",
+    "claude-code",
+    "cli",
+    "context-transfer",
+    "cursor",
+    "gemini-cli",
+    "github-copilot",
+    "session-management"
+   ],
+   "fitsWhen": [
+    "You hit a rate limit or want to switch tools and need the context carried over intact",
+    "You hand off between any of 16 tools including Claude Code, Codex, Copilot CLI, Gemini CLI and Cursor",
+    "You want \\"which files were read, which commands ran, what is left\\" written as a structured document for the next agent"
+   ],
+   "notFor": [
+    "Expecting it to migrate a model's internal state: it exports readable context, not a live runtime",
+    "You only need progress written into the repo: a task file such as Backlog.md is more direct",
+    "The tools you depend on change their local session format, in which case parsing can break \u2014 check versions first"
+   ],
+   "limits": [
+    "It covers 16 tools and 240 handoff paths, but each stores sessions differently (JSONL / JSON / SQLite / YAML), so a client upgrade can break parsing",
+    "You still have to judge which exported details remain true; it is not evidence on its own",
+    "The last commit was 2026-05-07, slower than comparable tools \u2014 check the current state before adopting"
+   ],
+   "knownIssues": "#84: --preset full fails on Linux/macOS with E2BIG because the argv length exceeds the limit (still open as of 2026-11)",
+   "licenceNote": null,
+   "sources": "Verified against the README \\"Supported tools\\" section, which lists 16 tools and 240 paths.",
+   "page": "https://www.goodthingure.com/tools/cli-continues/"
+  },
+  {
+   "id": "multica",
+   "name": "Multica",
+   "category": "Task Handoff",
+   "url": "https://github.com/multica-ai/multica",
+   "repo": "multica-ai/multica",
+   "summary": "Assigns issues to coding agents you already run; they claim the task, report progress, raise blockers, then hand it back for review.",
+   "stars": 55435,
+   "licence": "Apache-2.0 with additional conditions",
+   "licenceSpdx": "NOASSERTION",
+   "lastCommit": "2026-11-09",
+   "topics": [],
+   "fitsWhen": [
+    "You already have several coding agents and want to hand out work the way you would to a colleague",
+    "Agents need to claim an issue, report progress, raise blockers and leave an execution record",
+    "You want self-hosting and your existing agent CLIs, without lock-in"
+   ],
+   "notFor": [
+    "Treating \\"cancel the issue\\" as \\"stop the run\\" \u2014 this is the easiest misunderstanding to fall into",
+    "A single agent where a terminal plus Issue/PR is already enough",
+    "A fully standard open-source licence: it is source-available, Apache-2.0 with Part I additional conditions"
+   ],
+   "limits": [
+    "The README calls it \\"source-available\\"; the LICENSE is the Apache-2.0 text plus Part I additional conditions, and internal organisational use, third-party hosting and commercial embedding carry different requirements",
+    "Agent runtimes need separate configuration; self-hosting means providing the web app, API, PostgreSQL and a machine to run agents on",
+    "Execution consumes the connected machine and underlying tool quota, and returned results may contain code",
+    "Values in custom_env are stored server-side, so \\"runs locally\\" does not mean all data stays local"
+   ],
+   "knownIssues": "#10204: the self-host one-click install reports success even after the backend container has exited; #10203: importing a local SKILL.md directory straight from the CLI is not supported yet",
+   "licenceNote": "The GitHub API returns NOASSERTION; the README describes it as source-available and the LICENSE is Apache-2.0 plus Part I additional conditions.",
+   "sources": "Verified against the README \\"What is Multica?\\" section and the LICENSE text.",
+   "page": "https://www.goodthingure.com/tools/multica/"
+  },
+  {
+   "id": "mem0",
+   "name": "Mem0",
+   "category": "Memory & Retrieval",
+   "url": "https://github.com/mem0ai/mem0",
+   "repo": "mem0ai/mem0",
+   "summary": "Memory layer for AI apps: one call extracts facts, multi-signal retrieval (semantic + BM25 + entity matching).",
+   "stars": 68716,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-11-06",
+   "topics": [
+    "agentic-memory",
+    "agents",
+    "ai-agents",
+    "llm",
+    "long-term-memory",
+    "memory",
+    "memory-management",
+    "python",
+    "rag",
+    "state-management"
+   ],
+   "fitsWhen": [
+    "Your app needs to remember user preferences, session state and agent state across conversations",
+    "You will wire an SDK or a self-hosted service rather than use a finished product",
+    "You can accept append-only memory (ADD-only) and rely on retrieval ranking to surface what is currently true"
+   ],
+   "notFor": [
+    "Hand-editing individual memory entries: extraction and retrieval are automatic",
+    "Treating it as a multi-user knowledge workspace: it has no members, permissions or shared spaces",
+    "Expecting the open-source SDK to reproduce the platform benchmark numbers"
+   ],
+   "limits": [
+    "The README states the benchmark scores reflect proprietary optimisations in the managed platform; open-source SDK users \\"should expect directionally similar gains but not identical numbers\\"",
+    "The April 2026 algorithm switched to single-pass ADD-only extraction: no UPDATE or DELETE, so memories accumulate rather than get overwritten",
+    "Self-hosted and Cloud Platform differ in capabilities and quotas; check the specific version before adopting",
+    "Extraction and retrieval depend on a model, so records that are no longer true can still be recalled"
+   ],
+   "knownIssues": "#7889: inserting an existing id into Faiss adds a second vector, so search returns duplicates and delete leaves an orphan; #7879: vectors are still persisted when the SQLite history write fails",
+   "licenceNote": null,
+   "sources": "Verified against the README \\"New Memory Algorithm\\" section and the Library / Self-Hosted / Cloud comparison.",
+   "page": "https://www.goodthingure.com/tools/mem0/"
+  },
+  {
+   "id": "zep",
+   "name": "Zep",
+   "category": "Memory & Retrieval",
+   "url": "https://help.getzep.com/concepts",
+   "repo": "getzep/zep",
+   "summary": "Enterprise context layer for agents: Context Lake and Zep Agent Skills provide governed access to company knowledge.",
+   "stars": 5000,
+   "licence": "Apache-2.0 (community-edition repository)",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-11-04",
+   "topics": [
+    "ai",
+    "knowledge-graphs",
+    "language-model",
+    "llm"
+   ],
+   "fitsWhen": [
+    "You need business data unified into governed Context Graphs that agents can query",
+    "You want the tasks agents repeat to accumulate into reusable Agent Skills",
+    "You can use the Zep Cloud managed service through MCP or the official SDKs"
+   ],
+   "notFor": [
+    "Looking for a self-hostable open-source memory store: this repository is not the product, only examples and integrations",
+    "Simple cross-session preference recall, where a component such as Mem0 is lighter",
+    "The temporal knowledge graph framework itself, which is Graphiti from the same organisation"
+   ],
+   "limits": [
+    "getzep/zep is not the Zep product: the README states plainly that it contains only example code, agent harnesses, framework integrations and tools",
+    "Using Zep Cloud requires signing up at getzep.com; the official SDKs are zep-cloud for Python, TypeScript and Go",
+    "The positioning has moved from \\"memory service\\" to \\"enterprise context layer\\", split into Context Lake and Agent Skills"
+   ],
+   "knownIssues": "This repository has GitHub Issues disabled, so known problems cannot be verified from an issue list; check the documentation and repository state directly when evaluating.",
+   "licenceNote": "The repository holds Zep Cloud example and integration code, not the product itself; its Apache-2.0 licence does not describe Zep Cloud's terms.",
+   "sources": "Verified against the README sections \\"About Zep\\" and \\"About This Repository\\", which establish what the repository actually is.",
+   "page": "https://www.goodthingure.com/tools/zep/"
+  },
+  {
+   "id": "graphiti",
+   "name": "Graphiti",
+   "category": "Memory & Retrieval",
+   "url": "https://github.com/getzep/graphiti",
+   "repo": "getzep/graphiti",
+   "summary": "Builds and queries temporal context graphs for AI agents, tracking how facts change over time while keeping their provenance.",
+   "stars": 32692,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-11-09",
+   "topics": [
+    "agents",
+    "graph",
+    "llms",
+    "rag"
+   ],
+   "fitsWhen": [
+    "You need to track \\"what is true now and what was true before\\" while keeping provenance back to source data",
+    "You need incremental updates and precise historical queries without recomputing the whole graph",
+    "You need hybrid retrieval: semantic, keyword and graph traversal"
+   ],
+   "notFor": [
+    "Only needing to find document snippets by semantic similarity, where a vector store is enough",
+    "A team without the engineering capacity to run a graph database and a write pipeline",
+    "Expecting zero configuration: you supply the models and storage"
+   ],
+   "limits": [
+    "Requires a graph database and embedding models, so deployment and tuning cost more than a pure vector setup",
+    "Extraction quality depends on the model; entities and relations can be pulled wrong and need spot checks",
+    "There is a companion paper (arXiv 2501.13956), but its conclusions do not automatically hold on your dataset"
+   ],
+   "knownIssues": "#2135: the Gemini reranker misreads signed, decimal and four-digit scores; #2139: Neo4j entity saves fail when name_embedding is absent",
+   "licenceNote": null,
+   "sources": "Verified against the README \\"What is Graphiti\\" section and its notes on incremental updates and hybrid retrieval.",
+   "page": "https://www.goodthingure.com/tools/graphiti/"
+  },
+  {
+   "id": "openviking",
+   "name": "OpenViking",
+   "category": "Memory & Retrieval",
+   "url": "https://github.com/volcengine/OpenViking",
+   "repo": "volcengine/OpenViking",
+   "summary": "Open-source context database for AI agents: one filesystem for knowledge, memory and skills together.",
+   "stars": 41881,
+   "licence": "AGPL-3.0",
+   "licenceSpdx": "AGPL-3.0",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "agent-context",
+    "agent-memory",
+    "context-database",
+    "knowledge-base",
+    "memory",
+    "memory-management",
+    "vector-database"
+   ],
+   "fitsWhen": [
+    "You want knowledge, memory and skills in one context store rather than spread across several systems",
+    "You accept organising context by directory and summary, with agents going deeper only when needed",
+    "You can accept the propagation and open-source obligations of AGPL-3.0"
+   ],
+   "notFor": [
+    "Only needing flat facts such as user preferences",
+    "Commercial products or closed-source distribution that cannot accept AGPL terms",
+    "Expecting the system to decide which business facts have expired: it organises context but does not verify freshness"
+   ],
+   "limits": [
+    "AGPL-3.0 adds obligations when distributing as a network service; confirm before commercial use",
+    "Reading on demand depends on how well directories and summaries are organised, which is the team's work",
+    "The project offers one-click Railway deployment and an online demo, but production storage and backup remain yours to plan"
+   ],
+   "knownIssues": "#7317: a memory update drops schema fields that do not appear in the operation; #7322 / #7321 / #7320: time-range filters are still proposals",
+   "licenceNote": null,
+   "sources": "Verified against the README positioning as a \\"context database\\" and its feature notes.",
+   "page": "https://www.goodthingure.com/tools/openviking/"
+  },
+  {
+   "id": "basic-memory",
+   "name": "Basic Memory",
+   "category": "Memory & Retrieval",
+   "url": "https://github.com/basicmachines-co/basic-memory",
+   "repo": "basicmachines-co/basic-memory",
+   "summary": "Stores knowledge as Markdown files that humans and AI both read and write, retrieved through MCP and semantic search.",
+   "stars": 4541,
+   "licence": "AGPL-3.0",
+   "licenceSpdx": "AGPL-3.0",
+   "lastCommit": "2026-11-08",
+   "topics": [
+    "ai",
+    "claude",
+    "knowledge-management",
+    "local-first",
+    "markdown",
+    "mcp",
+    "obsidian",
+    "privacy-first",
+    "python"
+   ],
+   "fitsWhen": [
+    "You want knowledge to be locally readable Markdown that can be version-controlled",
+    "You already keep Obsidian notes and want an assistant reading and writing the same files",
+    "You need local-first, while accepting optional cloud sync"
+   ],
+   "notFor": [
+    "Several people editing the same notes in real time: that is the Teams cloud edition, not the local one",
+    "Distribution scenarios that cannot accept AGPL terms",
+    "Large-scale high-concurrency retrieval: the local index has a ceiling"
+   ],
+   "limits": [
+    "The local edition is free and open source (AGPL-3.0), but there is also a paid cloud edition and Basic Memory Teams shared workspace; check the official pricing page for the split",
+    "Two-way writes mean humans and AI change the same files, so agree on conflict handling and backups",
+    "Semantic search offers an optional cross-encoder reranker, which costs extra compute when enabled"
+   ],
+   "knownIssues": "#2044: the pybars3 dependency is affected by CVE-2026-119716; #2065: bm_write raises a vec0 constraint error when semantic search is disabled",
+   "licenceNote": "The repository is AGPL-3.0; there are also paid cloud and Teams editions, so the open-source scope is not the whole product.",
+   "sources": "Verified against the README local-first notes and its cloud / Teams pricing section.",
+   "page": "https://www.goodthingure.com/tools/basic-memory/"
+  },
+  {
+   "id": "memsearch",
+   "name": "memsearch",
+   "category": "Memory & Retrieval",
+   "url": "https://github.com/zilliztech/memsearch",
+   "repo": "zilliztech/memsearch",
+   "summary": "Cross-platform semantic memory: Markdown holds the truth, Milvus is a rebuildable shadow index, and several tools share one memory.",
+   "stars": 2848,
+   "licence": "MIT",
+   "licenceSpdx": "MIT",
+   "lastCommit": "2026-11-09",
+   "topics": [
+    "agent-memory",
+    "claude-code",
+    "codex",
+    "embeddings",
+    "hybrid-search",
+    "long-term-memory",
+    "milvus",
+    "opencode",
+    "rag",
+    "semantic-search"
+   ],
+   "fitsWhen": [
+    "You use Claude Code, Codex, DeepSeek Harness, OpenClaw and OpenCode together and need shared memory",
+    "You prefer Markdown as the memory format and want the index rebuildable at any time",
+    "You want repeated workflows distilled into installable skills"
+   ],
+   "notFor": [
+    "You do not want an external dependency such as Milvus",
+    "The team needs a permissioned shared knowledge base rather than personal memory for coding assistants",
+    "Expecting zero configuration: embedding and an index service must be set up"
+   ],
+   "limits": [
+    "Markdown is the source of truth and Milvus is derived; a corrupted index can be rebuilt, but a rebuild procedure is needed",
+    "It reuses memory across coding assistants and does not cover multi-user permissions or auditing",
+    "The project is young, so multi-tool plugins may change as clients upgrade"
+   ],
+   "knownIssues": "#838: the summarizer timeout is hardcoded to 30 seconds and opts.summarizeTimeoutMs never takes effect; #828: the index loads the embedding model even when nothing needs embedding",
+   "licenceNote": null,
+   "sources": "Verified against the README \\"Why memsearch\\" section and its Skills from Memory notes.",
+   "page": "https://www.goodthingure.com/tools/memsearch/"
+  },
+  {
+   "id": "skillshare",
+   "name": "skillshare",
+   "category": "Skills & Rules",
+   "url": "https://github.com/runkids/skillshare",
+   "repo": "runkids/skillshare",
+   "summary": "Manage skills, agents, rules, MCP connections and hooks in one place, then sync them to Claude Code, Codex, Pi, OpenCode and others.",
+   "stars": 2997,
+   "licence": "MIT",
+   "licenceSpdx": "MIT",
+   "lastCommit": "2026-11-09",
+   "topics": [
+    "ai-agents",
+    "claude-code",
+    "cli",
+    "codex",
+    "mcp",
+    "opencode",
+    "skills",
+    "skills-manager",
+    "team-collaboration"
+   ],
+   "fitsWhen": [
+    "The team uses several AI coding tools and wants to maintain rules and skills once",
+    "You want to audit skills before distributing them and choose per tool what each receives",
+    "You want project resources under \`.skillshare/\` to travel with the code, so a new member is one command away"
+   ],
+   "notFor": [
+    "One person on one client, where copying directories by hand is enough",
+    "Expecting it to sync running task state: it syncs configuration and skill files only",
+    "Organisation-level approval and RBAC, which needs a registry such as SkillHub"
+   ],
+   "limits": [
+    "Each client has its own directory layout and format, so adding a tool means maintaining a mapping",
+    "The web dashboard only listens on localhost or trusted addresses; behind a reverse proxy you must set --trusted-origin explicitly",
+    "A successful sync does not mean members see it: the client may need a new session"
+   ],
+   "knownIssues": "#800: tracked repositories miss hand-written .agents/skills entries; #802: MCP contract security is still under discussion and there is no signed baseline yet",
+   "licenceNote": null,
+   "sources": "Verified against the README \\"Why skillshare\\" section and the v0.30.0 security notes.",
+   "page": "https://www.goodthingure.com/tools/skillshare/"
+  },
+  {
+   "id": "teamai",
+   "name": "TeamAI CLI",
+   "category": "Skills & Rules",
+   "url": "https://github.com/Tencent/teamai-cli",
+   "repo": "Tencent/teamai-cli",
+   "summary": "Manages team skills, rules, agents, learnings, models and MCP in a Git repository, with resources syncing automatically once a member initialises.",
+   "stars": 5808,
+   "licence": "MIT",
+   "licenceSpdx": "NOASSERTION",
+   "lastCommit": "2026-11-10",
+   "topics": [],
+   "fitsWhen": [
+    "You want the team's execution conventions (skills / rules / culture / agents / hooks / MCP / workflows / env / models) in a single Git repository",
+    "The team spans several clients (Claude Code, Codex, Cursor, Copilot CLI, OpenCode and others) and needs one configuration everywhere",
+    "You have an admin maintaining the repository, with members pulling the latest resources after initialising"
+   ],
+   "notFor": [
+    "Nobody maintains the shared repository: unmaintained content decays and gets distributed anyway",
+    "Expecting the tool to validate skill quality: it distributes, it does not judge",
+    "Full feature coverage on every client: some combinations are marked unsupported in the capability table"
+   ],
+   "limits": [
+    "The README capability table shows not every client supports all nine resource types (Cursor and Copilot CLI, for example, do not support models)",
+    "Team Context and Team Improvement are still marked beta",
+    "The GitHub API returns NOASSERTION while the LICENSE file states MIT",
+    "The repository sets no GitHub topics, which hurts community discovery"
+   ],
+   "knownIssues": "#1812: on Windows, hook-dispatch leaves %TEMP% json payload files behind; #1808: uninstall leaves files and directories created by init and pull",
+   "licenceNote": "The GitHub API returns NOASSERTION; the LICENSE file states \\"licensed under MIT\\" with no additional restrictions.",
+   "sources": "Verified against the README capability table of 17+ clients against nine resource types, including the \u2713\xB9 / \u2713\xB2 / \u2713\xB3 footnote differences.",
+   "page": "https://www.goodthingure.com/tools/teamai/"
+  },
+  {
+   "id": "skillhub",
+   "name": "SkillHub",
+   "category": "Skills & Rules",
+   "url": "https://github.com/iflytek/skillhub",
+   "repo": "iflytek/skillhub",
+   "summary": "Self-hosted enterprise skill registry: publish, discover and manage reusable skill packages across an organisation.",
+   "stars": 5382,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "agent-framework",
+    "ai-governance",
+    "ai-infrastructure",
+    "audit-log",
+    "enterprise-ai",
+    "rbac",
+    "skill-hub",
+    "skill-management",
+    "skill-registry",
+    "skills",
+    "version-control"
+   ],
+   "fitsWhen": [
+    "You need a private registry behind the firewall so skills stay on your own infrastructure",
+    "You need namespace-level members and roles (Owner / Admin / Member) plus publishing policies",
+    "You need semantic versions, beta/stable tags, full-text search and download counts",
+    "You need an audit log of governance actions"
+   ],
+   "notFor": [
+    "A team of three or five, where namespaces and promotion flows are extra overhead",
+    "Only syncing skill files to local clients, which a tool such as skillshare does more directly",
+    "A team unwilling to maintain a self-hosted service"
+   ],
+   "limits": [
+    "Governance has two tiers: team admins review inside their namespace, platform admins gate promotion to the global scope",
+    "Self-hosting means maintaining the service and upgrades; storage can be the local filesystem or S3 / MinIO",
+    "The native CLI API is the primary supported path, and the ClawHub-style client compatibility layer is still expanding",
+    "Built on Java 21 and React 19, with container images published through GHCR"
+   ],
+   "knownIssues": "#1049: a skill:publish token cannot currently be limited to \\"submit for review only\\"; #1068: review-free publishing for TEAM namespaces is still a proposal",
+   "licenceNote": null,
+   "sources": "Verified against the governance, namespace and CLI notes in the README \\"Highlights\\" section.",
+   "page": "https://www.goodthingure.com/tools/skillhub/"
+  },
+  {
+   "id": "tencentdb-agent-memory",
+   "name": "TencentDB Agent Memory",
+   "category": "Skills & Rules",
+   "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+   "repo": "TencentCloud/TencentDB-Agent-Memory",
+   "summary": "Team-level memory hub: one proxy lets several agents share a single memory service, with no plugin, hook or MCP required.",
+   "stars": 30716,
+   "licence": "MIT",
+   "licenceSpdx": "NOASSERTION",
+   "lastCommit": "2026-11-09",
+   "topics": [
+    "agent",
+    "embedding",
+    "llm",
+    "local-first",
+    "long-term-memory",
+    "memory",
+    "vector-search"
+   ],
+   "fitsWhen": [
+    "Several agents (Claude Code, Codex, CodeBuddy, Hermes, OpenClaw and others) should share one memory",
+    "You want no plugins or protocol changes: point the agent's base URL at the proxy",
+    "You need a team panel to inspect and manage stored memories"
+   ],
+   "notFor": [
+    "Only needing simple cross-session preference recall, where a component such as Mem0 is lighter",
+    "A team that cannot accept having session content captured (members must be told the scope)",
+    "Expecting it to work out of the box: two sets of LLM parameters and three services must be started"
+   ],
+   "limits": [
+    "It starts three services at once (memory-core + memory-hub + proxy), so deployment and operations cost more than a plain library",
+    "The MongoDB storage backend is marked experimental and off by default",
+    "Team Memory is in Beta, so interfaces and behaviour may change",
+    "Upgrading from older versions (v1.x / v0.x) requires a dedicated data migration tool"
+   ],
+   "knownIssues": "#1973: capture.l0l1RetentionDays=1 never cleans anything up; #1962: CJK tokenisation builds bigrams across punctuation boundaries",
+   "licenceNote": "The GitHub API returns NOASSERTION; the LICENSE file states \\"licensed under MIT\\".",
+   "sources": "Verified against the README installation notes, the zero-code proxy integration and the experimental MongoDB status.",
+   "page": "https://www.goodthingure.com/tools/tencentdb-agent-memory/"
+  },
+  {
+   "id": "mex",
+   "name": "MEX",
+   "category": "Skills & Rules",
+   "url": "https://github.com/mex-memory/mex",
+   "repo": "mex-memory/mex",
+   "summary": "Keeps project memory as Markdown in \`.mex/\` that travels with Git: people read it in a local hub, agents read and write it through the CLI and skills.",
+   "stars": 1795,
+   "licence": "MIT",
+   "licenceSpdx": "MIT",
+   "lastCommit": "2026-11-04",
+   "topics": [
+    "agent-skill",
+    "claude-code",
+    "code-graph",
+    "codex",
+    "context-management",
+    "cursor",
+    "knowledge-graph",
+    "mcp-server",
+    "memory-management",
+    "project-memory",
+    "tree-sitter",
+    "typescript"
+   ],
+   "fitsWhen": [
+    "Architecture decisions, conventions and handoff notes should travel with the code rather than stay in chat",
+    "You want agents to read project memory and answer \\"why was this done this way\\"",
+    "Handoff records should be structured: progress, decisions, blockers, evidence, next steps"
+   ],
+   "notFor": [
+    "Every client needs full skill support: Cursor, Windsurf, GitHub Copilot and OpenCode currently receive an instruction template only, with no official mex skill commands",
+    "A team wiki with real-time collaborative editing",
+    "Expecting accurate architecture notes to appear without human maintenance"
+   ],
+   "limits": [
+    "The README capability table shows that in 0.8 only Claude Code and Codex get the full skills (/mex-inbox, /mex-relay, /mex-statechart); other clients get an instruction anchor only",
+    "Requires Node.js >= 22.5",
+    "Records go stale as the code evolves and need a place in routine maintenance"
+   ],
+   "knownIssues": "#320: mex graph refresh reports a numeric overflow when a source file changes; #282: every graph read re-walks the whole repository to prove freshness",
+   "licenceNote": null,
+   "sources": "Verified against the README \\"Works with\\" capability table, which shows how far each client is supported.",
+   "page": "https://www.goodthingure.com/tools/mex/"
+  },
+  {
+   "id": "codeg",
+   "name": "Codeg",
+   "category": "Coding Agents & Sessions",
+   "url": "https://github.com/spacering-net/codeg",
+   "repo": "spacering-net/codeg",
+   "summary": "Multi-agent coding workspace: renders every CLI agent session as the same structured conversation and lets you hand one agent's work to another.",
+   "stars": 4413,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "acp",
+    "agent",
+    "claude-code",
+    "codex",
+    "gui",
+    "multi-agent",
+    "opencode",
+    "terminal",
+    "vibe-coding",
+    "worktrees"
+   ],
+   "fitsWhen": [
+    "Around 20 agents are built in and any ACP agent can join, all rendered as structured conversation rather than terminal output",
+    "You need to import, search and resume sessions stored on disk, then hand them to a different agent",
+    "You want to delegate across agents with \`@\`, or queue to-dos that run unattended in their own worktrees",
+    "You work across desktop, a self-hosted server, Docker, iOS, Android and Telegram / Lark / WeChat"
+   ],
+   "notFor": [
+    "One agent in one terminal, where a workspace and cross-agent orchestration buy nothing",
+    "You cannot use Docker or a self-hosted server and do not want a desktop install",
+    "Expecting it to replace each agent's own authentication and model quota"
+   ],
+   "limits": [
+    "The repository was renamed from xintaofei/codeg to spacering-net/codeg; the old address redirects, so bookmarks need updating",
+    "Cross-agent handoff depends on importing session files from disk, so format changes can affect it",
+    "Each agent still needs installing and signing in separately; Codeg supplies no model access",
+    "Remote channels (Telegram / Lark / WeChat) need extra configuration and permissions"
+   ],
+   "knownIssues": "#1105: codeg-mcp tools are lost after forking a Codex session, so delegation cannot continue; #1113: some UI operations lag noticeably during long runs; #1108: a request to decouple Codeg server hosting from ACP agent execution and the workspace filesystem",
+   "licenceNote": null,
+   "sources": "Verified against the README and the actual modules under src-tauri/src/acp: agent_mentions.rs, agent_process.rs and agent_session.rs implement @ delegation, process management and sessions.",
+   "page": "https://www.goodthingure.com/tools/codeg/"
+  },
+  {
+   "id": "mco",
+   "name": "MCO",
+   "category": "Coding Agents & Sessions",
+   "url": "https://github.com/mco-org/mco",
+   "repo": "mco-org/mco",
+   "summary": "CLI-first orchestration layer: send one task to several agents in parallel and keep each raw answer for a human to compare.",
+   "stars": 554,
+   "licence": "MIT",
+   "licenceSpdx": "MIT",
+   "lastCommit": "2026-11-06",
+   "topics": [
+    "ai-agents",
+    "claude",
+    "cli",
+    "code-review",
+    "codex",
+    "copilot",
+    "cursor",
+    "multi-agent",
+    "opencode",
+    "orchestration",
+    "qwen"
+   ],
+   "fitsWhen": [
+    "Several agents should answer the same task independently so you can compare where they diverge",
+    "Code review, implementation, architecture analysis or CI checks where one perspective is not enough",
+    "Calling it from a terminal or from another coding agent (Claude Code, Codex, Cursor, Copilot, Pi, OpenClaw)",
+    "Dry-run, live streaming and JSONL events for scripted use"
+   ],
+   "notFor": [
+    "Expecting the tool to reach a conclusion: MCO explicitly does not turn natural-language output into findings, severity, confidence or consensus",
+    "A single agent with nothing to compare",
+    "A graphical workbench with persistent agent identity, which is Hive's positioning"
+   ],
+   "limits": [
+    "The README states MCO does not infer a provider team; without --providers or --agent you need a saved default configured in advance",
+    "Every provider CLI still needs installing, authenticating and managing its own model access and sandbox",
+    "Answers are written verbatim into .md files (source: InvocationArtifactWriter.append) with no findings / severity / consensus fields, so comparison and decisions stay with a human",
+    "Python 3.10+, distributed through npm"
+   ],
+   "knownIssues": "#135: an Anthropic API key is exposed under docs/probes (security); several other provider-related issues are not listed individually here",
+   "licenceNote": null,
+   "sources": "Verified against the README and runtime/invocation_artifacts.py: the answer is written as raw text into Markdown with no structured verdict fields.",
+   "page": "https://www.goodthingure.com/tools/mco/"
+  },
+  {
+   "id": "hive",
+   "name": "Hive",
+   "category": "Coding Agents & Sessions",
+   "url": "https://github.com/tt-a1i/hive",
+   "repo": "tt-a1i/hive",
+   "summary": "Local-first multi-agent workspace: an orchestrator plans and delegates while workers run as real PTY processes and report back.",
+   "stars": 585,
+   "licence": "BUSL-1.1",
+   "licenceSpdx": "BUSL-1.1",
+   "lastCommit": "2026-11-06",
+   "topics": [
+    "agent-orchestration",
+    "ai-agents",
+    "claude-code",
+    "cli",
+    "codex",
+    "coding-agent",
+    "local-first",
+    "multi-agent",
+    "pty",
+    "typescript"
+   ],
+   "fitsWhen": [
+    "One agent is not enough, but a pile of terminal windows is not a workflow either",
+    "You want an orchestrator that plans and delegates while workers implement, review, test and research",
+    "All workers should be real PTY processes on your machine rather than wrapped pseudo-sessions",
+    "You accept a browser workbench with the service bound to 127.0.0.1"
+   ],
+   "notFor": [
+    "Cannot accept BUSL-1.1: it became BSL from 0.6.0-alpha.8 and only converts back to Apache-2.0 on 2030-05-16",
+    "Cloud multi-user collaboration or remote execution, since it emphasises local-first",
+    "A single agent, where the orchestration layer buys nothing"
+   ],
+   "limits": [
+    "Licensed under BUSL-1.1; the additional use grant allows internal production use, embedding into a non-competitive product and non-commercial forks, but forbids hosting or embedding it for third parties to compete with its multi-CLI-agent orchestration product",
+    "Versions before 0.6.0-alpha.8 were Apache-2.0, so upgrading changes the licence \u2014 watch the version boundary",
+    "gateway/ is a separate remote-access gateway (Cloudflare Workers + D1) and is not in the npm package; self-hosting means replacing its routes and OAuth bindings",
+    "Windows support rests on ConPTY (the source includes conpty-startup.ts) and is marked best-effort",
+    "The main branch can contain unreleased work; npm installs the most recent release"
+   ],
+   "knownIssues": "#50: reliability validation of durable messaging and delegation is still under way; #54: switching the primary model has known problems",
+   "licenceNote": "Apache-2.0 up to and including 0.6.0-alpha.7; BUSL-1.1 from 0.6.0-alpha.8, converting to Apache-2.0 on 2030-05-16. The additional grant allows internal production use, embedding into a non-competitive product and non-commercial forks; hosting or embedding it for third parties to compete with the Licensor's multi-CLI-agent orchestration product is forbidden.",
+   "sources": "Verified against the README, the LICENSE.BSL text, and src/server (pty.ts, conpty-startup.ts, orchestrator-launch.ts) together with gateway/wrangler.toml.",
+   "page": "https://www.goodthingure.com/tools/hive/"
+  },
+  {
+   "id": "golutra",
+   "name": "Golutra",
+   "category": "Coding Agents & Sessions",
+   "url": "https://github.com/golutra/golutra",
+   "repo": "golutra/golutra",
+   "summary": "Desktop orchestration tool: keep the CLIs you know and organise several agents into an \\"AI team\\" that works in parallel.",
+   "stars": 3866,
+   "licence": "BUSL-1.1",
+   "licenceSpdx": "BUSL-1.1",
+   "lastCommit": "2026-09-28",
+   "topics": [
+    "agent",
+    "claude-code",
+    "codex-cli",
+    "desktop-app",
+    "gemini",
+    "multi-agent",
+    "openclaw",
+    "opencode",
+    "orchestration",
+    "workflows"
+   ],
+   "fitsWhen": [
+    "You do not want to change your existing CLIs (Claude Code, Gemini CLI, Codex CLI, OpenCode, Qwen Code, OpenClaw or any CLI)",
+    "You need a desktop app (Windows / macOS / Linux) to organise several agents into a parallel team",
+    "You want workflows and long-running memory rather than starting from zero each time"
+   ],
+   "notFor": [
+    "Cannot accept the commercial and distribution limits of BUSL-1.1",
+    "Pure command-line or server-side operation: it is a desktop application built on Tauri",
+    "Frequent updates: the last commit was 2026-09-28, slower than comparable tools"
+   ],
+   "limits": [
+    "Licensed under BUSL-1.1 (licensor: seekskyworld); read the full terms before adopting",
+    "The README is mainly Chinese, with relatively little English material",
+    "Updates are infrequent, so check recent issues and releases before adopting",
+    "A desktop application means each team member installs it separately"
+   ],
+   "knownIssues": "The last commit was 2026-09-28, more than six weeks ago; check the issue and release state yourself before adopting.",
+   "licenceNote": "The LICENSE is Business Source License 1.1, with seekskyworld as the Licensor.",
+   "sources": "Verified against the CLI list in the README, the platform badges and the licence file.",
+   "page": "https://www.goodthingure.com/tools/golutra/"
+  },
+  {
+   "id": "herdr",
+   "name": "Herdr",
+   "category": "Coding Agents & Sessions",
+   "url": "https://github.com/herdrdev/herdr",
+   "repo": "herdrdev/herdr",
+   "summary": "Runtime for agent terminals in a single Rust binary: closing the client does not stop the work, and a restart restores the layout and resumes sessions where possible.",
+   "stars": 49806,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-11-07",
+   "topics": [
+    "agent-orchestration",
+    "ai-agents",
+    "cli",
+    "codex",
+    "coding-agents",
+    "multiplexer",
+    "rust",
+    "terminal",
+    "terminal-multiplexer",
+    "tmux",
+    "tui",
+    "workspace-manager"
+   ],
+   "fitsWhen": [
+    "Agents in your terminals should keep working after you close the client or lose the SSH connection",
+    "You want local and several SSH machines in one window, each reconnecting independently",
+    "You want to see at a glance which agent is working, blocked or idle instead of digging through terminals",
+    "Agents should drive each other through the CLI and socket API and wait until another agent is genuinely blocked"
+   ],
+   "notFor": [
+    "Keeping original processes alive across a machine restart: the README states plainly that the original processes do not survive; only the saved layout is restored and supported sessions are resumed where possible",
+    "One agent on one terminal, where a terminal multiplexer buys nothing",
+    "A graphical interface: it is a TUI driven by keyboard and mouse"
+   ],
+   "limits": [
+    "After a machine or server restart the original processes do not survive; only the saved layout is restored, using the resume command each agent reports itself (source: src/agent_resume.rs)",
+    "Resume arguments have caps: 512 bytes for the session id, 4096 for the path, at most 64 arguments (source constants)",
+    "Windows has a separate endpoint-protected build within the beta scope",
+    "It neither wraps nor replaces the agents: it owns their terminals, and agent behaviour remains the agent's own",
+    "The plugin ecosystem is still early"
+   ],
+   "knownIssues": "#5909: Claude Code restores the conversation from before /branch after a restart; #5905: panes running outside the user launchd session cause system DNS failures",
+   "licenceNote": null,
+   "sources": "Verified against the README and src/agent_resume.rs, where the resume command is reported by the agent itself and carries explicit length and argument limits.",
+   "page": "https://www.goodthingure.com/tools/herdr/"
+  },
+  {
+   "id": "backlog",
+   "name": "Backlog.md",
+   "category": "Task Handoff",
+   "url": "https://github.com/MrLesk/Backlog.md",
+   "repo": "MrLesk/Backlog.md",
+   "summary": "Writes tasks, acceptance criteria and implementation plans as Markdown in the repository, so agents and people work from the same record through the CLI, board and MCP.",
+   "stars": 7333,
+   "licence": "MIT",
+   "licenceSpdx": "MIT",
+   "lastCommit": "2026-11-09",
+   "topics": [
+    "agent",
+    "agentic-ai",
+    "management",
+    "markdown",
+    "project",
+    "task-manager",
+    "tasks"
+   ],
+   "fitsWhen": [
+    "You want to review the task spec \u2014 description, acceptance criteria, milestones \u2014 before any code is written",
+    "You want the agent to research the codebase and write its implementation plan for approval first",
+    "You accept \\"one task = one context window = one PR\\", keeping diffs at a size a human can actually read",
+    "Completed tasks should remain in Git as a permanent record for later people and agents"
+   ],
+   "notFor": [
+    "Real-time collaborative boards with a permission system: these are files in the repository, not a SaaS",
+    "Complex workflow automation, Gantt charts or resource scheduling, which are beyond its positioning",
+    "Very long titles or special characters need care because of filename limits (see Known issues)"
+   ],
+   "limits": [
+    "Tasks are stored as Markdown files, so filenames are subject to operating-system length limits",
+    "Both MCP and CLI rely on the team maintaining task content; the tool does not judge whether a task makes sense",
+    "It records tasks and plans; it does not migrate a running session",
+    "The README says almost all of the project's own code was written by AI through Backlog.md \u2014 that is self-validation, not a third-party assessment"
+   ],
+   "knownIssues": "#1186: task edit --title changes the frontmatter but the filename keeps the old title slug; #1184: task create fails with ENAMETOOLONG when the title is too long; #1185: a consumer that closes stdout early makes the CLI exit with a crash dump",
+   "licenceNote": null,
+   "sources": "Verified against the README's description of the three review checkpoints and the actual structure of src/file-system/operations.ts and src/mcp/ (server, tools, resources).",
+   "page": "https://www.goodthingure.com/tools/backlog/"
+  },
+  {
+   "id": "markplane",
+   "name": "Markplane",
+   "category": "Task Handoff",
+   "url": "https://github.com/zerowand01/markplane",
+   "repo": "zerowand01/markplane",
+   "summary": "Stores tasks, epics and plans as Markdown inside the repository and compresses them into a roughly 1000-token project summary for agents to read.",
+   "stars": 193,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-11-07",
+   "topics": [
+    "ai-native",
+    "claude-code",
+    "cli",
+    "cursor",
+    "git",
+    "markdown",
+    "mcp",
+    "mcp-server",
+    "project-management",
+    "task-management"
+   ],
+   "fitsWhen": [
+    "Project state should be versioned with the code, so you can grep tasks and git blame status changes",
+    "Agents should load a roughly 1000-token project summary rather than a whole document",
+    "No database or SaaS: a single binary and no infrastructure",
+    "Agents should manage tasks over MCP even when there is no graphical interface"
+   ],
+   "notFor": [
+    "Mature large-scale project management: the project is very new, has few issues and is still filling in features",
+    "Multi-user permissions and auditing, since it is a file model inside the repository",
+    "Two-way sync with an existing Jira or Linear"
+   ],
+   "limits": [
+    "The project is small (193 stars, a single open issue), so maturity and community support are limited",
+    "Summary compression depends on generation logic; with many tasks the 1000-token target may need rethinking",
+    "Markdown files are the data, so conflicts are handled by Git rather than database transactions",
+    "As a single binary, a team deploying together installs it per machine"
+   ],
+   "knownIssues": "The repository has only one open issue (a README demo asset), so there is very little feedback to learn from \u2014 the project is still early.",
+   "licenceNote": null,
+   "sources": "Verified against the README's .context summary notes, the comment on line 14 of crates/markplane-core/src/context.rs (\\"Generate .context/summary.md (~1000 tokens target)\\"), and the .markplane directory layout.",
+   "page": "https://www.goodthingure.com/tools/markplane/"
+  },
+  {
+   "id": "its-a-plan",
+   "name": "It's a Plan",
+   "category": "Task Handoff",
+   "url": "https://github.com/croffasia/itsaplan",
+   "repo": "croffasia/itsaplan",
+   "summary": "Self-hosted full issue tracker where agents hold roles, permissions and assignee slots and work on the same board as people.",
+   "stars": 2252,
+   "licence": "AGPL-3.0",
+   "licenceSpdx": "AGPL-3.0",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "agentic",
+    "agile",
+    "ai-agents",
+    "issue-tracker",
+    "jira-alternative",
+    "kanban",
+    "linear-alternative",
+    "project-management",
+    "roadmap",
+    "self-hosted",
+    "sprint-planning",
+    "team-collaboration"
+   ],
+   "fitsWhen": [
+    "A self-hosted issue tracker that can replace Linear / Jira / Asana without per-seat fees",
+    "Agents should have roles, permissions and assignee slots and take issues like colleagues",
+    "You need REST API, webhooks and MCP to connect your own systems",
+    "You can accept the propagation obligations of AGPL-3.0"
+   ],
+   "notFor": [
+    "Commercial closed-source distribution that cannot accept AGPL-3.0",
+    "A stable release: the README states there will be breaking changes before the first stable version",
+    "Lightweight task notes only: this is a full project management platform and correspondingly heavy"
+   ],
+   "limits": [
+    "AGPL-3.0 adds obligations when distributing over a network; confirm before commercial use",
+    "The README states \\"Expect breaking changes before the first stable release\\" \u2014 read the change notes before upgrading",
+    "Self-hosting needs your own database and API keys, so operations cost more than a single-binary tool",
+    "Open issues are mostly feature requests, which shows how fast it is still iterating"
+   ],
+   "knownIssues": "#843: PR review records should be written back to the issue and handed to the agent that opened the PR; #838: Gitea pull request support is still a proposal",
+   "licenceNote": "AGPL-3.0: providing a modified version as a network service carries source-availability obligations.",
+   "sources": "Verified against the README positioning, the feature table and the \\"breaking changes\\" note, together with the topics and issue state.",
+   "page": "https://www.goodthingure.com/tools/its-a-plan/"
+  },
+  {
+   "id": "agor",
+   "name": "Agor",
+   "category": "Shared Collaboration Spaces",
+   "url": "https://github.com/preset-io/agor",
+   "repo": "preset-io/agor",
+   "summary": "Puts the team and their agents together on a spatial board, with every agent running on its own git branch and dev environment.",
+   "stars": 1486,
+   "licence": "BUSL-1.1",
+   "licenceSpdx": "BUSL-1.1",
+   "lastCommit": "2026-11-09",
+   "topics": [
+    "agent-orchestration",
+    "ai-agents",
+    "multi-agent",
+    "multiplayer",
+    "real-time-collaboration",
+    "git-worktree",
+    "canvas",
+    "mcp"
+   ],
+   "fitsWhen": [
+    "You want the team and each member's agents on one shared spatial board where each can see the others' work",
+    "Each agent needs its own git branch, dev environment and conversation history",
+    "You want to keep using the Claude Code, Codex, Gemini, Copilot, Cursor and OpenCode installs you already have instead of switching models",
+    "You can start with an npm install for yourself and invite the team later"
+   ],
+   "notFor": [
+    "You cannot accept BUSL-1.1: the README and LICENSE are both BSL 1.1",
+    "One person with one agent: branch isolation and a spatial board buy you nothing",
+    "An out-of-the-box multi-user account system: Agor's collaboration sits on top of a self-hosted deployment"
+   ],
+   "limits": [
+    "Licensed under BUSL-1.1 (source-available, not standard open source); commercial and redistribution terms need checking line by line",
+    "Agor ships no model of its own and drives the CLI/SDK you already run, so each agent's auth and quota stay yours to supply",
+    "Deployment and runtime configuration are yours to maintain; Agor Cloud is still in Open Beta",
+    "Inline editing in the knowledge base has a known issue where changes are lost (see Known issues)"
+   ],
+   "knownIssues": "#3232: inline editing of knowledge base documents silently drops or partially saves changes; #3212: the GitHub Gateway has no retry on final reply delivery, so a comment can stay stuck on Processing forever",
+   "licenceNote": "BUSL-1.1, a source-available licence; the README states plainly that Agor is \\"source-available, not open source, before the Change Date\\".",
+   "sources": "Verified against the README's \\"Multiplayer AI\\" positioning and the actual adapter packages under packages/: agor-claude, agor-codex, agor-copilot, agor-cursor and agor-gemini.",
+   "page": "https://www.goodthingure.com/tools/agor/"
+  },
+  {
+   "id": "openwebui",
+   "name": "Open WebUI",
+   "category": "Shared Collaboration Spaces",
+   "url": "https://github.com/open-webui/open-webui",
+   "repo": "open-webui/open-webui",
+   "summary": "Self-hosted AI interface: connect models and knowledge bases, with members collaborating through shared channels and notes.",
+   "stars": 158248,
+   "licence": "Open WebUI License (with a branding clause)",
+   "licenceSpdx": "NOASSERTION",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "ai",
+    "llm",
+    "llm-ui",
+    "llm-webui",
+    "mcp",
+    "ollama",
+    "rag",
+    "self-hosted",
+    "openai",
+    "webui"
+   ],
+   "fitsWhen": [
+    "The team needs one self-hosted AI entry point connected to local or cloud models",
+    "You need shared channels, notes, knowledge bases and tool configuration, plus user groups and permissions",
+    "You want to run fully offline, or reach several providers through an OpenAI-compatible API",
+    "You can accept the branding clause of the Open WebUI License"
+   ],
+   "notFor": [
+    "Removing or replacing \\"Open WebUI\\" branding in your own deployment: clause 4 restricts this strictly",
+    "More than 50 end users and a rebrand: written permission or an enterprise licence is required first",
+    "An officially supported multi-tenant SaaS: this is a self-hosted product"
+   ],
+   "limits": [
+    "The licence is not a standard SPDX open-source licence: clause 4 forbids removing or altering Open WebUI branding unless end users stay under 50 within any rolling 30 days, written permission is granted, or an enterprise licence is held",
+    "The GitHub API cannot identify this licence and returns NOASSERTION, so automated tooling may misread it as unlicensed",
+    "Models and access permissions are yours to configure, and the service is yours to maintain",
+    "Some historical material carries a different licence; see the repository LICENSE_HISTORY",
+    "Side chat and attachment passing have known issues (see Known issues)"
+   ],
+   "knownIssues": "#34002: the side chat tab shows the parent conversation after a reload and the copied context boundary is not persisted; #33992: images attached in an agent chat never reach the agent",
+   "licenceNote": "Open WebUI License (not standard open source): redistribution and modification are allowed, but clause 4 forbids removing or altering the branding unless one of the three conditions holds \u2014 under 50 users, written permission, or an enterprise licence.",
+   "sources": "Verified against the README self-hosting and offline notes and the clause 4 branding text in the LICENSE file.",
+   "page": "https://www.goodthingure.com/tools/openwebui/"
+  },
+  {
+   "id": "buzz",
+   "name": "Buzz",
+   "category": "Shared Collaboration Spaces",
+   "url": "https://github.com/block/buzz",
+   "repo": "block/buzz",
+   "summary": "Self-hosted Nostr relay workspace: people and agents share the same rooms, and every message is part of one signed event log.",
+   "stars": 36825,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-11-10",
+   "topics": [],
+   "fitsWhen": [
+    "The team and their agents should share the same rooms with a single audit trail for every action",
+    "Signed identity matters: people and processes use the same identity model and event log",
+    "You need a self-hosted relay and want to own the data",
+    "Agents should be able to open repos, send patches, review code, run workflows, edit canvases and orchestrate other agents"
+   ],
+   "notFor": [
+    "Needing the latest version: Buzz 1.0 has moved to block/buzz-app while this repository is 0.X",
+    "Stable plugin integrations: the 1.0 plugin API is still a preview and updates can break plugins",
+    "Plain chat only, where the Nostr relay and signed event model add unnecessary complexity"
+   ],
+   "limits": [
+    "The README states plainly that Buzz 1.0 lives at block/buzz-app; this repository is the 0.X line, still supported but no longer the main line",
+    "The plugin API is a preview, so upgrading may break existing plugins",
+    "In a single-relay deployment one URL maps to one community; multi-tenancy means the hosting operator splits by domain",
+    "The repository sets no GitHub topics, which hurts community discovery"
+   ],
+   "knownIssues": "#9299: signed receipts for each billable turn and paid job are still under design discussion; #9261: when an adapter rejects initialize, the desktop app shows Claude Code as Ready with an empty model dropdown",
+   "licenceNote": null,
+   "sources": "Verified against the README notes on the Nostr relay, communities and URL authority, together with the migration notice stating that Buzz 1.0 is at block/buzz-app.",
+   "page": "https://www.goodthingure.com/tools/buzz/"
+  },
+  {
+   "id": "rowboat",
+   "name": "Rowboat",
+   "category": "Shared Collaboration Spaces",
+   "url": "https://github.com/rowboatlabs/rowboat",
+   "repo": "rowboatlabs/rowboat",
+   "summary": "Personal AI assistant workbench: folds notes, whiteboards, email and code into a knowledge graph that keeps updating.",
+   "stars": 18150,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-11-09",
+   "topics": [
+    "agents",
+    "ai-agents",
+    "multiagent",
+    "orchestration",
+    "productivity",
+    "claude-code",
+    "generative-ai",
+    "llm"
+   ],
+   "fitsWhen": [
+    "Email, notes, browser sessions and code should all feed one personal knowledge graph",
+    "You need a workbench that works solo and can also be shared with a team",
+    "You need a macOS / Windows / Linux desktop application",
+    "You accept the product direction of a YC S24 company, including a commercial edition"
+   ],
+   "notFor": [
+    "A pure team collaboration space: it is positioned as a personal assistant first, with team features layered on top",
+    "Teams that cannot accept path-traversal class bugs in the codebase (see Known issues); assess first if security-sensitive",
+    "Server-only self-hosting: it is primarily a desktop application"
+   ],
+   "limits": [
+    "The README describes it as a \\"personal AI assistant\\"; team collaboration is an add-on, not the core positioning",
+    "The codebase has known bugs around path traversal and concurrency, so security-sensitive deployments should assess first",
+    "There are commercial editions and desktop distribution; the boundary between open-source and commercial capability needs the official notes",
+    "The knowledge graph index grows with material, so long-term use needs a plan for storage and rebuilds"
+   ],
+   "knownIssues": "#1340: a background task slug can traverse outside the task directory (path traversal); #1339: concurrent removals can overwrite files already in the trash; #1330: concurrent cipher initialisation loses the durable token key",
+   "licenceNote": null,
+   "sources": "Verified against the README positioning notes and the security-related open issues; no end-to-end deployment was performed.",
+   "page": "https://www.goodthingure.com/tools/rowboat/"
+  },
+  {
+   "id": "commonly",
+   "name": "Commonly",
+   "category": "Shared Collaboration Spaces",
+   "url": "https://github.com/Team-Commonly/commonly",
+   "repo": "Team-Commonly/commonly",
+   "summary": "One pod for the team and the agent each person already runs: agents are named members with an explicit owner.",
+   "stars": 1401,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "agent-framework",
+    "agent-harness",
+    "agentic",
+    "ai-agents",
+    "ai-orchestration",
+    "multi-agent",
+    "openclaw",
+    "self-hosted"
+   ],
+   "fitsWhen": [
+    "Team members already run their own agents (such as local Claude Code or Codex) and want them in one pod",
+    "Teammates should join by link and be able to @ each other's agents",
+    "Agents should be named members with an owner, so responsibility is clear",
+    "You accept self-hosting, where only the agents you bring along run"
+   ],
+   "notFor": [
+    "Expecting self-hosting to include the hosted edition's built-in agents: the README states hosted agents are not part of a self-hosted install",
+    "Self-hosting without a working model configuration, where Scout greets and then stops replying",
+    "A mature enterprise permission system: it is designed around pods and member ownership"
+   ],
+   "limits": [
+    "Self-hosting runs the agents you bring along; built-in hosted agents are not part of the self-hosted install",
+    "Without a configured model, self-hosted Scout only greets and never replies (see Known issues)",
+    "The project is new and its issues are mostly early interaction problems",
+    "The pod model is a fairly heavy collaboration unit; cross-pod collaboration needs separate confirmation"
+   ],
+   "knownIssues": "#3512: on a self-hosted install with no model configured, Scout greets and then never replies; #3742: the first @ mention gets an answer plus an unprompted welcome message",
+   "licenceNote": null,
+   "sources": "Verified against the README v3 notes and the statement that hosted agents are not part of a self-hosted install.",
+   "page": "https://www.goodthingure.com/tools/commonly/"
+  },
+  {
+   "id": "omnigent",
+   "name": "Omnigent",
+   "category": "Shared Collaboration Spaces",
+   "url": "https://github.com/omnigent-ai/omnigent",
+   "repo": "omnigent-ai/omnigent",
+   "summary": "Open-source meta-harness: a common orchestration layer above 16+ agents, with cross-device session continuity and real-time collaboration.",
+   "stars": 11305,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "agent-framework",
+    "agent-governance",
+    "agent-orchestration",
+    "coding-agents",
+    "multi-agent",
+    "sandbox",
+    "python"
+   ],
+   "fitsWhen": [
+    "You want one orchestration layer above 16+ agents (Claude Code, Codex, Cursor, OpenCode, Goose, Devin, Kiro and others)",
+    "A session should continue across the terminal, the browser and a phone",
+    "Shared sessions should let teammates watch live, co-drive on your machine, or fork the conversation to continue",
+    "Agents should run in cloud sandboxes, without depending on a laptop"
+   ],
+   "notFor": [
+    "A stable version: the README marks the status as alpha",
+    "Simple use of a single agent",
+    "A team that cannot accept the Python stack and sandbox deployment cost"
+   ],
+   "limits": [
+    "The README marks the status as alpha, so interfaces and behaviour are still changing",
+    "The orchestration layer supplies no model itself; model access still comes from your API key, subscription or gateway",
+    "Cross-device continuity relies on server-side session sync, so you deploy it yourself or use the official hosting",
+    "Custom agents are defined in YAML, which adds configuration to maintain"
+   ],
+   "knownIssues": "#13344: host-route tests time out on a busy CI machine while the route itself works; #13322: Changes treats repositories with no checkout as mass deletions and can return a 502",
+   "licenceNote": null,
+   "sources": "Verified against the README definition of a meta-harness, its supported-agent list and the alpha status marker.",
+   "page": "https://www.goodthingure.com/tools/omnigent/"
+  },
+  {
+   "id": "tutti",
+   "name": "Tutti",
+   "category": "Shared Collaboration Spaces",
+   "url": "https://github.com/tutti-os/tutti",
+   "repo": "tutti-os/tutti",
+   "summary": "A multi-user, multi-agent real-time collaboration space; the open-source and VM editions differ substantially in capability.",
+   "stars": 3904,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-10-08",
+   "topics": [
+    "agent-collaboration",
+    "agent-orchestration",
+    "agent-workspace",
+    "desktop-app",
+    "local-first",
+    "macos-app",
+    "mcp",
+    "multi-agent",
+    "shared-context"
+   ],
+   "fitsWhen": [
+    "You want several agents in one workspace on your own machine, without multi-user collaboration for now",
+    "You accept extending later through the VM edition for group chat, simultaneous editing and cross-device use",
+    "You need a macOS desktop app with local-first shared context"
+   ],
+   "notFor": [
+    "Group chat, working with others, simultaneous editing or cross-device use in the open-source edition: the README capability table marks these unsupported",
+    "An invite-code constraint: creating a Room in Tutti VM requires an invite code",
+    "Recent maintenance: the last commit was 2026-10-08"
+   ],
+   "limits": [
+    "The README capability table shows the open-source edition does not support group chat, working with others, simultaneous editing or use across devices; those are available only in Tutti VM",
+    "Creating a Room in Tutti VM needs an invite code and is outside the open-source repository",
+    "The last commit was 2026-10-08, slower than comparable tools",
+    "As a desktop application, a team deploying together installs it per machine"
+   ],
+   "knownIssues": "#2652: on macOS, force-quitting Tutti Computer makes it restart automatically, and there is no persistent stop control; #2638: cold-start dollar skill queries need capabilities reloaded",
+   "licenceNote": "The open-source edition is Apache-2.0; Tutti VM is a separate product whose capability and licensing follow the official notes.",
+   "sources": "Verified against the README \\"Two Versions of Tutti\\" capability table, which sets out the boundary between the open-source and VM editions.",
+   "page": "https://www.goodthingure.com/tools/tutti/"
+  },
+  {
+   "id": "team9",
+   "name": "team9",
+   "category": "Shared Collaboration Spaces",
+   "url": "https://github.com/team9ai/team9",
+   "repo": "team9ai/team9",
+   "summary": "Agent collaboration workspace built on OpenClaw: gives agents channels, documents, memory and a shared audit trail.",
+   "stars": 1953,
+   "licence": "Modified Apache-2.0 (no multi-tenancy)",
+   "licenceSpdx": "NOASSERTION",
+   "lastCommit": "2026-07-28",
+   "topics": [
+    "ai-agent",
+    "openclaw",
+    "team9"
+   ],
+   "fitsWhen": [
+    "You already use OpenClaw and want agents to have a home with channels, documents and a shared audit trail",
+    "You want one-click OpenClaw startup instead of hand configuration",
+    "You can accept the additional conditions of the modified Apache-2.0 licence"
+   ],
+   "notFor": [
+    "Operating a multi-tenant service: the licence forbids multi-tenant environments without written authorisation (one workspace is one tenant)",
+    "Not using OpenClaw: it is currently built on OpenClaw and its ecosystem",
+    "Features such as \\"connect your computer\\", which the README marks TODO",
+    "Active maintenance: the last commit was 2026-07-28"
+   ],
+   "limits": [
+    "The licence is a modified Apache-2.0: commercial use is allowed, but the source may not be used to run a multi-tenant environment without written authorisation",
+    "It is currently built on OpenClaw and its ecosystem, so capability is limited outside that ecosystem",
+    "The README lists \\"Optionally connect to your computer\\" as a TODO, not yet implemented",
+    "The last commit was 2026-07-28, more than three months ago, and the open issues are mostly internal phase tasks",
+    "The GitHub API returns NOASSERTION, which automated tooling can easily misread"
+   ],
+   "knownIssues": "#22: the in-app \\"New Message\\" dialog cannot be closed properly; #21: switching the app language is unreliable",
+   "licenceNote": "Modified Apache-2.0: commercial use is allowed, but the source may not be used to run a multi-tenant environment (one workspace is one tenant) without written authorisation from Team9.",
+   "sources": "Verified against the README notes on the OpenClaw dependency and its TODO markers, plus the multi-tenant clause in the LICENSE file.",
+   "page": "https://www.goodthingure.com/tools/team9/"
+  },
+  {
+   "id": "anythingllm",
+   "name": "AnythingLLM",
+   "category": "Shared Knowledge",
+   "url": "https://github.com/Mintplex-Labs/anything-llm",
+   "repo": "Mintplex-Labs/anything-llm",
+   "summary": "Workspace-based document Q&A: each workspace organises its own documents, agents and tools, on local or cloud models.",
+   "stars": 68124,
+   "licence": "MIT",
+   "licenceSpdx": "MIT",
+   "lastCommit": "2026-11-09",
+   "topics": [
+    "agent-computer",
+    "agent-harness",
+    "agent-orchestration",
+    "agentic-ai",
+    "agentic-workflow",
+    "ai-agents",
+    "computer-use",
+    "hermes-agent",
+    "llm",
+    "local-ai",
+    "localai",
+    "multimodal"
+   ],
+   "fitsWhen": [
+    "The team needs document Q&A spaces split by project",
+    "You want agents, a vector store and embedding built in and working out of the box",
+    "You can deploy with Docker to enable multi-user accounts"
+   ],
+   "notFor": [
+    "A team of one or two, where the desktop edition is enough and no service is needed",
+    "Deeper RAG pipeline customisation: it is a finished product"
+   ],
+   "limits": [
+    "Multi-user accounts and permission management are available in the Docker edition only; the desktop edition is single-user (the README marks this \\"Docker version only\\")",
+    "Custom theming and white-labelling, and the embeddable chat widget, are also Docker-only",
+    "Anonymous telemetry is on by default and must be turned off explicitly with DISABLE_TELEMETRY=true",
+    "The source has user.js, workspace.js and workspaceUsers.js under server/models and admin.js and invite.js under server/endpoints, so the multi-user capability is real rather than a stub"
+   ],
+   "knownIssues": "#6946: the agent web-browsing skill lacks some search providers; #6892: user-specific mobile device registration and binding are not supported yet; #7071: image-generation provider coverage is limited",
+   "licenceNote": null,
+   "sources": "Verified against the README \\"Cool Features\\" entries marked Docker version only, the DISABLE_TELEMETRY telemetry section, and the actual structure of server/models (user.js, workspace.js, workspaceUsers.js) and server/endpoints (admin.js, invite.js).",
+   "page": "https://www.goodthingure.com/tools/anythingllm/"
+  },
+  {
+   "id": "onyx",
+   "name": "Onyx",
+   "category": "Shared Knowledge",
+   "url": "https://github.com/onyx-dot-app/onyx",
+   "repo": "onyx-dot-app/onyx",
+   "summary": "Team knowledge context layer: indexes material from 50+ applications and serves it to people and agents with the original permissions applied.",
+   "stars": 33315,
+   "licence": "Core + ee directory under an enterprise licence",
+   "licenceSpdx": "NOASSERTION",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "ai",
+    "ai-chat",
+    "chatgpt",
+    "chatui",
+    "enterprise-search",
+    "gen-ai",
+    "information-retrieval",
+    "llm",
+    "llm-ui",
+    "nextjs",
+    "python",
+    "rag"
+   ],
+   "fitsWhen": [
+    "You need to index material from several business applications and filter it by the existing permissions",
+    "You need agentic RAG, deep research, sandboxes and artifacts",
+    "Air-gapped self-hosting matters: the index, database and processing all stay in your environment"
+   ],
+   "notFor": [
+    "Simple document Q&A only, where something like AnythingLLM is lighter",
+    "A team that cannot take on the heavier deployment and maintenance"
+   ],
+   "limits": [
+    "The README says it replaces agent-by-agent MCP retrieval with an internal representation plus filtering; the result depends on index quality",
+    "backend/ee/ carries its own LICENSE (the Onyx Enterprise License), separate from the core code licence",
+    "The capability surface is broad (search, sandboxes, voice, artifacts, an MCP server, a Chrome extension), which raises deployment complexity",
+    "The source shows both an onyx and an ee line under backend, so enterprise features evolve separately"
+   ],
+   "knownIssues": "#17481: uploading .java or .py source files fails and PLAIN_TEXT_FILE_EXTENSIONS has no effect; #17234: Contextual Retrieval uses the default embedding tokenizer for LiteLLM proxy models, causing context-window errors; #17185: the chromium dependency on release/v5.1 has a vulnerability",
+   "licenceNote": "The core is open source; backend/ee/ is under the Onyx Enterprise License, a different licence.",
+   "sources": "Verified against the README positioning and feature list (agentic RAG, deep research, sandboxes, artifacts, an MCP server, a Chrome extension), the MCP comparison passage, the backend/ee/LICENSE text, and the agents, sandbox_proxy and tools directories under backend/onyx.",
+   "page": "https://www.goodthingure.com/tools/onyx/"
+  },
+  {
+   "id": "librechat",
+   "name": "LibreChat",
+   "category": "Shared Knowledge",
+   "url": "https://github.com/danny-avila/LibreChat",
+   "repo": "danny-avila/LibreChat",
+   "summary": "Self-hosted chat platform: unify several model providers and share agents with tools and file retrieval with specific members and groups.",
+   "stars": 46916,
+   "licence": "MIT",
+   "licenceSpdx": "MIT",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "ai",
+    "anthropic",
+    "artifacts",
+    "aws",
+    "azure",
+    "chatgpt",
+    "chatgpt-clone",
+    "claude",
+    "clone",
+    "deepseek",
+    "gemini",
+    "google"
+   ],
+   "fitsWhen": [
+    "You need to switch between model providers in one interface and manage roles",
+    "You need agent files, skills and OIDC machine-client authentication",
+    "You need a trace viewer, OpenTelemetry export and Langfuse integration"
+   ],
+   "notFor": [
+    "Simple chat only, where the official clients are enough",
+    "A team that cannot take fast release cadence (v0.8.8 introduced several beta capabilities)"
+   ],
+   "limits": [
+    "The Agent Management API is marked beta and attached workspaces are marked highly experimental",
+    "Code approval controls (Ask / Allow / Deny) depend on the deployment allowing them; they are not on by default",
+    "The source is split into api and client, so upgrades need both sides checked together",
+    "v0.8.8 carries a very long changelog, which makes item-by-item evaluation costly"
+   ],
+   "knownIssues": "#17916: the Responses API rejects parallel client tool calls and only hands off the first of a batch; #17981: read-aloud on a long message stays silent until the whole audio file has arrived",
+   "licenceNote": null,
+   "sources": "Verified against the README \\"What is New in v0.8.8\\" notes item by item, including the beta marker on the Agent Management API, the highly experimental marker on attached workspaces, the \\"where administrators permit it\\" limit on code approval, and the api plus client directory split.",
+   "page": "https://www.goodthingure.com/tools/librechat/"
+  },
+  {
+   "id": "maxkb",
+   "name": "MaxKB",
+   "category": "Shared Knowledge",
+   "url": "https://github.com/1Panel-dev/MaxKB",
+   "repo": "1Panel-dev/MaxKB",
+   "summary": "Enterprise agent platform: a RAG pipeline, a workflow engine and MCP tool calling combined into an embeddable Q&A system.",
+   "stars": 23134,
+   "licence": "GPL-3.0",
+   "licenceSpdx": "GPL-3.0",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "agent",
+    "agentic-ai",
+    "chatbot",
+    "deepseek-r1",
+    "knowledgebase",
+    "langchain",
+    "llama3",
+    "llm",
+    "maxkb",
+    "mcp-server",
+    "ollama",
+    "pgvector"
+   ],
+   "fitsWhen": [
+    "You need RAG, workflows and MCP in one platform",
+    "You need zero-code embedding into existing business systems",
+    "You can accept GPL-3.0"
+   ],
+   "notFor": [
+    "A team that cannot accept the distribution obligations of GPL-3.0",
+    "Plain Q&A only, where the workflow engine is extra weight"
+   ],
+   "limits": [
+    "GPL-3.0: distributing a modified version requires releasing it under the same licence",
+    "The README prints a default admin password of MaxKB@123.. that must be changed immediately after deployment",
+    "The source is split into application / chat / knowledge / local_model, so workflows and the knowledge base are fairly tightly coupled",
+    "After a large batch of vector writes the retrieval score can degrade and the index needs rebuilding (see Known issues)"
+   ],
+   "knownIssues": "#7597: retrieval scores keep degrading after a large batch of vector writes into the knowledge base and only recover after rebuilding the HNSW index; #7596: vectorising several documents in one library in parallel races on creating the HNSW index, raising DuplicateTable and failing the whole library; #7780: on a community-edition source deployment the Celery default key is a UUID object, so async tasks are never delivered",
+   "licenceNote": null,
+   "sources": "Verified against the README feature list and the default credentials in the Docker quick start, the GPL-3.0 licence, the application / chat / knowledge / local_model split under apps, and open issues #7597, #7596 and #7780.",
+   "page": "https://www.goodthingure.com/tools/maxkb/"
+  },
+  {
+   "id": "weknora",
+   "name": "WeKnora",
+   "category": "Shared Knowledge",
+   "url": "https://github.com/Tencent/WeKnora",
+   "repo": "Tencent/WeKnora",
+   "summary": "Team knowledge base: cross-session long-term memory, retrieval chunks that can be edited and rolled back, and multi-workspace RBAC.",
+   "stars": 37041,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-11-09",
+   "topics": [
+    "agent",
+    "agentic",
+    "ai",
+    "chatbot",
+    "dsh-plugin",
+    "embeddings",
+    "evaluation",
+    "generative-ai",
+    "golang",
+    "knowledge-base",
+    "llm",
+    "multi-tenant"
+   ],
+   "fitsWhen": [
+    "You need to sync material from Feishu, Confluence, GitLab, Notion and others",
+    "You need four-tier RBAC, per-resource ownership and a per-workspace audit log",
+    "You need IM-channel Q&A and a built-in MCP server"
+   ],
+   "notFor": [
+    "Single-machine document Q&A only",
+    "A team unwilling to maintain several storage instances and a task queue"
+   ],
+   "limits": [
+    "The capability surface is very wide (29 model vendors, many data sources, RBAC, auditing, Langfuse tracing), so deployment and governance cost a lot",
+    "Retrieval chunks can be edited, diffed and rolled back, which means someone has to keep maintaining content quality",
+    "Source syncing depends on each platform's API and credentials, so there are many configuration items",
+    "The source is a single Go repository (agent, automation, background, container and more under internal), so there are many modules and a higher customisation threshold"
+   ],
+   "knownIssues": "#5345: the completion budget for table metadata is hardcoded to 512/2048, so csv/xlsx ingestion fails entirely under a reasoning summariser model; #5337: the MinerU V1 client only speaks the 4.0 API and fails with a 404 against 4.1.3; #5333: agent resume loses background notices recorded before the suspension",
+   "licenceNote": null,
+   "sources": "Verified against the permission, data source, channel and deployment sections of the README Overview, the version note on line 224 (v0.6.0 introduced the four-tier Owner / Admin / Contributor / Viewer RBAC), the agent / automation / background / container / sandbox directories under internal, and open issues #5345, #5337 and #5333.",
+   "page": "https://www.goodthingure.com/tools/weknora/"
+  },
+  {
+   "id": "pandawiki",
+   "name": "PandaWiki",
+   "category": "Shared Knowledge",
+   "url": "https://github.com/chaitin/PandaWiki",
+   "repo": "chaitin/PandaWiki",
+   "summary": "Publishes documentation as a Wiki with AI Q&A and connects it to chat entry points including DingTalk, Feishu and WeCom.",
+   "stars": 10487,
+   "licence": "AGPL-3.0",
+   "licenceSpdx": "AGPL-3.0",
+   "lastCommit": "2026-11-05",
+   "topics": [
+    "ai",
+    "docs",
+    "document",
+    "documentation",
+    "kb",
+    "knownledge",
+    "llm",
+    "self-hosted",
+    "wiki"
+   ],
+   "fitsWhen": [
+    "You need to publish product and technical documentation as a public Wiki",
+    "You need AI-assisted authoring, Q&A and search",
+    "You need both a web widget and IM bots as distribution paths",
+    "You need bulk import from URLs, sitemaps, RSS or offline files"
+   ],
+   "notFor": [
+    "A team that cannot accept AGPL-3.0, where distributing a modified version requires releasing it",
+    "Internal knowledge only, with nothing published outward",
+    "Strict security boundaries around anonymous uploads (see Known issues)"
+   ],
+   "limits": [
+    "AGPL-3.0 adds obligations when distributing over a network",
+    "The README is mainly Chinese, with relatively little English material",
+    "The source has three layers (backend / web / sdk), so customising means understanding both server and frontend",
+    "Anonymous uploads allow a stored XSS issue, so upload permissions must be restricted when deploying (see Known issues)"
+   ],
+   "knownIssues": "#1845: anonymous uploads of HTML files lead to stored XSS (security); #1844: user-group permissions cannot yet be set by the left navigation directory; #1846 / #1847: a private vulnerability reporting channel is still being enabled",
+   "licenceNote": null,
+   "sources": "Verified against the four entries in the README feature section, the AGPL-3.0 licence, the backend / web / sdk layout, and open issues #1845 and #1844.",
+   "page": "https://www.goodthingure.com/tools/pandawiki/"
+  },
+  {
+   "id": "docsgpt",
+   "name": "DocsGPT",
+   "category": "Shared Knowledge",
+   "url": "https://github.com/arc53/DocsGPT",
+   "repo": "arc53/DocsGPT",
+   "summary": "Document Q&A platform: turns documents, sites and connected apps into agents that answer with sources, delivered through a widget, API or MCP.",
+   "stars": 18366,
+   "licence": "MIT",
+   "licenceSpdx": "MIT",
+   "lastCommit": "2026-11-09",
+   "topics": [
+    "agent-builder",
+    "agents",
+    "ai",
+    "chatgpt",
+    "docsgpt",
+    "hacktoberfest",
+    "hacktoberfest-swag",
+    "hacktoberfest2026",
+    "information-retrieval",
+    "language-model",
+    "llm",
+    "machine-learning"
+   ],
+   "fitsWhen": [
+    "You need agent answers that carry citations back to the source",
+    "You need the agent inside your own product: a widget, an OpenAI-compatible API or an MCP server",
+    "You need SSO, teams and quotas, and want those covered by the MIT licence too",
+    "You need it running in your own environment, with cloud or local models"
+   ],
+   "notFor": [
+    "Simple document retrieval only, without agents or workflows",
+    "A team unwilling to configure several distribution channels"
+   ],
+   "limits": [
+    "The README states that \\"everything, including SSO, teams and quotas, is MIT licensed\\"; the LICENSE is plain MIT and application/ has no ee subdirectory, which sets it apart from the usual core-plus-enterprise split",
+    "There are many distribution channels (web, widget, OpenAI-compatible API, agent API, webhooks, MCP, Discord / Slack / Telegram bots and a CLI), each needing separate configuration",
+    "The MCP server lets external clients retrieve knowledge, so the access scope needs defining",
+    "The source has three layers (application / docs / docsgpt), and the parser modules need their dependencies checked separately"
+   ],
+   "knownIssues": "#3288: the API tool reports an unfollowed 3xx redirect as a successful call; #3230: Gemini tool declarations lose the fields of nested object parameters; #3228: with remove_images enabled, Markdown image alt text keeps a leading \\"!\\" prefix",
+   "licenceNote": null,
+   "sources": "Verified against the MIT-everything statement in the README \\"Why DocsGPT\\" section, the LICENSE text, the application directory (with no ee subdirectory), and the open issues.",
+   "page": "https://www.goodthingure.com/tools/docsgpt/"
+  },
+  {
+   "id": "yuxi",
+   "name": "Yuxi",
+   "category": "Shared Knowledge",
+   "url": "https://github.com/xerrors/Yuxi",
+   "repo": "xerrors/Yuxi",
+   "summary": "Cloud multi-user agent harness: knowledge bases, multi-step tasks, a knowledge graph, and per-department usage scoping.",
+   "stars": 7635,
+   "licence": "MIT",
+   "licenceSpdx": "MIT",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "agentic-rag",
+    "ai-agents",
+    "deepagents",
+    "docker",
+    "document-ai",
+    "fastapi",
+    "harness",
+    "kbqa",
+    "kgqa",
+    "knowledge-base",
+    "knowledge-graph",
+    "langgraph"
+   ],
+   "fitsWhen": [
+    "You need to scope knowledge bases and agents by user, department and sharing scope",
+    "You need agentic RAG and entity-relation extraction from documents into a graph database",
+    "You prefer an MIT licence and code that is practical to extend",
+    "You can deploy with Docker Compose and supply a model API"
+   ],
+   "notFor": [
+    "A smooth upgrade from an older version: 0.8 offers no automatic migration",
+    "VM-level isolation without preparing Linux/KVM nodes",
+    "Single-machine use only"
+   ],
+   "limits": [
+    "The README states plainly that 0.8 is for fresh deployments only: existing databases, indexes and file layouts get no automatic upgrade, so try it with a separate data directory",
+    "The container sandbox shares the host kernel, which suits local trials and single-tenant trusted code; for VM isolation or persistent user environments, switch to Cube and prepare Linux/KVM execution nodes",
+    "Knowledge graph writes span two independent transactions across Neo4j and PostgreSQL, which carries a consistency risk (see Known issues)",
+    "The default approval mode requires confirming command execution and writes outside the project, while full-trust mode requires no approval"
+   ],
+   "knownIssues": "#879: graph writes span two transactions across Neo4j and PostgreSQL, and when Neo4j succeeds while PostgreSQL fails the system relies on retries to converge; #893: a proposal to make PostgreSQL the system of record with derived stores, to fix cross-store consistency at the root; #995: on macOS x86 the first deployment does not create the PostgreSQL database",
+   "licenceNote": null,
+   "sources": "Verified against the prerequisites in the README quick start and the two restriction sentences quoted verbatim (the 0.8 upgrade limit on line 36 and the container versus Cube distinction on line 38), the backend / frontend / packages layout, and the open issues.",
+   "page": "https://www.goodthingure.com/tools/yuxi/"
+  },
+  {
+   "id": "litellm",
+   "name": "LiteLLM",
+   "category": "Model Access",
+   "url": "https://github.com/BerriAI/litellm",
+   "repo": "BerriAI/litellm",
+   "summary": "Unified model gateway: one OpenAI-compatible interface to 100+ models, with virtual keys, spend tracking, rate limits and load balancing.",
+   "stars": 63007,
+   "licence": "MIT",
+   "licenceSpdx": "MIT",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "ai-gateway",
+    "anthropic",
+    "azure-openai",
+    "bedrock",
+    "gateway",
+    "langchain",
+    "litellm",
+    "llm",
+    "llm-gateway",
+    "llmops",
+    "mcp-gateway",
+    "openai"
+   ],
+   "fitsWhen": [
+    "You need one interface and one key-management scheme across several providers",
+    "You need spend tracking, guardrails, load balancing and virtual keys",
+    "You need broad endpoint coverage (chat, responses, embeddings, images, audio, batches, rerank, a2a, messages)"
+   ],
+   "notFor": [
+    "A single provider with no governance needs",
+    "A team that cannot accept the gateway becoming a single point in the architecture"
+   ],
+   "limits": [
+    "The SDK ships as two distributions, litellm and litellm-core, which own overlapping Python files, so only one can be installed per environment",
+    "litellm-core carries no optional extras, CLI entry point or bundled dashboard; the proxy and CLI require litellm",
+    "The README claims 8ms P95 at 1k RPS, which is a specific benchmark result that you need to measure in your own environment",
+    "As a gateway it is an architectural single point and needs a high-availability design; provider credentials and service configuration are yours to maintain"
+   ],
+   "knownIssues": "#50835: the MCP client factory still requires SSL configuration even when an explicit transport is supplied; #50837: resetting end-user spend applies the proxy-wide default budget tier to users governed by a key-specific budget; #50826: Ollama model-info lookup ignores an explicit api_base",
+   "licenceNote": null,
+   "sources": "Verified against the endpoint list in the README features, the litellm versus litellm-core distribution notes, the latency benchmark, the backend directory, and the open issues.",
+   "page": "https://www.goodthingure.com/tools/litellm/"
+  },
+  {
+   "id": "higress",
+   "name": "Higress",
+   "category": "Model Access",
+   "url": "https://github.com/higress-group/higress",
+   "repo": "higress-group/higress",
+   "summary": "Cloud-native gateway built on Istio and Envoy and extended with Wasm plugins, serving as both an AI gateway and an MCP server host.",
+   "stars": 9737,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "ai-gateway",
+    "ai-native",
+    "api-gateway",
+    "cloud-native",
+    "envoy"
+   ],
+   "fitsWhen": [
+    "You need LLM APIs and MCP APIs managed together",
+    "You need to host remote MCP servers or turn OpenAPI specs into MCP services",
+    "You already run Kubernetes or cloud-native infrastructure and accept Wasm plugin extensions",
+    "You want dozens of ready-made general plugins and a console"
+   ],
+   "notFor": [
+    "Simple model proxying only",
+    "No Kubernetes environment and no intention of introducing one",
+    "A team sensitive to known CVEs that cannot upgrade promptly (see Known issues)"
+   ],
+   "limits": [
+    "The cloud-native positioning on Istio and Envoy raises the deployment and operations bar above a single-binary gateway",
+    "Plugins are Wasm written in Go, Rust or JS, so extensions need the corresponding language skills",
+    "AI plugins such as ai-proxy, ai-cache and ai-load-balancer are separate extensions that each need enabling and configuring",
+    "v2.2.5 still ships an Envoy version affected by CVE-2026-111497 (see Known issues)"
+   ],
+   "knownIssues": "#5298: the v2.2.5 gateway still ships Envoy 1.36.10, which is affected by CVE-2026-111497; #5313: Claude streaming state isolation and Vertex coverage in ai-proxy are still being designed; #5325: v2.2.6 release tracking",
+   "licenceNote": null,
+   "sources": "Verified against the Istio/Envoy foundation and plugin mechanism described in the README \\"What is Higress\\" section, the AI gateway and MCP hosting use cases, the actual structure of the 12+ AI plugins under plugins/wasm-go/extensions, and the open issues.",
+   "page": "https://www.goodthingure.com/tools/higress/"
+  },
+  {
+   "id": "bifrost",
+   "name": "Bifrost",
+   "category": "Model Access",
+   "url": "https://github.com/maximhq/bifrost",
+   "repo": "maximhq/bifrost",
+   "summary": "AI gateway: one OpenAI-compatible interface to many providers, with automatic fallback and load balancing as the core capabilities.",
+   "stars": 9465,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "agent-gateway",
+    "ai-gateway",
+    "ai-governance",
+    "api-gateway",
+    "claude-code",
+    "coding-agents",
+    "failover",
+    "gateway",
+    "guardrails",
+    "llm-cost",
+    "llm-gateway",
+    "llm-observability"
+   ],
+   "fitsWhen": [
+    "You need automatic failover when a provider fails, without downtime",
+    "You need one interface to OpenAI, Anthropic, Bedrock, Vertex, Azure, Cerebras, Cohere, Mistral, Ollama, Groq and others",
+    "You need semantic caching to cut the cost and latency of repeated calls",
+    "You need MCP so models can call external tools"
+   ],
+   "notFor": [
+    "A single provider with no failover requirement",
+    "Custom plugins: the README files them under the enterprise documentation path",
+    "A team unwilling to carry the operations load of the gateway as a single point"
+   ],
+   "limits": [
+    "The README links Custom Plugins to docs.getbifrost.ai/enterprise/custom-plugins, so they are an enterprise capability rather than core open source",
+    "User Provisioning (OIDC) likewise links to an enterprise path",
+    "Automatic fallback depends on how consistently providers behave, so it needs measuring yourself",
+    "The source is a single Go repository (providers, mcp, agent, relay and more under core), so extending it needs Go skills"
+   ],
+   "knownIssues": "#9803: /anthropic/v1/messages drops the web_search_tool_result of a resumed (deferred) search; #9802: streaming /anthropic/v1/messages sends a deferred web_search server_tool_use with empty input and no content_block_stop; #9797: on Bedrock a tool_choice naming a tool that is not in tools is silently dropped and answered 200",
+   "licenceNote": null,
+   "sources": "Verified against the unified interface, multi-provider, automatic fallback, load balancing, semantic caching and MCP entries in the README \\"Key Features\\" section; the actual providers / mcp / agent / relay directories under core; and the open issues.",
+   "page": "https://www.goodthingure.com/tools/bifrost/"
+  },
+  {
+   "id": "portkey-ai-gateway",
+   "name": "Portkey AI Gateway",
+   "category": "Model Access",
+   "url": "https://github.com/Portkey-AI/gateway",
+   "repo": "Portkey-AI/gateway",
+   "summary": "AI gateway: unified routing, guardrails and a plugin system; its MCP Gateway is a product capability and is not in the open-source repository.",
+   "stars": 13357,
+   "licence": "MIT",
+   "licenceSpdx": "MIT",
+   "lastCommit": "2026-05-25",
+   "topics": [
+    "ai-gateway",
+    "gateway",
+    "generative-ai",
+    "hacktoberfest",
+    "langchain",
+    "llm",
+    "llm-gateway",
+    "llmops",
+    "llms",
+    "mcp",
+    "mcp-client",
+    "mcp-gateway"
+   ],
+   "fitsWhen": [
+    "You need a unified routing and guardrails plugin chain",
+    "You need to reach many providers and transform requests",
+    "You can use the open-source edition as a base gateway and evaluate the enterprise edition as needed"
+   ],
+   "notFor": [
+    "Expecting the open-source repository to include the MCP Gateway: the README MCP section links to product documentation and plugins/ has no mcp implementation",
+    "A project needing steady maintenance: the last commit was 2026-05-25",
+    "Enterprise governance (org management, governance, security) without buying the enterprise edition"
+   ],
+   "limits": [
+    "The MCP Gateway is not in the open-source repository: the 21 plugin directories under plugins/ (acuvity, aporia, azure, bedrock, exa, mistral, promptfoo and others) focus on providers and security vendors and none is mcp, while src/ has no mcp module either; the README MCP section points to portkey.ai/docs/product/mcp-gateway",
+    "The README carries a separate \\"Enterprise Version (Private deployments)\\" section and marks features with an asterisk meaning \\"Available in hosted and enterprise versions\\"",
+    "The last commit was 2026-05-25, over five months ago; confirm the maintenance state before adopting",
+    "The plugin ecosystem is rich but built around request transformation and security guardrails, and does not cover MCP server management"
+   ],
+   "knownIssues": "#1879: the jsonSchema guardrail truncates nested JSON payloads early with a non-greedy regex; #1867: live logs middleware hardcodes port splitting, so custom ports show \\"undefined\\"; #1864: adminAuth parseCookies throws an uncaught URIError when a cookie contains an unencoded percent sign",
+   "licenceNote": null,
+   "sources": "Verified against the README MCP Gateway passages on lines 50 and 178-186 (both linking to the product site), the Enterprise Version section on line 158, the asterisk footnote on line 217; the actual structure of the 21 directories under plugins/ and 12 modules under src/ (none of them mcp); and pushed_at together with the open issues.",
+   "page": "https://www.goodthingure.com/tools/portkey-ai-gateway/"
+  },
+  {
+   "id": "mcphub",
+   "name": "MCPHub",
+   "category": "Model Access",
+   "url": "https://github.com/samanhappy/mcphub",
+   "repo": "samanhappy/mcphub",
+   "summary": "Self-hosted MCP gateway and control plane: connect once and expose several MCP servers through stable endpoints.",
+   "stars": 2655,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "mcp",
+    "mcp-gateway",
+    "mcp-hub",
+    "mcp-router",
+    "mcp-server"
+   ],
+   "fitsWhen": [
+    "You need to connect and manage several MCP servers in one place",
+    "You need routes per group or per server, with aliases",
+    "You need per-user credentials with isolated stdio runtimes",
+    "You need OAuth 2.0 in both client and server modes"
+   ],
+   "notFor": [
+    "A single MCP server, which you can connect to directly",
+    "A very large number of MCP servers where restart downtime is unacceptable (see Known issues)",
+    "No need for central management or observability"
+   ],
+   "limits": [
+    "The README lists SSE, streamable HTTP and stdio transports, but stdio servers carry noticeable startup cost at scale",
+    "Smart Routing relies on vector semantic search and needs extra embedding configuration and services",
+    "Social login requires Database Mode and is unavailable with a purely file-based configuration",
+    "The gateway is a single point and needs a high-availability plan"
+   ],
+   "knownIssues": "#1154: at around 100 stdio servers, startup connections are unbounded and the tool cache is not persisted, so a restart causes an outage; #703: embedding sync scheduling is not centralised, leading to overlaps, stale writes and RPM limit breaches; #1278: tracking the legacy SSE removal after the announced window",
+   "licenceNote": null,
+   "sources": "Verified against the Smart Routing, server aliases, three transports, per-user credentials, OAuth dual mode and Database Mode requirements for social login in the README \\"Features\\" section, and open issues #1154 and #703.",
+   "page": "https://www.goodthingure.com/tools/mcphub/"
+  },
+  {
+   "id": "mcpjungle",
+   "name": "MCPJungle",
+   "category": "Model Access",
+   "url": "https://github.com/mcpjungle/MCPJungle",
+   "repo": "mcpjungle/MCPJungle",
+   "summary": "MCP server registry and gateway: register several MCP servers in one place and expose them to clients as a single endpoint.",
+   "stars": 1616,
+   "licence": "MPL-2.0",
+   "licenceSpdx": "MPL-2.0",
+   "lastCommit": "2026-11-03",
+   "topics": [
+    "ai-agents",
+    "infrastructure",
+    "mcp",
+    "mcp-gateway",
+    "mcp-registry",
+    "mcp-server",
+    "model-context-protocol",
+    "self-hosted"
+   ],
+   "fitsWhen": [
+    "You need to register several MCP servers and expose them as one endpoint",
+    "A plain docker compose self-host is enough",
+    "You need central discovery and access control shared across the team"
+   ],
+   "notFor": [
+    "You only need to connect one MCP server",
+    "You need heavy enterprise governance and observability",
+    "You want a non-containerised deployment as the default"
+   ],
+   "limits": [
+    "Narrower than a full control plane such as MCPHub: no per-user credentials and similar capabilities",
+    "Deploys through docker compose by default and exposes a streamable HTTP endpoint at 8080/mcp",
+    "MPL-2.0 is file-level copyleft: files under MPL must be published under the same licence when modified",
+    "The secure token flow for enterprise setup and MCP client calls is still being finished (see Known issues)"
+   ],
+   "knownIssues": "#321: tool _meta is lost after registry persistence and proxy rebuild; #318: enterprise setup and MCP client calls still lack a secure token flow; #312: the container image still runs as root with non-minimised APT dependencies",
+   "licenceNote": "MPL-2.0: files covered by MPL must be published under the same licence when modified.",
+   "sources": "Verified against the README positioning section and Quickstart (docker compose, the 8080/mcp endpoint), the api / db / migrations / dashboardui structure under internal, the MPL-2.0 licence, and open issues.",
+   "page": "https://www.goodthingure.com/tools/mcpjungle/"
+  },
+  {
+   "id": "obot",
+   "name": "Obot",
+   "category": "Model Access",
+   "url": "https://github.com/obot-platform/obot",
+   "repo": "obot-platform/obot",
+   "summary": "MCP and LLM gateway platform: virtual MCP servers, MCP tunnels, hosted MCP servers and a registry.",
+   "stars": 1176,
+   "licence": "MIT",
+   "licenceSpdx": "MIT",
+   "lastCommit": "2026-11-09",
+   "topics": [
+    "ai",
+    "chat",
+    "mcp",
+    "modelcontextprotocol"
+   ],
+   "fitsWhen": [
+    "You need to combine several catalogue servers into one endpoint through vMCP (a virtual MCP server)",
+    "You need to reach remote MCP servers inside a private network without opening inbound ports (MCP tunnels)",
+    "vMCP components should be pinned to a snapshot of the catalogue entry and change only on an explicit upgrade",
+    "You need to control server and tool access per user or per identity-provider group"
+   ],
+   "notFor": [
+    "You need only one of these capabilities, where a single-purpose tool is lighter",
+    "You are unwilling to maintain platform-level components (gateway + hosting runtime + registry)",
+    "You need large community support: the project has 1.1k stars, so assess its maturity"
+   ],
+   "limits": [
+    "The core surface is wide: MCP Gateway, LLM Gateway, Hosted MCP Servers, Claude Environments, MCP and Skills registries, a CLI and Sentry observability",
+    "Model visibility in the LLM Gateway is governed by Model Access Policies, which have to be configured per user",
+    "Hosted MCP servers run in separate execution environments, so resource and isolation policy are yours to plan",
+    "Claude Environments is an integration for specific clients and has limited coverage"
+   ],
+   "knownIssues": "#8498: static OAuth clients are ignored when upstream declares CIMD support; #8495: the per-provider LLM proxy routing removed in v0.28.0 needs restoring; #8493: initial setup still requires an extra login after the owner account is created",
+   "licenceNote": null,
+   "sources": "Verified against the README \\"Core Capabilities\\" subsections on MCP Gateway (vMCP, MCP tunnels, snapshot pinning, group-based access control, tool search), LLM Gateway and Hosted MCP Servers; the chart / runtime / tools / ui directories; plain MIT with no ee directory; and the open issues.",
+   "page": "https://www.goodthingure.com/tools/obot/"
+  },
+  {
+   "id": "langfuse",
+   "name": "Langfuse",
+   "category": "Tracing & Evaluation",
+   "url": "https://github.com/langfuse/langfuse",
+   "repo": "langfuse/langfuse",
+   "summary": "LLM observability and evaluation platform: trace calls, version prompts and skills, run evaluations, and provide an AI Gateway.",
+   "stars": 37225,
+   "licence": "Core + ee directory licensed separately",
+   "licenceSpdx": "NOASSERTION",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "analytics",
+    "autogen",
+    "evaluation",
+    "langchain",
+    "large-language-models",
+    "llama-index",
+    "llm",
+    "llm-evaluation",
+    "llm-observability",
+    "llmops",
+    "monitoring",
+    "observability"
+   ],
+   "fitsWhen": [
+    "You need OpenTelemetry-based tracing to debug LLM calls, retrieval and agent actions",
+    "You need prompt versioning with a Playground to iterate",
+    "You need LLM-as-a-judge, code evaluators, human annotation and datasets",
+    "You need every model call recorded as a trace with cost accounting"
+   ],
+   "notFor": [
+    "You cannot accept the separate licence on the ee directory: the core is MIT Expat, but enterprise features are licensed separately",
+    "You only need a simple model gateway",
+    "You are unwilling to maintain self-hosted ClickHouse and queue components"
+   ],
+   "limits": [
+    "The licence is layered: ee/, web/src/ee/, worker/src/ee/ and packages/shared/src/server/ee/ are licensed under their own ee/LICENSE, and the rest is MIT Expat",
+    "Skill Management and AI Gateway are both marked beta",
+    "The CLI and Agent Skill let coding agents drive the platform directly, so the permission boundary needs defining",
+    "The AI Gateway resolve cache can briefly return stale context after an organisation is invalidated (see Known issues)"
+   ],
+   "knownIssues": "#19986: the AI Gateway resolve cache returns stale context after an organisation is invalidated; #19976: OTEL ingestion marked v4 is unqueryable for minutes while the worker/ClickHouse is idle; #19943: ClickHouse memory errors surface as Request Timed Out",
+   "licenceNote": "Core is MIT Expat; ee/, web/src/ee/, worker/src/ee/ and packages/shared/src/server/ee/ are licensed under their own ee/LICENSE.",
+   "sources": "Verified against the seven capabilities and beta markers in the README \\"Core Features\\", the layered licensing text in the LICENSE file (the four ee directories confirmed through the contents API at 7/2/7/7 entries), the ai-gateway directory, and the open issues.",
+   "page": "https://www.goodthingure.com/tools/langfuse/"
+  },
+  {
+   "id": "promptfoo",
+   "name": "Promptfoo",
+   "category": "Tracing & Evaluation",
+   "url": "https://github.com/promptfoo/promptfoo",
+   "repo": "promptfoo/promptfoo",
+   "summary": "Automated evaluation for prompts and models: run tests, red-team scans, model comparisons, and wire it into CI.",
+   "stars": 27005,
+   "licence": "MIT",
+   "licenceSpdx": "MIT",
+   "lastCommit": "2026-11-09",
+   "topics": [
+    "ci",
+    "ci-cd",
+    "cicd",
+    "evaluation",
+    "evaluation-framework",
+    "llm",
+    "llm-eval",
+    "llm-evaluation",
+    "llm-evaluation-framework",
+    "llmops",
+    "pentesting",
+    "prompt-engineering"
+   ],
+   "fitsWhen": [
+    "You need prompt evaluations running automatically in CI/CD",
+    "You need red-team testing and vulnerability scanning",
+    "You need side-by-side comparison across several models (OpenAI, Anthropic, Azure, Bedrock, Ollama and others)",
+    "You need LLM-related security and compliance scanning on pull requests"
+   ],
+   "notFor": [
+    "You need online observability and production monitoring: Promptfoo is built for offline evaluation",
+    "You cannot accept that evaluation thresholds need configuring item by item",
+    "An environment sensitive to credential handling (see Known issues)"
+   ],
+   "limits": [
+    "Evaluation thresholds have several defaults (0.75 for CSV, 0.5 for RAG, 1 for the classifier), which makes pass/fail easy to misjudge",
+    "Default behaviour for several assertion types differs from the documentation (see Known issues)",
+    "MIT licensed, but it is an open-source tool maintained by a company, with commercial support through official channels",
+    "Red-teaming and code scanning need the target and rule set configured separately"
+   ],
+   "knownIssues": "#12351: the SageMaker provider logs AWS credentials in plaintext when config validation fails (security); #12350: the HTTP provider logs the Authorization header in plaintext in the \\"body is a string\\" warning (security); #12362: a CSV levenshtein cell with no threshold set passes only on an exact match",
+   "licenceNote": null,
+   "sources": "Verified against the five use cases in the README \\"What can you do with Promptfoo\\", the MIT licence, and the two credential-leak issues plus the threshold inconsistency issue among the open issues.",
+   "page": "https://www.goodthingure.com/tools/promptfoo/"
+  },
+  {
+   "id": "opik",
+   "name": "Opik",
+   "category": "Tracing & Evaluation",
+   "url": "https://github.com/comet-ml/opik",
+   "repo": "comet-ml/opik",
+   "summary": "LLM observability and evaluation platform: trace agent calls, run dataset experiments, and apply online evaluation and guardrails.",
+   "stars": 23295,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "evaluation",
+    "hacktoberfest",
+    "hacktoberfest2025",
+    "langchain",
+    "llama-index",
+    "llm",
+    "llm-evaluation",
+    "llm-observability",
+    "llmops",
+    "open-source",
+    "openai",
+    "playground"
+   ],
+   "fitsWhen": [
+    "You need complete trace trees for multi-step agents and tool calls",
+    "You need datasets, experiments and LLM-as-a-judge metrics",
+    "You need to test LLM pipelines in CI through PyTest integration",
+    "You need online evaluation rules and production monitoring"
+   ],
+   "notFor": [
+    "You only need simple log collection",
+    "You are unwilling to maintain the deployment components",
+    "You need a governance model with no commercial ties at all"
+   ],
+   "limits": [
+    "Coverage spans four areas \u2014 tracing, evaluation, optimisation and guardrails \u2014 so the configuration surface is wide",
+    "The LLM-as-a-judge span records the configured model rather than the model that actually answered (see Known issues), which matters when attributing results",
+    "CI/CD evaluation goes through PyTest integration, so the team needs to know the testing framework",
+    "Data goes to a self-hosted or cloud instance by default, so the data boundary needs confirming before deployment"
+   ],
+   "knownIssues": "#9505: the LLM-as-a-Judge evaluation span records the configured model rather than the model that answered; #9514: the LlamaIndex handler removes chunks from the shared CHUNKING payload; #9516: the LlamaIndex handler aborts the traced call when Settings.llm cannot be resolved",
+   "licenceNote": null,
+   "sources": "Verified against the six capabilities in the README \\"What is Opik\\", the Apache-2.0 licence, the apps and deployment directories, and the open issues.",
+   "page": "https://www.goodthingure.com/tools/opik/"
+  },
+  {
+   "id": "arize-phoenix",
+   "name": "Arize Phoenix",
+   "category": "Tracing & Evaluation",
+   "url": "https://github.com/Arize-ai/phoenix",
+   "repo": "Arize-ai/phoenix",
+   "summary": "Open-source AI observability platform: OpenTelemetry tracing, evaluation, datasets and experiments, with a built-in MCP server.",
+   "stars": 12223,
+   "licence": "Elastic License 2.0",
+   "licenceSpdx": "Elastic-2.0",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "agents",
+    "ai-monitoring",
+    "ai-observability",
+    "aiengineering",
+    "anthropic",
+    "datasets",
+    "evals",
+    "langchain",
+    "llamaindex",
+    "llm-eval",
+    "llm-evaluation",
+    "llmops"
+   ],
+   "fitsWhen": [
+    "You need vendor- and language-agnostic tracing across OpenAI Agents SDK, Claude Agent SDK, LangGraph, Vercel AI SDK, Mastra, CrewAI, LlamaIndex, DSPy and others",
+    "You need datasets, experiments and a Playground to iterate prompts",
+    "You need a Remote MCP Server so Claude Code and Cursor can query traces and datasets directly",
+    "You need local, containerised or cloud self-hosting"
+   ],
+   "notFor": [
+    "You need to offer Phoenix as a hosted service to third parties: ELv2 restricts this",
+    "You need a fully permissive open-source licence",
+    "You need a managed production platform: Arize has a separate AX product"
+   ],
+   "limits": [
+    "The licence is Elastic License 2.0 (ELv2), not standard open source: offering the software as a hosted service to third parties is forbidden, and the licence notices may not be removed",
+    "The README clearly separates the open-source self-hosted Phoenix from the managed Arize AX platform, which differ in features and support",
+    "PXI (Phoenix Intelligence) is the built-in AI engineering agent, and its operating boundary needs checking per version",
+    "The Remote MCP Server exposes queries over traces, datasets and experiments, so access control is required"
+   ],
+   "knownIssues": "#17819: phoenix-otel drops the brackets around an IPv6 collector host when building a gRPC endpoint; #17807: the online-evals timing test is flaky on Windows because of clock precision; #17805: the prototype deployment on Vercel is still in progress",
+   "licenceNote": "Elastic License 2.0 (ELv2): offering it as a hosted service to third parties is forbidden, and the licence notices may not be removed.",
+   "sources": "Verified against the eight-capability list in the README (including the Remote MCP Server /mcp endpoint), the distinction between Phoenix and Arize AX, the LICENSE text (Elastic License 2.0), the structure with no ee directory, and the open issues.",
+   "page": "https://www.goodthingure.com/tools/arize-phoenix/"
+  },
+  {
+   "id": "laminar",
+   "name": "Laminar",
+   "category": "Tracing & Evaluation",
+   "url": "https://github.com/lmnr-ai/lmnr",
+   "repo": "lmnr-ai/lmnr",
+   "summary": "Observability platform for AI agents: OpenTelemetry tracing, natural-language Signals alerting, evaluation and dashboards.",
+   "stars": 3481,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-11-09",
+   "topics": [
+    "agent-observability",
+    "agents",
+    "ai",
+    "ai-observability",
+    "aiops",
+    "analytics",
+    "developer-tools",
+    "evals",
+    "evaluation",
+    "llm-evaluation",
+    "llm-observability",
+    "llmops"
+   ],
+   "fitsWhen": [
+    "You need one-line tracing for Vercel AI SDK, Browser Use, Stagehand, LangChain, OpenAI, Anthropic and Gemini",
+    "You need to describe agent behaviour to watch for in natural language (\\"the agent is stuck in a loop\\") and get a Slack alert when it fires",
+    "You need SQL queries over traces, spans, metrics and events so coding agents can investigate from trace data",
+    "You need to run evaluations locally or in CI and compare results"
+   ],
+   "notFor": [
+    "You have strict requirements on the self-hosting security boundary: app-server once served tenant-internal routes without authentication (see Known issues)",
+    "You only need basic logging",
+    "You cannot accept anonymous usage telemetry"
+   ],
+   "limits": [
+    "The README mentions anonymous usage telemetry, so confirm how to turn it off before deployment",
+    "Self-hosting needs Docker Compose with Postgres and ClickHouse",
+    "Signals depend on analysing every agent run, so the cost needs estimating at volume",
+    "There has been a publicly reachable unauthenticated port (see Known issues), so check the current version before adopting"
+   ],
+   "knownIssues": "#2688: Laminar app-server serves tenant-scoped internal routes on a public port with no authentication (security); #2686: a failed ClickHouse usage query disables the hard byte limit for up to 24 hours; #2649: spans whose parent span was not ingested disappear from the trace tree and merged timeline",
+   "licenceNote": null,
+   "sources": "Verified against the Tracing, Signals, Evals, MCP/CLI, Dashboards and data-labelling features in the README, the Apache-2.0 LICENSE.md, the app-server and pii-redactor directories, and the two security issues among the open issues.",
+   "page": "https://www.goodthingure.com/tools/laminar/"
+  },
+  {
+   "id": "langwatch",
+   "name": "LangWatch",
+   "category": "Tracing & Evaluation",
+   "url": "https://github.com/langwatch/langwatch",
+   "repo": "langwatch/langwatch",
+   "summary": "AI operations platform: LLM observability and evaluation, coding-agent cost tracking, an AI Gateway and AI governance.",
+   "stars": 5019,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "agent-testing",
+    "ai",
+    "analytics",
+    "datasets",
+    "dspy",
+    "evaluation",
+    "gpt",
+    "llm",
+    "llm-ops",
+    "llmops",
+    "low-code",
+    "observability"
+   ],
+   "fitsWhen": [
+    "You need per-PR cost accounting for coding agents such as Claude Code, and to optimise usage",
+    "You need simulation testing and voice-agent evaluation",
+    "You need an OpenAI- and Anthropic-compatible gateway with virtual keys and budgets",
+    "You need to inventory every AI tool in the company and who uses it, and set anomaly rules"
+   ],
+   "notFor": [
+    "You only need one observability capability: running all four areas together is heavier",
+    "You are unwilling to maintain a multi-service architecture (api, backend, server, sims, tasks and more under apps)",
+    "You need a project with no commercial ties at all"
+   ],
+   "limits": [
+    "Capability splits into four areas (LLM Ops, Coding Agents, AI Gateway, AI Governance), so the configuration surface is wide",
+    "The source is a multi-service architecture (api / backend / server / sims / tasks under apps), so self-hosting means orchestrating several components",
+    "For some errors Langy only gives a generic hint (see Known issues), so diagnosis means reading the raw logs",
+    "Per-PR cost accounting depends on how deeply coding-agent sessions are integrated"
+   ],
+   "knownIssues": "#9442: Langy returns the same vague \\"model provider rejected that\\" for both \\"not deployed\\" and \\"unsupported parameter\\"; #9441: Langy sends reasoning.effort to non-reasoning models, so gpt-4.1 returns 400; #9440: the OpenAI provider still shows the full OpenAI catalogue when a custom base URL is configured",
+   "licenceNote": null,
+   "sources": "Verified against the four capabilities and three concrete uses in the README \\"What you get\\", the Apache-2.0 licence, the actual api / backend / server / sims / tasks structure under apps, and the open issues.",
+   "page": "https://www.goodthingure.com/tools/langwatch/"
+  },
+  {
+   "id": "ragas",
+   "name": "Ragas",
+   "category": "Tracing & Evaluation",
+   "url": "https://github.com/vibrantlabsai/ragas",
+   "repo": "vibrantlabsai/ragas",
+   "summary": "Evaluation framework for RAG and LLM applications: LLM-based and classical metrics, test-data generation, and integrations with the main frameworks.",
+   "stars": 16277,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-02-24",
+   "topics": [
+    "evaluation",
+    "llm",
+    "llmops"
+   ],
+   "fitsWhen": [
+    "You need to evaluate retrieval and generation quality of a RAG pipeline locally or in CI",
+    "You need to generate test datasets that cover several scenarios automatically",
+    "You need integration with LangChain and the main observability tools",
+    "You want a feedback loop built from production data"
+   ],
+   "notFor": [
+    "You need an actively maintained project: the last commit was 2026-02-24 and the community has publicly questioned its maintenance status (see Known issues)",
+    "You need an out-of-the-box visualisation platform: it is a Python library",
+    "You need evaluation that covers every edge case: some metrics score straight 0 when lengths differ (see Known issues)"
+   ],
+   "limits": [
+    "The last commit was 2026-02-24, over eight months ago",
+    "Open issue #3099 asks directly whether RAGAS is still actively maintained or development has stalled, so assess before adopting",
+    "Some metrics (ToolCallAccuracy, for example) score a flat 0.0 when lengths differ rather than deducting proportionally",
+    "train_test_split with the same seed changes the split and mutates the input (see Known issues)"
+   ],
+   "knownIssues": "#3099: the community publicly questions whether the project is still actively maintained; #3079: ToolCallAccuracy drops the score to 0.0 when lengths differ; #3095: reusing the same train_test_split seed changes the partition and mutates the input",
+   "licenceNote": null,
+   "sources": "Verified against the four capabilities in the README \\"Key Features\\", the pip install route, the src and examples directories, pushed_at (2026-02-24), and the open issues on maintenance status and metric behaviour.",
+   "page": "https://www.goodthingure.com/tools/ragas/"
+  },
+  {
+   "id": "coze-loop",
+   "name": "Coze Loop",
+   "category": "Tracing & Evaluation",
+   "url": "https://github.com/coze-dev/coze-loop",
+   "repo": "coze-dev/coze-loop",
+   "summary": "ByteDance's open-source platform for the full agent lifecycle: prompt development, evaluation and observability.",
+   "stars": 5803,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "agent",
+    "agent-evaluation",
+    "agent-observability",
+    "agentops",
+    "ai",
+    "coze",
+    "eino",
+    "evaluation",
+    "langchain",
+    "llm-observability",
+    "llmops",
+    "monitoring"
+   ],
+   "fitsWhen": [
+    "You need to compare prompt output across models in real time in a visual Playground",
+    "You need systematic evaluation of prompts and agent output (accuracy, conciseness, compliance and other dimensions)",
+    "You need every stage from user input to AI output recorded, capturing intermediate results and exceptions",
+    "You need Docker Compose or Helm deployment"
+   ],
+   "notFor": [
+    "You only need one stage (evaluation alone, for example)",
+    "You are unwilling to maintain a multi-component deployment",
+    "You need a solution independent of the Coze ecosystem"
+   ],
+   "limits": [
+    "Model integration centres on OpenAI and Volcano Engine Ark, so support for other providers needs confirming",
+    "The source has backend / frontend / common / idl layers, so customising means both backend and frontend work",
+    "make compose up has a known tenant startup failure (see Known issues)",
+    "Evaluation dimensions come preset from the platform, and custom evaluators have to be extended per the documentation"
+   ],
+   "knownIssues": "#515: make compose up panics with \\"failed to start tenant cozeloop\\"; #629: object-storage upload keys use backslashes on Windows; #681: the parallel-search MCP tool for prompt debugging is still a feature request",
+   "licenceNote": null,
+   "sources": "Verified against the three capabilities in the README \\"What can Coze Loop do\\" and its feature list table, the backend / frontend / common / idl directories, the Apache-2.0 licence, and the open issues.",
+   "page": "https://www.goodthingure.com/tools/coze-loop/"
+  },
+  {
+   "id": "openllmetry",
+   "name": "OpenLLMetry",
+   "category": "Tracing & Evaluation",
+   "url": "https://github.com/traceloop/openllmetry",
+   "repo": "traceloop/openllmetry",
+   "summary": "OpenTelemetry extension for LLMs: auto-generates tracing spans for 16+ model providers, vector stores and frameworks.",
+   "stars": 7529,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-11-09",
+   "topics": [
+    "artifical-intelligence",
+    "datascience",
+    "generative-ai",
+    "good-first-issue",
+    "good-first-issues",
+    "help-wanted",
+    "llm",
+    "llmops",
+    "metrics",
+    "ml",
+    "model-monitoring",
+    "monitoring"
+   ],
+   "fitsWhen": [
+    "You already run OpenTelemetry and want spans on your LLM calls",
+    "You need coverage for Anthropic, Bedrock, Cohere, Gemini, Groq, Mistral, Ollama, OpenAI, Vertex AI and others",
+    "You need vector-store spans (Chroma, Pinecone, Qdrant, Weaviate, LanceDB)",
+    "You need automatic spans for LangChain, LlamaIndex, Haystack, CrewAI, Agno and others"
+   ],
+   "notFor": [
+    "You need an all-in-one evaluation and UI platform: this only instruments and exports",
+    "You have no OpenTelemetry infrastructure",
+    "You need a single dependency: it ships one separate package per provider and framework"
+   ],
+   "limits": [
+    "Every provider and framework under packages/ is its own instrumentation package (opentelemetry-instrumentation-anthropic, -bedrock, -chromadb and so on), installed as needed",
+    "The environment variables that control content capture are inconsistent (see Known issues)",
+    "Some frameworks are silently skipped under opentelemetry-instrument (see Known issues)",
+    "The library supplies no storage or query layer, so an existing OTEL backend is required"
+   ],
+   "knownIssues": "#4691: OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT is ignored, and only TRACELOOP_TRACE_CONTENT can turn content capture off; #4689: opentelemetry-instrument silently skips langchain, llamaindex, writer and watsonx (the instruments extra is misconfigured); #4700: since anthropic 1.14.0 usage is reported on two spans per call",
+   "licenceNote": null,
+   "sources": "Verified against the provider and framework lists in the README \\"What do we instrument\\", the actual per-package opentelemetry-instrumentation-* structure under packages, the Apache-2.0 licence, and the open issues.",
+   "page": "https://www.goodthingure.com/tools/openllmetry/"
+  },
+  {
+   "id": "dify",
+   "name": "Dify",
+   "category": "Apps & Workflows",
+   "url": "https://github.com/langgenius/dify",
+   "repo": "langgenius/dify",
+   "summary": "Visual AI application platform: a workflow canvas, prompt IDE, RAG pipeline and agents with their own sandbox.",
+   "stars": 160794,
+   "licence": "Modified Apache-2.0 with commercial terms",
+   "licenceSpdx": "NOASSERTION",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "agent",
+    "agentic-ai",
+    "agentic-framework",
+    "agentic-workflow",
+    "ai",
+    "automation",
+    "claude",
+    "deepseek",
+    "genai",
+    "gpt",
+    "llm",
+    "low-code"
+   ],
+   "fitsWhen": [
+    "You need to build and test AI workflows on a visual canvas",
+    "You need hundreds of model providers plus self-hosted models",
+    "You need the full RAG chain from document ingestion to retrieval (PDF, PPT and others)",
+    "You need agents with a sandbox to run commands, install software and handle files"
+   ],
+   "notFor": [
+    "You plan to run a multi-tenant service: the licence forbids multi-tenant environments without written authorisation",
+    "You need to remove the Dify logo or copyright notice from the frontend",
+    "You cannot accept the design patent and the additional conditions"
+   ],
+   "limits": [
+    "The licence is the \\"Dify Open Source License\\": Apache 2.0 plus additional conditions, not standard Apache 2.0",
+    "Additional condition one: the source may not be used to run a multi-tenant environment (one workspace is one tenant) without written authorisation",
+    "Additional condition two: the console and app LOGO/copyright notices may not be removed or modified when using the Dify frontend (frontend means the web/ directory or the Docker web image)",
+    "The LICENSE states that \\"The interactive design of this product is protected by appearance patent\\"",
+    "The Weighted Score in hybrid search has a semantic problem (see Known issues)"
+   ],
+   "knownIssues": "#45953: hybrid search Weighted Score feeds a full-text rank (ts_rank / BM25 / MATCH AGAINST) into the vector similarity slot; #45959: the CSV extractor silently trims leading and trailing whitespace from cells; #45956: remote file URL decoding breaks percent-encoded query parameters",
+   "licenceNote": "Dify Open Source License: Apache 2.0 plus additional conditions \u2014 unauthorised multi-tenant operation is forbidden, and the frontend LOGO/copyright notices may not be removed; the interactive design is protected by an appearance patent.",
+   "sources": "Verified against the five capabilities in the README \\"Key features\\", the three additional conditions quoted from the LICENSE file, the presence of the web directory (which determines the scope of the LOGO clause), the structure with no ee directory, and the open issues.",
+   "page": "https://www.goodthingure.com/tools/dify/"
+  },
+  {
+   "id": "n8n",
+   "name": "n8n",
+   "category": "Apps & Workflows",
+   "url": "https://github.com/n8n-io/n8n",
+   "repo": "n8n-io/n8n",
+   "summary": "AI-native workflow automation platform: visually orchestrate multi-step agents, with 1500+ integrations and 9000+ templates.",
+   "stars": 209961,
+   "licence": "Sustainable Use License + ee directory",
+   "licenceSpdx": "NOASSERTION",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "ai",
+    "apis",
+    "automation",
+    "cli",
+    "data-flow",
+    "development",
+    "integration-framework",
+    "integrations",
+    "ipaas",
+    "low-code",
+    "low-code-platform",
+    "mcp"
+   ],
+   "fitsWhen": [
+    "You need to orchestrate multi-step AI workflows and agents on a visual canvas",
+    "You need 1500+ integrations to connect existing systems",
+    "You need human approval steps and observability inside the flow",
+    "You need to move between visual and code (JavaScript, Python and npm packages)"
+   ],
+   "notFor": [
+    "You cannot accept the Sustainable Use License: it is not a standard open-source licence",
+    "You need to modify .ee. files or the ee directory and still distribute freely",
+    "You only need simple scheduled scripts"
+   ],
+   "limits": [
+    "The licence is the Sustainable Use License, not an OSI-approved open-source licence; code under .ee. filenames or the ee directory requires a valid n8n Enterprise License",
+    "The LICENSE states plainly that content outside the main (master) branch is not covered by the licence",
+    "The source is a pnpm monorepo (cli / core / workflow / nodes-base / frontend and more under packages), which raises the bar for customising",
+    "The credential domain allowlist does not match internationalised domain names, so non-ASCII domains break (see Known issues)"
+   ],
+   "knownIssues": "#43290: the credential domain allowlist does not match internationalised (non-ASCII) domains; #43289: the Native Agent mid-run observer treats unloaded tool results as stale after in-memory persistence; #43283: nodeNameToToolName returns an empty tool name after truncation",
+   "licenceNote": "Sustainable Use License (not OSI-approved open source); code under .ee. filenames or the ee directory requires an Enterprise License; content outside the main branch is not covered.",
+   "sources": "Verified against the six entries in the README \\"Key Capabilities\\", the Sustainable Use License and .ee. clauses plus the non-main-branch note in LICENSE.md, the actual directory structure under packages, and the open issues.",
+   "page": "https://www.goodthingure.com/tools/n8n/"
+  },
+  {
+   "id": "activepieces",
+   "name": "Activepieces",
+   "category": "Apps & Workflows",
+   "url": "https://github.com/activepieces/activepieces",
+   "repo": "activepieces/activepieces",
+   "summary": "Open-source automation platform: all 280+ integrations are exposed as MCP tools for LLMs, and pieces ship as npm packages.",
+   "stars": 25455,
+   "licence": "Core + ee directory licensed separately",
+   "licenceSpdx": "NOASSERTION",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "ai-agent",
+    "ai-agent-tools",
+    "ai-agents",
+    "ai-agents-framework",
+    "mcp",
+    "mcp-server",
+    "mcp-tools",
+    "mcps",
+    "n8n-alternative",
+    "no-code-automation",
+    "workflow",
+    "workflow-automation"
+   ],
+   "fitsWhen": [
+    "You need existing integrations exposed as MCP tools to Claude Desktop, Cursor, Windsurf and others",
+    "You want pieces as TypeScript npm packages you can customise and hot-reload locally",
+    "You need a visual builder non-technical colleagues can use",
+    "You accept MIT Expat (the ee directory is licensed separately)"
+   ],
+   "notFor": [
+    "You cannot accept the separate licence on packages/ee/",
+    "You need to audit MCP security boundaries and cannot accept the current score (see Known issues)",
+    "You only need a single integration"
+   ],
+   "limits": [
+    "The licence is layered: packages/ee/ and packages/server/api/src/app/ee are licensed under their own ee/LICENSE, and the rest is MIT Expat; the ee directory was confirmed through the contents API (2 entries)",
+    "The README calls it the \\"Largest open source MCP toolkit\\", but an independent report scored MCP security at 50/100 (see Known issues)",
+    "The piece ecosystem is mostly community-contributed (60% per the README), so quality and maintenance vary",
+    "The source is a monorepo (cli / core / ee / pieces / server / web under packages), so local development means understanding the multi-package layout"
+   ],
+   "knownIssues": "#17293: an independent report scored MCP security at 50/100 (security); #17333: Microsoft 365 Copilot Chat with Copilot returns duplicated text; #17362: the Google-related pieces bundle qs 6.15.1",
+   "licenceNote": "Core is MIT Expat; packages/ee/ and packages/server/api/src/app/ee are licensed under their own ee/LICENSE.",
+   "sources": "Verified against the five points in the README \\"Why Activepieces is Different\\" (280+ MCP tools, 60% community contributions, TypeScript npm packages, hot reload, AI-First), the layered licensing text in the LICENSE file, confirmation that packages/ee exists, and the open issues.",
+   "page": "https://www.goodthingure.com/tools/activepieces/"
+  },
+  {
+   "id": "langgraph",
+   "name": "LangGraph",
+   "category": "Apps & Workflows",
+   "url": "https://github.com/langchain-ai/langgraph",
+   "repo": "langchain-ai/langgraph",
+   "summary": "Low-level framework for stateful agents: durable execution, human-in-the-loop, memory and LangSmith debugging.",
+   "stars": 44722,
+   "licence": "MIT",
+   "licenceSpdx": "MIT",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "agents",
+    "ai",
+    "ai-agents",
+    "chatgpt",
+    "deepagents",
+    "enterprise",
+    "framework",
+    "gemini",
+    "generative-ai",
+    "langchain",
+    "langgraph",
+    "llm"
+   ],
+   "fitsWhen": [
+    "You need durable execution that resumes from the last checkpoint after a failure",
+    "You need to inspect and modify agent state at any point during execution",
+    "You need short-term working memory plus long-term memory across sessions",
+    "You need graph-style workflows with visual debugging"
+   ],
+   "notFor": [
+    "You want a high-level wrapper and do not want to build state management yourself",
+    "You cannot accept LangSmith as the debugging and deployment companion",
+    "You are sensitive to the current durable-execution problems (see Known issues)"
+   ],
+   "limits": [
+    "It is low-level infrastructure: graphs, state and interrupt semantics are yours to model",
+    "The README points debugging at LangSmith and deployment at LangSmith Deployments, both separate products",
+    "Durable execution still carries many unclassified issues (see Known issues)",
+    "Storage backends split under libs into checkpoint / checkpoint-postgres / checkpoint-sqlite, and the choice affects persistence behaviour"
+   ],
+   "knownIssues": "#9655: 14 durable-execution bugs (interrupts, retries, checkpointed subgraphs, durability, caching) await classification, and 10 community fixes were auto-closed; #9659: py.typed is ineffective for langgraph.graph (a namespace package), so bare generics leak Unknown into StateGraph signatures; #9660: make test skips the test variants that depend on services because of how NO_DOCKER is written",
+   "licenceNote": null,
+   "sources": "Verified against the five capabilities and the LangSmith note in the README \\"Why use LangGraph\\", the actual checkpoint / checkpoint-postgres / checkpoint-sqlite / sdk-js structure under libs, and the open issues.",
+   "page": "https://www.goodthingure.com/tools/langgraph/"
+  },
+  {
+   "id": "mastra",
+   "name": "Mastra",
+   "category": "Apps & Workflows",
+   "url": "https://github.com/mastra-ai/mastra",
+   "repo": "mastra-ai/mastra",
+   "summary": "TypeScript-first AI application framework: model routing, agents, graph workflows, human-in-the-loop and an MCP server.",
+   "stars": 29436,
+   "licence": "Core + ee directory licensed separately",
+   "licenceSpdx": "NOASSERTION",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "agents",
+    "ai",
+    "chatbots",
+    "evals",
+    "javascript",
+    "llm",
+    "mcp",
+    "nextjs",
+    "nodejs",
+    "reactjs",
+    "tts",
+    "typescript"
+   ],
+   "fitsWhen": [
+    "You work in a TypeScript and React / Next.js / Node.js stack",
+    "You need one model interface across 40+ providers",
+    "You need agents and workflows that can pause and resume (human-in-the-loop)",
+    "You need to publish your own MCP server exposing agents and tools"
+   ],
+   "notFor": [
+    "A non-TypeScript stack",
+    "You cannot accept the separate licence on the ee directory",
+    "You need an out-of-the-box visual low-code platform"
+   ],
+   "limits": [
+    "The licence is layered: the ee/ directory (@mastra/core/auth/ee, @mastra/core/agent-builder/ee, @mastra/editor/ee and so on) is licensed separately",
+    "packages contains many internal packages starting with an underscore (_internal-core, _internals, _test-utils and others), so the public API boundary needs confirming against the documentation",
+    "Observational Memory token counts creep upward during long tool-chain runs (see Known issues)",
+    "GraphRAG and reranker parameter validation have known defects (see Known issues)"
+   ],
+   "knownIssues": "#29878: Mastra Code cross-agent signals do not work on Windows (UnixSocketPubSub is disabled on win32); #29876: GraphRAG accepts inserts and snapshot restores with non-finite edge weights; #29875: the reranker accepts negative component weights that sum to 1",
+   "licenceNote": "The core is open source; the ee/ directory is licensed separately, including @mastra/core/auth/ee, @mastra/core/agent-builder/ee and @mastra/editor/ee.",
+   "sources": "Verified against the seven capabilities in the README \\"Why Mastra\\", the separate-licensing text for the ee/ directory in LICENSE.md (including paths such as @mastra/core/auth/ee), the internal package structure under packages, and the open issues.",
+   "page": "https://www.goodthingure.com/tools/mastra/"
+  },
+  {
+   "id": "budibase",
+   "name": "Budibase",
+   "category": "Apps & Workflows",
+   "url": "https://github.com/Budibase/budibase",
+   "repo": "Budibase/budibase",
+   "summary": "Low-code operations platform: connects request handling, workflows and business systems in one place, where agents can execute actions directly.",
+   "stars": 28396,
+   "licence": "GPLv3 (platform as a whole)",
+   "licenceSpdx": "NOASSERTION",
+   "lastCommit": "2026-11-09",
+   "topics": [
+    "ai-app-builder",
+    "ai-applications",
+    "crud-app",
+    "crud-application",
+    "data-application",
+    "data-apps",
+    "internal-tools",
+    "it-workflows",
+    "low-code",
+    "low-code-no-code",
+    "low-code-platform",
+    "no-code"
+   ],
+   "fitsWhen": [
+    "You need to automate day-to-day questions, approvals and issue reporting from staff",
+    "You need agents to create records, route approvals, update apps and notify the team directly",
+    "You need a low-code platform rather than writing an application from scratch",
+    "You need self-hosting with fine-grained access control"
+   ],
+   "notFor": [
+    "You need a project that is fully open source with no layered licensing",
+    "You only need a pure AI application framework, where something like Mastra is more direct",
+    "You cannot accept the abstraction cost of a low-code platform"
+   ],
+   "limits": [
+    "The LICENSE states that \\"You can consider Budibase to be GPLv3 licensed overall\\", but each package has its own licence file, so confirm individually before adopting",
+    "The key distinction: apps built with Budibase do not bundle GPLv3 code and are therefore not bound by GPLv3 \u2014 this is often misunderstood",
+    "An agent's capability depends on the workflows and app definitions inside the platform; it is not a general-purpose agent framework",
+    "The repository is a monorepo, so local tests take a long time and use a lot of memory (see Known issues)"
+   ],
+   "knownIssues": "#20042: local yarn test is very slow and memory-hungry (server and backend-core); #20030: there are cases where an app cannot be published; #20055: Activity requests are not yet available to non-admin users",
+   "licenceNote": "Per the LICENSE: each package has its own licence, but \\"you can consider Budibase to be GPLv3 licensed overall\\"; apps built with Budibase do not bundle GPLv3 code and are therefore not covered by that licence.",
+   "sources": "Verified against the three passages on running operations, agents handling requests and agents executing actions in the README \\"Features\\", the per-directory licensing guidance in the LICENSE, the charts and docs directory structure, and the open issues.",
+   "page": "https://www.goodthingure.com/tools/budibase/"
+  },
+  {
+   "id": "tooljet",
+   "name": "ToolJet",
+   "category": "Apps & Workflows",
+   "url": "https://github.com/ToolJet/ToolJet",
+   "repo": "ToolJet/ToolJet",
+   "summary": "Internal app building platform: a built-in MCP server lets coding agents generate pages, queries and components that colleagues then edit.",
+   "stars": 41212,
+   "licence": "AGPL-3.0",
+   "licenceSpdx": "AGPL-3.0",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "ai-app-builder",
+    "docker",
+    "internal-applications",
+    "internal-project",
+    "internal-tool",
+    "internal-tools",
+    "javascript",
+    "kubernetes",
+    "low-code",
+    "low-code-development-platform",
+    "low-code-framework",
+    "no-code"
+   ],
+   "fitsWhen": [
+    "You need coding agents (Claude Code, Codex, Grok Build, Cursor and others) to build internal apps directly",
+    "You need 80+ responsive components, a built-in database and 90+ data sources",
+    "You need multi-user collaborative editing and fine-grained access control",
+    "You need self-hosting (Docker, K8s, AWS, GCP, Azure)"
+   ],
+   "notFor": [
+    "You cannot accept the network-service obligations of AGPL-3.0",
+    "You need agents to draw on ToolJet AI credits: the README states plainly that the MCP path uses your own model subscription",
+    "You need MCP to be stable: the ToolJet MCP is currently beta"
+   ],
+   "limits": [
+    "AGPL-3.0: offering a modified version as a network service carries source-availability obligations",
+    "The README states plainly that \\"ToolJet MCP is currently in beta\\"",
+    "The MCP path \\"operations run on your own model subscription rather than drawing down ToolJet AI credits\\", a separate billing path from the built-in AI",
+    "Agents build against the platform's first-party contracts, so capability is bounded by ToolJet's own schema"
+   ],
+   "knownIssues": "#18509: workspace secrets/constants containing \\"$\\" are mangled when resolved in the data source options; #18612: TooljetDatabase performs synchronous navigation during render instead of in useEffect; #18610: AddNewPagePopup reads homePageId as appId and does not exclude the current app",
+   "licenceNote": null,
+   "sources": "Verified against the MCP beta and own-model-subscription notes in the README \\"Build with your coding agent\\", the 80+ components and 90+ data sources in the Community Edition list, the AGPL-3.0 LICENSE text, the src / lib / migrations structure under server, and the open issues.",
+   "page": "https://www.goodthingure.com/tools/tooljet/"
+  },
+  {
+   "id": "dagu",
+   "name": "Dagu",
+   "category": "Apps & Workflows",
+   "url": "https://github.com/dagucloud/dagu",
+   "repo": "dagucloud/dagu",
+   "summary": "Single-process orchestration engine that keeps workflow structure in YAML: dependencies, retries, scheduling and manual tasks in one file.",
+   "stars": 4576,
+   "licence": "GPL-3.0",
+   "licenceSpdx": "GPL-3.0",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "agentic-workflows",
+    "ai-agents",
+    "ai-workflows",
+    "airflow-alternative",
+    "cron",
+    "dag",
+    "data-pipeline",
+    "devops",
+    "durable-execution",
+    "human-in-the-loop",
+    "job-scheduler",
+    "llm"
+   ],
+   "fitsWhen": [
+    "You already have working scripts and containers and only lack scheduling, retries, dependencies and log viewing",
+    "You want workflows as configuration with no framework programming model to migrate into",
+    "You need orchestration at a small scale without operating a scheduler, metadata store and worker platform",
+    "You need a Web UI to edit DAGs"
+   ],
+   "notFor": [
+    "You cannot accept GPL-3.0",
+    "You need large-scale distributed scheduling and multi-tenancy",
+    "You need a mature DAG ecosystem with a vast set of operators"
+   ],
+   "limits": [
+    "GPL-3.0: distributing a modified version requires releasing it under the same licence",
+    "The positioning is small-scale orchestration: the README compares the cost of cron, Airflow and Temporal and chooses a single-process design, so scaling capability needs assessing yourself",
+    "Retries pass the redacted step output to the rerun step (see Known issues), so retries that depend on output need care",
+    "The source is a single Go repository (agentsession, audit, auth, cloudaccess, cloudrelay and more under internal), so customising needs Go skills"
+   ],
+   "knownIssues": "#3681: retry passes the already-redacted step output to the rerun step; #3679: the DAG editor gives no warning when a command does not exist; #3677: there is no form-based schedule builder",
+   "licenceNote": null,
+   "sources": "Verified against the cron / Airflow / Temporal comparison and the YAML-configuration positioning in the README \\"Why Dagu\\", the GPL-3.0 LICENSE text, the agentsession / audit / auth / cloudaccess directories under internal, and the open issues.",
+   "page": "https://www.goodthingure.com/tools/dagu/"
+  },
+  {
+   "id": "coze-studio",
+   "name": "Coze Studio",
+   "category": "Apps & Workflows",
+   "url": "https://github.com/coze-dev/coze-studio",
+   "repo": "coze-dev/coze-studio",
+   "summary": "ByteDance's open-source visual AI agent platform: prompts, RAG, plugins and workflows, with a Go backend and React frontend.",
+   "stars": 21811,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-07-29",
+   "topics": [
+    "agent",
+    "agent-platform",
+    "ai-plugins",
+    "chatbot",
+    "chatbot-framework",
+    "coze",
+    "coze-platform",
+    "generative-ai",
+    "go",
+    "kouzi",
+    "low-code-ai",
+    "multimodel-ai"
+   ],
+   "fitsWhen": [
+    "You need one-stop low-code / no-code agent development and deployment",
+    "You need complete app templates and a framework to start from quickly",
+    "You accept a Go backend plus React frontend with microservices and DDD",
+    "You need a standard licence such as Apache 2.0"
+   ],
+   "notFor": [
+    "You need feature parity with the commercial Coze edition: what is open source is the core engine",
+    "You only need a single stage (prompt management alone, for example)",
+    "You want security issues handled publicly: the README explicitly asks for no public GitHub issues"
+   ],
+   "limits": [
+    "The README states plainly that \\"we have made its core engine completely open\\", meaning the open-source scope is the core engine, not the full capability of the commercial edition",
+    "Security issues must be reported through the ByteDance security centre or email, and filing them publicly on GitHub is explicitly forbidden \u2014 confirm you have a reporting channel before adopting",
+    "Docker compose pull has known failures around image pulls and minio permissions (see Known issues)",
+    "The architecture is microservices with DDD (api / application / domain / infra / crossdomain under backend), which raises the bar for customising"
+   ],
+   "knownIssues": "#2779: the repository received a security vulnerability report (which must follow the private channel in the README); #2775: Docker compose pull fails with a missing image or minio access denied; #2781: interaction between inline threads and the main chat context is still a feature request",
+   "licenceNote": null,
+   "sources": "Verified against the core-engine statement in the README \\"What is Coze Studio\\", the Golang + React + microservices + DDD architecture description, the feature table, the LICENSE-APACHE text, the DDD layering under backend (api / application / domain / infra / crossdomain), and the open issues.",
+   "page": "https://www.goodthingure.com/tools/coze-studio/"
+  },
+  {
+   "id": "haystack",
+   "name": "Haystack",
+   "category": "Apps & Workflows",
+   "url": "https://github.com/deepset-ai/haystack",
+   "repo": "deepset-ai/haystack",
+   "summary": "Production-grade agent and RAG framework: lifecycle hooks, explicit context engineering, native async and modular components.",
+   "stars": 26970,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "agent-framework",
+    "agentic-ai",
+    "agentic-rag",
+    "agents",
+    "ai",
+    "ai-agents",
+    "context-engineering",
+    "framework",
+    "genai",
+    "generative-ai",
+    "information-retrieval",
+    "large-language-models"
+   ],
+   "fitsWhen": [
+    "You need observable, controllable agents (before_llm, before_tool and on_exit lifecycle hooks)",
+    "You need explicit control over retrieval, ranking, filtering, composition, structuring and routing",
+    "You need both sync and async pipelines with token-by-token streaming",
+    "You want ready-made agents from an Agent Pack (deep research, advanced RAG and others)"
+   ],
+   "notFor": [
+    "You need an out-of-the-box visual platform",
+    "You are unwilling to assemble pipelines and components yourself",
+    "A non-Python stack"
+   ],
+   "limits": [
+    "It is a framework, not a platform: pipelines, components and connection logic are yours to design",
+    "Some documentation and integrations live in separate repositories (Agent Pack in haystack-core-integrations, for example)",
+    "Document splitting does not split by sentence for some non-Latin scripts (Devanagari scripts that use the danda), so the whole document becomes one chunk (see Known issues)",
+    "Pipeline.connect refuses to connect a Literal output to an input of that value type (see Known issues)"
+   ],
+   "knownIssues": "#13645: DocumentSplitter does not split by sentence for scripts that use the danda (Hindi, Marathi, Bengali and others), leaving the whole document as one chunk; #13643: Pipeline.connect refuses to connect a Literal output to an input of its value type; #13631: SearchableToolset cannot find a tool by words in its snake_case name",
+   "licenceNote": null,
+   "sources": "Verified against the four passages in the README \\"Features\\" (lifecycle hooks, context engineering, native async, modularity), the Apache-2.0 LICENSE text, the haystack package directory, and the open issues.",
+   "page": "https://www.goodthingure.com/tools/haystack/"
+  },
+  {
+   "id": "langbot",
+   "name": "LangBot",
+   "category": "Chat & Meetings",
+   "url": "https://github.com/langbot-app/LangBot",
+   "repo": "langbot-app/LangBot",
+   "summary": "Multi-platform AI bot framework: one codebase for Discord, Telegram, Slack, WeCom, Feishu and others, with deep integration into Dify, Coze and n8n.",
+   "stars": 18863,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "agent",
+    "coze",
+    "deepseek",
+    "dify",
+    "dingtalk",
+    "discord",
+    "feishu",
+    "kook",
+    "langbot",
+    "lark",
+    "line",
+    "llm"
+   ],
+   "fitsWhen": [
+    "You need to deploy one AI bot across several IM platforms",
+    "You need deep integration into Dify, Coze, n8n, Langflow, Deerflow and WeKnora",
+    "You need access control, rate limiting, sensitive-word filtering and multiple pipelines",
+    "You need a Web admin panel rather than hand-editing YAML"
+   ],
+   "notFor": [
+    "You only need a native bot for one platform",
+    "You do not need a multi-layer integration and plugin system",
+    "You want to build entirely without framework constraints"
+   ],
+   "limits": [
+    "It supports many IM platforms (Discord, Telegram, Slack, LINE, QQ, WeChat, WeCom, Feishu, DingTalk, KOOK), but capabilities and approval requirements differ, so each needs checking",
+    "Integration with Dify, Coze and n8n means failures can come from either side, which lengthens troubleshooting",
+    "Sandbox file sync can restore files already deleted inside the sandbox (see Known issues)",
+    "The source has several directories (src, web, plugins, skills), so customising means understanding backend and frontend together"
+   ],
+   "knownIssues": "#2877: E2B mount sync can restore files already deleted inside the sandbox; #2878: incremental token usage is not preserved when the process exits abnormally; #2880: there are no structured progress or cancellation-acknowledgement events",
+   "licenceNote": null,
+   "sources": "Verified against the six entries in the README \\"Key Capabilities\\" (multi-platform support, integration list, production features, plugin ecosystem, Web panel, multiple pipelines), the Apache-2.0 LICENSE text, the src / web / plugins / skills structure, and the open issues.",
+   "page": "https://www.goodthingure.com/tools/langbot/"
+  },
+  {
+   "id": "agentic-inbox",
+   "name": "Agentic Inbox",
+   "category": "Chat & Meetings",
+   "url": "https://github.com/cloudflare/agentic-inbox",
+   "repo": "cloudflare/agentic-inbox",
+   "summary": "AI email client on Cloudflare: each mailbox is isolated, and the agent drafts replies but never sends without human confirmation.",
+   "stars": 8637,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-04-23",
+   "topics": [],
+   "fitsWhen": [
+    "You need a complete email client with a built-in AI agent (9 email tools)",
+    "You need each mailbox isolated (its own Durable Object, its own SQLite, R2 attachments)",
+    "You need the agent to draft automatically but never send automatically \u2014 the README states it \\"always requir[es] explicit confirmation before sending\\"",
+    "You already have a Cloudflare account and accept Workers / Durable Objects / Access"
+   ],
+   "notFor": [
+    "You have no Cloudflare account or do not want to bind to that ecosystem",
+    "You need local deployment: this is a full Cloudflare stack",
+    "You need a multi-tenant SaaS shape"
+   ],
+   "limits": [
+    "The stack is bound to Cloudflare: Workers, Durable Objects, R2, Email Routing, and the @cf/moonshotai/kimi-k2.5 model on Workers AI",
+    "Non-local development environments require Cloudflare Access JWT validation, so access control has to be configured before deployment",
+    "The sending flow has known defects: a rejected send is displayed as sent (see Known issues)",
+    "The last commit was 2026-04-23, over six months ago"
+   ],
+   "knownIssues": "#84: a rejected send is reported as sent and filed under Sent; #83: outgoing mail stores a Message-ID that was never sent; #85: replying to a stored message is filed into a different thread",
+   "licenceNote": null,
+   "sources": "Verified against the five entries in the README \\"Features\\" and the full \\"Stack\\" (React 19 / Hono / Durable Objects / R2 / Workers AI / Access JWT), the actual agent / db / durableObject / mcp / routes directories under workers, the Apache-2.0 licence, pushed_at (2026-04-23), and the open issues.",
+   "page": "https://www.goodthingure.com/tools/agentic-inbox/"
+  },
+  {
+   "id": "agentconnect",
+   "name": "AgentConnect",
+   "category": "Chat & Meetings",
+   "url": "https://github.com/agentconnect-md/agentconnect",
+   "repo": "agentconnect-md/agentconnect",
+   "summary": "Turns the glue around \\"how several agents work with a team\\" into a platform: message channels, scheduled jobs, credentials and context assembly.",
+   "stars": 1524,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "agent-client-protocol",
+    "agent-sandbox",
+    "ai-agent",
+    "claude-tag-alternative",
+    "codereview",
+    "developer-tools",
+    "github",
+    "jev",
+    "kubernetes",
+    "multi-agent",
+    "slack",
+    "typescript"
+   ],
+   "fitsWhen": [
+    "Teammates need to see what an agent is doing, take over a session, and review its output",
+    "You need message channels, cron, credential handling and context assembly as platform capabilities",
+    "You need MCP upstream support (stdio and legacy HTTP+SSE)",
+    "You need GitHub pull-request conversations and issue collaboration"
+   ],
+   "notFor": [
+    "A single agent in a personal terminal is already enough",
+    "You do not need team visibility or session handover",
+    "You are unwilling to maintain platform-level components"
+   ],
+   "limits": [
+    "The README positioning is \\"turns that glue into a platform\\", meaning it takes on substantial infrastructure duties and is more complex to deploy than a single-machine tool",
+    "GitHub pull-request conversations do not quite behave as expected (see Known issues)",
+    "The source includes charts and docker, so self-hosting means orchestrating several components",
+    "MCP upstream support for stdio and legacy HTTP+SSE is still being filled in (see Known issues)"
+   ],
+   "knownIssues": "#3888: a mention in a GitHub PR conversation always opens a formal review, even when the comment asks for something else; #3875: MCP provider support for stdio and legacy HTTP+SSE upstreams is still being completed; #3849: Linux form filling and Vault are still being implemented",
+   "licenceNote": null,
+   "sources": "Verified against the problem statement and \\"turns that glue into a platform\\" positioning in the README \\"Why AgentConnect\\" (team visibility, session handover, context stranded on one laptop), the four use cases, the charts and docker directories, the Apache-2.0 licence, and the open issues.",
+   "page": "https://www.goodthingure.com/tools/agentconnect/"
+  },
+  {
+   "id": "centaur-paradigm",
+   "name": "Centaur (Paradigm)",
+   "category": "Chat & Meetings",
+   "url": "https://github.com/paradigmxyz/centaur",
+   "repo": "paradigmxyz/centaur",
+   "summary": "Slack-native agent session platform: each conversation runs in its own Kubernetes sandbox, and by design the agent uses approved services without touching raw keys.",
+   "stars": 1429,
+   "licence": "Dual licence (MIT or Apache-2.0)",
+   "licenceSpdx": "NOASSERTION",
+   "lastCommit": "2026-11-10",
+   "topics": [],
+   "fitsWhen": [
+    "The team works mainly in Slack and wants progress and final answers by @-mentioning a bot",
+    "You need a real execution environment per conversation (shell, workspace, git, Python, Node.js, Bun)",
+    "You need a credential boundary: the agent uses approved services without raw API keys entering its environment",
+    "You need replayable state and durable workflows (sleep, resume, wait for events, spawn sub-agents)"
+   ],
+   "notFor": [
+    "No Kubernetes or k3s environment (the README notes a lightweight k3s cluster is enough locally)",
+    "Handling sensitive credentials before all security issues are fixed",
+    "You do not need a Slack-native experience"
+   ],
+   "limits": [
+    "The README credential boundary is a design goal, but a defect currently cuts the other way: a tool client configured with credentials can send API keys to an origin the caller specifies (issue #2071), so confirm it is fixed before adopting",
+    "There are three further open security issues: admin sandbox defaults are skipped, iron-control drops fields and accepts unvalidated identifiers, and Slack sync retains stale privacy state",
+    "It depends on Kubernetes sandboxes; k3s works locally but is still cluster operations",
+    "The source is multiple Rust crates (centaur-iron-control, centaur-iron-proxy, centaur-perms, active-record-encryption and others), so customising needs Rust skills"
+   ],
+   "knownIssues": "#2071: a credentialed tool client can send an API key to an origin the caller specifies (security); #2074: the console user principal provider skips admin sandbox defaults (security); #2073: iron-control drops fragment methods fields, collides on thread foreign-id, and accepts unvalidated queue-name identifiers (security); #2072: Slack sync retains stale privacy and deletion state for rows that leave discovery scope (security)",
+   "licenceNote": "Dual licensed under Apache License 2.0 or MIT, at your option (SPDX: Apache-2.0 OR MIT).",
+   "sources": "Verified against the eight entries in the README \\"Features\\" (Slack-native, K8s sandboxes, bring your own harness, shared tools, durable workflows, credential boundary, replayable state, organisational overlays), the actual centaur-iron-control / centaur-iron-proxy / centaur-perms / active-record-encryption crates, the dual-licence text in LICENSE (Apache-2.0 OR MIT), and the four security reports among the open issues.",
+   "page": "https://www.goodthingure.com/tools/centaur-paradigm/"
+  },
+  {
+   "id": "kaneo",
+   "name": "Kaneo",
+   "category": "Task Handoff",
+   "url": "https://github.com/usekaneo/kaneo",
+   "repo": "usekaneo/kaneo",
+   "summary": "Team task management with kanban, list, calendar and gantt views, connected to GitHub, Gitea, MCP and a REST API.",
+   "stars": 9767,
+   "licence": "MIT",
+   "licenceSpdx": "MIT",
+   "lastCommit": "2026-11-09",
+   "topics": [
+    "hono",
+    "issue-management",
+    "issue-tracker",
+    "jira-alternative",
+    "kanban",
+    "linear-alternative",
+    "mcp",
+    "project-management",
+    "react",
+    "self-hosted",
+    "typescript"
+   ],
+   "fitsWhen": [
+    "You need several views (kanban, list, calendar, gantt) plus a backlog",
+    "You need complete task context (description, attachments, subtasks, dependencies, labels, comments, time tracking)",
+    "You need custom columns and fields, with rules that move tasks in response to repository activity",
+    "You need MCP for AI assistants, or a REST API and CLI"
+   ],
+   "notFor": [
+    "You only need a simple to-do list",
+    "You need a mature large-scale project-management ecosystem",
+    "You cannot choose between self-hosting and Kaneo Cloud"
+   ],
+   "limits": [
+    "MIT licensed; you can self-host or use Kaneo Cloud",
+    "A cross-project defect exists: a subtask's \\"Subtask of\\" link shows the wrong project prefix (see Known issues)",
+    "The Android app requests images from private projects without authentication and gets a 401 (see Known issues)",
+    "The source is an apps monorepo, so self-hosting means understanding the multi-app structure"
+   ],
+   "knownIssues": "#2204: the \\"Subtask of\\" link on a subtask in a different project shows the parent task with the subtask's project prefix; #2199: the Android app requests description and comment images from private projects without authentication and gets a 401; #2196: closing a linked GitHub issue as not planned resets it to completed",
+   "licenceNote": null,
+   "sources": "Verified against the six capabilities in the README \\"Built for your team's work\\" (including GitHub/Gitea, REST API, CLI and MCP), the MIT licence, the apps monorepo structure, and the open issues.",
+   "page": "https://www.goodthingure.com/tools/kaneo/"
+  },
+  {
+   "id": "open-inspect",
+   "name": "Open-Inspect",
+   "category": "Task Handoff",
+   "url": "https://github.com/ColeMurray/background-agents",
+   "repo": "ColeMurray/background-agents",
+   "summary": "Background agent platform: the team owns sessions and environments, and the design is explicitly limited to a trusted single-tenant organisation.",
+   "stars": 3476,
+   "licence": "MIT",
+   "licenceSpdx": "MIT",
+   "lastCommit": "2026-11-08",
+   "topics": [
+    "background-agents",
+    "cloud-agents",
+    "software-factory"
+   ],
+   "fitsWhen": [
+    "Trusted members of one organisation share background agent capability",
+    "You need the team to own sessions, environments and automation, with operations gated by team membership",
+    "You need fine-grained permissions (deleting requires sessions.delete plus session ownership, team lead or workspace admin)",
+    "You accept a single-tenant deployment model"
+   ],
+   "notFor": [
+    "You need multi-tenant isolation: the README states plainly that \\"This system is designed for single-tenant deployment only\\"",
+    "You need to share an instance across organisations",
+    "You treat team-level access control as tenant isolation"
+   ],
+   "limits": [
+    "The README has a separate section making the limit explicit: single tenant only, all users must be trusted members of one organisation, and teams add internal access control rather than tenant isolation",
+    "Session visibility (Workspace / Team / Private) and fixed ownership are two separate things, and resources cannot move between teams or workspaces",
+    "Operating on a team-owned session requires current membership of the owning team, and even a workspace Owner cannot override that",
+    "The repository (background-agents) was last committed 2026-11-08, so activity is normal"
+   ],
+   "knownIssues": "#2655: block merges until AI review has run; #2605: limit harness execution after an abrupt bridge restart; #2607: provider account pools for new sessions are assigned randomly",
+   "licenceNote": null,
+   "sources": "Verified against the README \\"Security Model (Single-Tenant Only)\\" section (single-tenant limit, team-owned resources, deleting requiring sessions.delete), the packages directory, the MIT licence, and the open issues.",
+   "page": "https://www.goodthingure.com/tools/open-inspect/"
+  },
+  {
+   "id": "optio",
+   "name": "Optio",
+   "category": "Task Handoff",
+   "url": "https://github.com/jonwiggins/optio",
+   "repo": "jonwiggins/optio",
+   "summary": "Agent platform that turns issues into pull requests: 14 trigger types, repository worktree execution, persistent agents and shared sessions.",
+   "stars": 1099,
+   "licence": "MIT",
+   "licenceSpdx": "MIT",
+   "lastCommit": "2026-11-09",
+   "topics": [
+    "agent",
+    "agents",
+    "ai",
+    "claude-code",
+    "codex",
+    "copilot",
+    "gemini",
+    "kubernetes",
+    "opencode",
+    "orchestration"
+   ],
+   "fitsWhen": [
+    "You need issues or events to drive automatically through to a PR, following CI and review",
+    "You need 14 trigger types (manual, schedule, webhook, ticket, GitHub, GitLab, Slack, Linear, Jira, Pylon, PagerDuty, Sentry, Alertmanager, Datadog)",
+    "You need persistent agents each with their own instructions and inbox, coordinated through an inter-agent API",
+    "You need short-lived shared links so colleagues can view and control a session, revoked when done"
+   ],
+   "notFor": [
+    "You run a single agent: the trigger and coordination layer buys nothing",
+    "You do not need multiple clients (Web, CLI, iOS, Android)",
+    "You are unwilling to maintain repository worktrees and execution environments"
+   ],
+   "limits": [
+    "Repository platform support covers GitHub, GitLab and AWS CodeCommit, and CI and issue features differ by platform",
+    "Coordinating persistent agents relies on the inter-agent API, so roles and inboxes have to be designed per the documentation",
+    "Shared links are short-lived revocable access, not a long-term collaboration permission model",
+    "The source is an apps monorepo (api / web / cli / ios / android), so self-hosting means understanding the multi-client structure"
+   ],
+   "knownIssues": "#797: OpenCode sessions cannot use OpenCode Zen / Go keys (OPENCODE_API_KEY is never forwarded); #770: SSO login fails because the login link lacks browserChallenge; #769: Codex app-server mode fails because the bundled codex-cli 0.166.0 has no exec --app-server flag",
+   "licenceNote": null,
+   "sources": "Verified against the eight-row \\"What can you do\\" table in the README, the explicit list of 14 triggers and three repository platforms, the actual api / web / cli / ios / android structure under apps, the MIT licence, and the open issues.",
+   "page": "https://www.goodthingure.com/tools/optio/"
+  },
+  {
+   "id": "paca",
+   "name": "Paca",
+   "category": "Task Handoff",
+   "url": "https://github.com/Paca-AI/paca",
+   "repo": "Paca-AI/paca",
+   "summary": "Self-hosted Scrum platform where AI agents take part as equal teammates in sprint planning, picking up tasks and writing BDD specs.",
+   "stars": 2049,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "ai-agent",
+    "bdd",
+    "clickup-alternative",
+    "jira-alternative",
+    "mcp",
+    "open-source",
+    "openhands",
+    "project-management",
+    "scrum",
+    "scrumban",
+    "self-hosted",
+    "trello-alternative"
+   ],
+   "fitsWhen": [
+    "The team runs Scrum and wants agents genuinely inside the iteration, not just a chatbot",
+    "You need agents in sprint planning, picking tasks off the board and writing BDD specs",
+    "You need workflows, data models and UI all extensible through plugins",
+    "You need self-hosting"
+   ],
+   "notFor": [
+    "You do not use Scrum or need another methodology",
+    "You only need a simple task board",
+    "You are unwilling to maintain several services (agent-runner, agent-server, api, realtime)"
+   ],
+   "limits": [
+    "The README positioning is that \\"AI agents and humans collaborate as equal teammates inside a Scrum team\\", so the methodology is bound to Scrum",
+    "Capability depends on several separate services (agent-runner / agent-server / api / realtime under services), which lengthens deployment and diagnosis",
+    "Plugins mean core behaviour can be rewritten, but that requires understanding the plugin contract",
+    "Several SSO and permission enhancements are still feature requests (see Known issues)"
+   ],
+   "knownIssues": "#676: an SSO-only mode (disabling local password login except for a default super admin) is still a feature request; #675: SSO does not yet support enforcing a per-IdP group/role claim allowlist; #688: plugin pulling for private hosts on CGNAT addresses (Tailscale) is still under discussion",
+   "licenceNote": null,
+   "sources": "Verified against the equal-teammate Scrum positioning and plugin notes in the README \\"What is Paca\\", the actual agent-runner / agent-server / api / realtime structure under services, the Apache-2.0 licence, and the open issues.",
+   "page": "https://www.goodthingure.com/tools/paca/"
+  },
+  {
+   "id": "paperclip",
+   "name": "Paperclip",
+   "category": "Task Handoff",
+   "url": "https://github.com/paperclipai/paperclip",
+   "repo": "paperclipai/paperclip",
+   "summary": "Control plane for autonomous AI organisations: coordinates several agents toward one goal and audits their output and cost.",
+   "stars": 112693,
+   "licence": "MIT",
+   "licenceSpdx": "MIT",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "acpx",
+    "agent-orchestration",
+    "agent-skills",
+    "agentic-ai",
+    "ai-agents",
+    "ai-engineering",
+    "ai-governance",
+    "ai-tools",
+    "autonomous-agents",
+    "claude",
+    "claude-code",
+    "claude-skills"
+   ],
+   "fitsWhen": [
+    "You need to coordinate OpenClaw, Codex, Claude, Cursor and other agents toward one goal",
+    "You need to manage many concurrent Claude Code terminals without losing the global view",
+    "You need agents running 24/7 autonomously while keeping an audit trail and staying able to intervene",
+    "You need cost monitoring and enforced budgets",
+    "You need to manage it from a phone"
+   ],
+   "notFor": [
+    "Only one or two agents, where a control plane buys nothing",
+    "You do not need auditing or budget control",
+    "You do not buy into the \\"AI organisation\\" framing"
+   ],
+   "limits": [
+    "The README positioning is \\"autonomous AI organizations\\", and what it manages is a team of agents rather than a single session",
+    "All four pillars (tasks, organisation, training, infrastructure) need configuring before it produces anything",
+    "Board Retry on a dependency-blocked task returns 202 but never dispatches (see Known issues), so dependency chains need care when diagnosing",
+    "Self-hosted deployment has several easy-to-miss configuration points (the README has a dedicated five-item pitfalls note)"
+   ],
+   "knownIssues": "#20479: Board Retry on a dependency-blocked task returns 202 but never dispatches, the receipt is skipped again on every scan, and the UI shows no reason; #20485: Codex bootstrap fails on duplicated Git permissions and leaves Retry blocked; #20481: self-hosted deployment has five easy-to-miss configuration points (env_file credentials, public-MCP URL, heartbeat defaults, DNS stub, Hermes gateway path)",
+   "licenceNote": null,
+   "sources": "Verified against the seven \\"Paperclip is right for you if\\" entries and the four-pillars positioning in the README, the MIT licence, and the open issues (including the self-hosted deployment pitfalls note).",
+   "page": "https://www.goodthingure.com/tools/paperclip/"
+  },
+  {
+   "id": "pr-agent",
+   "name": "PR-Agent",
+   "category": "Task Handoff",
+   "url": "https://github.com/The-PR-Agent/pr-agent",
+   "repo": "The-PR-Agent/pr-agent",
+   "summary": "Pull-request automation: generates PR descriptions, review comments and suggested edits, running from the CLI, CI or code-platform events.",
+   "stars": 15759,
+   "licence": "MIT",
+   "licenceSpdx": "MIT",
+   "lastCommit": "2026-11-10",
+   "topics": [
+    "ai",
+    "anthropic",
+    "code-review",
+    "coding-assistant",
+    "devtools",
+    "ollama",
+    "openai",
+    "pull-request",
+    "pull-requests"
+   ],
+   "fitsWhen": [
+    "You need PR descriptions and review comments generated automatically",
+    "You need GitHub Action, CLI or CI integration",
+    "You need a self-review flow scoped to the diff",
+    "You need multi-platform support including GitLab"
+   ],
+   "notFor": [
+    "You need the commercial AI code review that Qodo sells as its main product \u2014 the README draws a clear line",
+    "You are unprepared for the Docker Hub namespace migration: image addresses changed from 0.34.2 onward",
+    "You do not need automated code review"
+   ],
+   "limits": [
+    "The README states plainly that this is \\"a community-maintained legacy project of Qodo\\" and \\"it is not the Qodo offering for open-source projects\\" \u2014 it is a different thing from the commercial AI code review product",
+    "The Docker Hub namespace has migrated: 0.34.2 and later publish under pragent/pr-agent, while older versions (including v0.31) stay frozen at codiumai/pr-agent with no further pushes \u2014 image references must be updated when upgrading",
+    "The source ships the pr_agent package (agent / algo / git_providers / secret_providers / mosaico) plus github_action and docker distribution forms, and the form you choose affects maintenance cost",
+    "Hardening of the self-review flow and CI inputs is still in progress (see Known issues)"
+   ],
+   "knownIssues": "#4813: reviews reach sibling repositories and submodules outside the reviewed project's top-level namespace; #4809: mentions after setext headings, HTML blocks and escaped backticks need neutralising on GitLab; #4784: CI and staleness inputs need hardening against their influence on the merge verdict",
+   "licenceNote": null,
+   "sources": "Verified against the Docker Hub namespace migration note in the README \\"Getting Started\\" (0.34.2 \u2192 pragent/pr-agent, older versions frozen), the recommended GitHub Action path, the actual agent / algo / git_providers / secret_providers modules under pr_agent, the MIT licence, and the open issues.",
+   "page": "https://www.goodthingure.com/tools/pr-agent/"
+  },
+  {
+   "id": "solo-solo-agent",
+   "name": "Solo (solo-agent)",
+   "category": "Task Handoff",
+   "url": "https://github.com/solo-agent/solo",
+   "repo": "solo-agent/solo",
+   "summary": "Shared workspace for several agents: channels, direct messages, threads and a task board, where a message can become a task someone claims, submits and reviews.",
+   "stars": 602,
+   "licence": "MIT",
+   "licenceSpdx": "MIT",
+   "lastCommit": "2026-09-13",
+   "topics": [
+    "agent-orchestration",
+    "agent-workspace",
+    "ai-agents",
+    "ai-workspace",
+    "claude-code",
+    "codex",
+    "coding-agents",
+    "multi-agent",
+    "opencode",
+    "solo",
+    "solo-agent",
+    "soloagent"
+   ],
+   "fitsWhen": [
+    "You run Claude Code, Codex, OpenCode, Hermes and OpenClaw sessions at once and need one place to coordinate them",
+    "You need agents with long-term memory, their own environment and a fixed workspace",
+    "You need \\"can you help me with this\\" to turn from chat into a trackable task",
+    "You need tasks split into subtasks across agents, producing artifacts you can inspect"
+   ],
+   "notFor": [
+    "You need a company-level simulator: the README is explicit that this is a workspace",
+    "You have only a single agent",
+    "You do not need task claiming and review flows"
+   ],
+   "limits": [
+    "The README states plainly that \\"Solo is intentionally a workspace, not a company simulator\\" \u2014 it does not model org structure or personnel",
+    "The shared workspace depends on each agent's CLI and authentication, so coverage is bounded by the supported list",
+    "Per-task and per-run worktree execution environments are still a proposal (see Known issues)",
+    "The source is mostly a single Go repository (cmd / internal / pkg / migrations / skills), and the convergence stage of multi-branch reasoning is still being designed"
+   ],
+   "knownIssues": "#61: task/run-level worktree execution environments are still a proposal; #74: an explicit convergence stage for the multi-branch reasoning mode is still to be added; #147: a request to support the Antigravity CLI",
+   "licenceNote": null,
+   "sources": "Verified against the comparison table in the README \\"Why Solo\\" (channels / DMs / threads / task board, long-term memory, messages becoming tasks, subtask splitting, visible artifacts), the explicit \\"not a company simulator\\" positioning, the actual cmd / internal / pkg / migrations / skills structure, the MIT licence, and the open issues.",
+   "page": "https://www.goodthingure.com/tools/solo-solo-agent/"
+  },
+  {
+   "id": "toolhive",
+   "name": "ToolHive",
+   "category": "Model Access",
+   "url": "https://github.com/stacklok/toolhive",
+   "repo": "stacklok/toolhive",
+   "summary": "MCP server runtime: runs any MCP server isolated in a container, with a Gateway and Registry Server for central governance.",
+   "stars": 2331,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-11-09",
+   "topics": [
+    "ai",
+    "ai-security",
+    "aicodeassistant",
+    "golang",
+    "kubernetes",
+    "mcp",
+    "mcp-security",
+    "mcp-servers",
+    "mcp-tools",
+    "model-context-protocol",
+    "security"
+   ],
+   "fitsWhen": [
+    "You need MCP servers running safely and instantly, isolated in containers",
+    "You need a Gateway that orchestrates several tools into a virtual MCP, with access policy and network endpoints",
+    "You need security policy, authentication, authorisation and auditing in one place, with OIDC/OAuth SSO through your IdP",
+    "You need tool and description filtering to cut token usage"
+   ],
+   "notFor": [
+    "You only need one MCP server running locally",
+    "You have no container runtime",
+    "You need stable multi-turn stateful sessions (see Known issues)"
+   ],
+   "limits": [
+    "The architecture has three layers (Gateway / Registry Server / Runtime), and Registry Server is a separate repository that must be deployed alongside",
+    "Isolation rests on containers, so the security boundary depends on container configuration and network policy",
+    "The README emphasises filtering tools and descriptions to improve performance and reduce token usage, but filtering can itself weaken what the agent can do, so it is a trade-off",
+    "vMCP loses stateful backend sessions after the Serve/core migration (see Known issues), so multi-turn tool-calling scenarios need particular testing"
+   ],
+   "knownIssues": "#7069: vMCP loses stateful backend sessions between tool calls after the Serve/core migration; #7094: the DCR client_name sent for upstream dynamic client registration needs to be configurable; #7064: a podTemplateSpec port missing protocol makes the MCPRemoteProxy Deployment update repeatedly",
+   "licenceNote": null,
+   "sources": "Verified against the Gateway / Registry Server / Runtime three-layer architecture and the Gateway's six capabilities in the README \\"Core capabilities\\" (virtual MCP orchestration, access policy, central governance, IdP SSO, tool filtering, local client connection), the cmd / config / containers / deploy directories, the Apache-2.0 licence, and the open issues.",
+   "page": "https://www.goodthingure.com/tools/toolhive/"
+  },
+  {
+   "id": "plano",
+   "name": "Plano",
+   "category": "Model Access",
+   "url": "https://github.com/katanemo/plano",
+   "repo": "katanemo/plano",
+   "summary": "Envoy-based AI-native proxy and data plane: agent routing, signal collection, guardrail filtering and model routing.",
+   "stars": 7113,
+   "licence": "Apache-2.0",
+   "licenceSpdx": "Apache-2.0",
+   "lastCommit": "2026-10-24",
+   "topics": [
+    "ai-gateway",
+    "ai-gateway-support",
+    "envoy",
+    "envoyproxy",
+    "gateway",
+    "generative-ai",
+    "llm-gateway",
+    "llm-inference",
+    "llm-proxy",
+    "llm-routing",
+    "llmops",
+    "llms"
+   ],
+   "fitsWhen": [
+    "You need low-latency inter-agent orchestration where adding an agent needs no application code change",
+    "You need LLM routing by model name, alias or preference",
+    "You need Signals and OTEL trace/metrics collected with no code",
+    "You need jailbreak protection, content moderation and memory handled uniformly through Filter Chains"
+   ],
+   "notFor": [
+    "You do not need a proxy layer, having built routing and guardrails into the application",
+    "You cannot accept the regional limit on Plano LLMs (see Limitations)",
+    "You need a steadily maintained project: the last commit was 2026-10-24"
+   ],
+   "limits": [
+    "The README states plainly that Plano and the Plano family of LLMs (Plano-Orchestrator, for example) are hosted free in the US-central region for first-time evaluation only; production means running locally or requesting an API key \u2014 the regional and quota constraints are real",
+    "Output filters process each chunk independently, so a value split across SSE events can bypass output_redactor (see Known issues); security scenarios need particular testing",
+    "Built on Envoy, so operations means understanding its configuration model",
+    "The source is multiple Rust crates (prompt_gateway, llm_gateway, hermesllm, brightstaff and others), so customising needs Rust skills"
+   ],
+   "knownIssues": "#1036: output filters judge each streaming chunk separately, so a value split across two SSE events passes output_redactor (a security bypass); #1035: optional agent trust (AgentCert) verification is still under discussion; #1052: whether to support a decisions API is still undecided",
+   "licenceNote": null,
+   "sources": "Verified against the four capabilities in the README Overview (Orchestration, Model Agility, Agentic Signals, Moderation & Memory Hooks), the Envoy foundation, the IMPORTANT notice on the free hosting region, the actual prompt_gateway / llm_gateway / hermesllm / brightstaff crates, the Apache-2.0 licence, and the open issues.",
+   "page": "https://www.goodthingure.com/tools/plano/"
+  },
+  {
+   "id": "mission-control-by-builderz",
+   "name": "Mission Control by Builderz",
+   "category": "Task Handoff",
+   "url": "https://github.com/builderz-labs/mission-control",
+   "repo": "builderz-labs/mission-control",
+   "summary": "Control plane above agent runtimes: one view over tasks, agents, operations, knowledge and governance, without replacing the agent's reasoning.",
+   "stars": 6468,
+   "licence": "MIT",
+   "licenceSpdx": "MIT",
+   "lastCommit": "2026-11-09",
+   "topics": [
+    "agent-observability",
+    "agent-operations",
+    "agent-orchestration",
+    "ai-agents",
+    "claude-code",
+    "codex",
+    "developer-tools",
+    "mcp",
+    "nextjs",
+    "open-source",
+    "openclaw",
+    "self-hosted"
+   ],
+   "fitsWhen": [
+    "You need one place to see and govern the work around several agent runtimes",
+    "You need the full task lifecycle (inbox, assignment, execution, review, the Aegis quality gate and completion receipts)",
+    "You need an activity stream, scheduling, alerts, webhooks, logs, token usage and cost views",
+    "You need roles, API keys, security events, trust signals, approvals, auditing and evaluation"
+   ],
+   "notFor": [
+    "You expect it to replace the agent's reasoning or tool loop: the README states plainly that it does not",
+    "You need multi-tenant isolation: the control plane is a workspace-aware self-hosted single instance",
+    "You are unwilling to maintain a self-hosted control plane"
+   ],
+   "limits": [
+    "The README states plainly that \\"the control plane sits above agent runtimes\\" and \\"does not replace their reasoning or tool loops\\" \u2014 it governs the workflow around agents, not the agents themselves",
+    "The runtime is self-hosted and workspace-aware, with SQLite holding local control-plane state",
+    "Strict workspace mode blocks deployment-level runtime integrations that carry no workspace ownership, so resource ownership needs confirming before integrating",
+    "The OpenClaw gateway connection has a protocol-version mismatch (see Known issues)"
+   ],
+   "knownIssues": "#997: the Gateway connection fails on OpenClaw 2026.10.3 with PROTOCOL_MISMATCH (the client sends protocol 3 while the gateway expects 4); #992: local CLI session scanning is slow, activity information is misleading, and the sidebar lacks detail navigation; #985: support for version 23.0.0 is needed",
+   "licenceNote": null,
+   "sources": "Verified against the six-row governance scope table in the README \\"What Mission Control governs\\" (tasks, agents, operations, knowledge, governance, interfaces), the explicit statement that the control plane does not replace reasoning, the SQLite and control-plane positioning, the src / skills / ops directories, the MIT licence, and the open issues.",
+   "page": "https://www.goodthingure.com/tools/mission-control-by-builderz/"
+  }
+ ],
+ "comparisons": [
+  {
+   "slug": "mem0-vs-zep",
+   "tools": [
+    "mem0",
+    "zep"
+   ],
+   "title": "Mem0 vs Zep: two different memory layers",
+   "summary": "Mem0 is a memory component you add to your app. Zep is an enterprise context layer for agents. Which one you want depends on whether you need \\"remember the preference\\" or \\"governed access to knowledge\\".",
+   "dimensions": [
+    {
+     "name": "Positioning",
+     "a": "Memory component: extracts facts and retrieves them with several signals",
+     "b": "Enterprise context layer: Context Lake plus Agent Skills"
+    },
+    {
+     "name": "Open-source scope",
+     "a": "Apache-2.0 SDK, with self-hosted and cloud tiers",
+     "b": "The repository holds Zep Cloud examples and integrations, not the product"
+    },
+    {
+     "name": "Algorithm",
+     "a": "Single-pass ADD-only extraction: memories accumulate and are never overwritten",
+     "b": "Governed context graphs, with repeated agent tasks distilled into skills"
+    },
+    {
+     "name": "Integration",
+     "a": "SDK or self-hosted service",
+     "b": "MCP or the official SDKs, with a Zep Cloud account"
+    }
+   ],
+   "chooseA": [
+    "You have one application and only want it to remember user preferences and state across sessions",
+    "You can accept append-only memories that rely on retrieval ranking to surface what is currently true",
+    "You want to self-host rather than put memory in someone else's managed service"
+   ],
+   "chooseB": [
+    "You need business data unified into governed context graphs that several agents share",
+    "You want the tasks agents repeat to accumulate into reusable skills",
+    "You accept using a managed service"
+   ],
+   "neither": "If all you need is \\"let the chat assistant remember me\\", check whether your host tool already has memory built in \u2014 neither of these is needed.",
+   "page": "https://www.goodthingure.com/compare/mem0-vs-zep/"
+  },
+  {
+   "slug": "mem0-vs-openviking",
+   "tools": [
+    "mem0",
+    "openviking"
+   ],
+   "title": "Mem0 vs OpenViking: extracted facts or context read on demand",
+   "summary": "Mem0 turns conversations into facts and retrieves them. OpenViking puts knowledge, memory and skills into one filesystem where agents go deeper by directory and summary as needed.",
+   "dimensions": [
+    {
+     "name": "Storage shape",
+     "a": "Extracted facts with vector retrieval",
+     "b": "A unified context database (directory + summary + semantics)"
+    },
+    {
+     "name": "How you use it",
+     "a": "SDK plugged into an existing application",
+     "b": "A context storage layer for agents"
+    },
+    {
+     "name": "Licence",
+     "a": "Apache-2.0",
+     "b": "AGPL-3.0"
+    },
+    {
+     "name": "Scale fit",
+     "a": "Small to medium sets of preference-type facts",
+     "b": "Long, hierarchically structured material"
+    }
+   ],
+   "chooseA": [
+    "What you need to remember is flat facts such as user preferences and settings",
+    "You do not want to take on the obligations of AGPL",
+    "You need a memory component that drops into an existing application"
+   ],
+   "chooseB": [
+    "Your material is inherently hierarchical (directories, modules, chapters) and suits organisation by directory",
+    "You want agents to read summaries first and drill into the source only when needed",
+    "You can accept the propagation obligations of AGPL-3.0"
+   ],
+   "neither": "If context length is not the bottleneck, an ordinary vector store plus retrieval covers it; both of these are heavier.",
+   "page": "https://www.goodthingure.com/compare/mem0-vs-openviking/"
+  },
+  {
+   "slug": "basic-memory-vs-memsearch",
+   "tools": [
+    "basic-memory",
+    "memsearch"
+   ],
+   "title": "Basic Memory vs memsearch: two Markdown memory designs",
+   "summary": "Both keep the truth in Markdown. They differ in indexing and audience. Basic Memory targets local notes and MCP clients, while memsearch targets memory shared across several coding assistants.",
+   "dimensions": [
+    {
+     "name": "Audience",
+     "a": "Personal knowledge base and MCP clients",
+     "b": "Coding assistants (Claude Code, Codex, OpenCode and others)"
+    },
+    {
+     "name": "Index",
+     "a": "Local index with optional cross-encoder reranking",
+     "b": "Milvus as a rebuildable shadow index"
+    },
+    {
+     "name": "Licence",
+     "a": "AGPL-3.0",
+     "b": "MIT"
+    },
+    {
+     "name": "Commercial edition",
+     "a": "Also a paid cloud edition and a Teams workspace",
+     "b": "An open-source project with no paid edition in evidence"
+    }
+   ],
+   "chooseA": [
+    "You already keep Obsidian notes and want the assistant to read and write the same files",
+    "You mainly use MCP clients and do not need memory shared across several coding CLIs",
+    "You want optional semantic reranking to improve retrieval quality"
+   ],
+   "chooseB": [
+    "You use Claude Code, Codex and OpenCode at once and need the same memory available everywhere",
+    "You do not mind Milvus as an indexing dependency",
+    "You need a permissive licence such as MIT"
+   ],
+   "neither": "If the memory is small and used in a single tool, the client's own session memory is enough.",
+   "page": "https://www.goodthingure.com/compare/basic-memory-vs-memsearch/"
+  },
+  {
+   "slug": "skillshare-vs-teamai",
+   "tools": [
+    "skillshare",
+    "teamai"
+   ],
+   "title": "skillshare vs TeamAI CLI: config sync or a team resource repository",
+   "summary": "Skillshare solves \\"how do my settings follow me everywhere\\". TeamAI CLI solves \\"how are team execution conventions distributed consistently\\".",
+   "dimensions": [
+    {
+     "name": "Scope",
+     "a": "Skills, agents, rules, MCP, hooks",
+     "b": "Skills, rules, culture, agents, hooks, MCP, workflows, env, models"
+    },
+    {
+     "name": "Distribution",
+     "a": "Personal configuration plus project-level \`.skillshare/\`",
+     "b": "A team Git repository maintained by an admin"
+    },
+    {
+     "name": "Client coverage",
+     "a": "Claude Code, Codex, Pi, OpenCode and others",
+     "b": "17+ clients, with some combinations marked unsupported"
+    },
+    {
+     "name": "Extras",
+     "a": "Audit before distributing, choose what each tool receives",
+     "b": "Team Context and Team Improvement (beta)"
+    }
+   ],
+   "chooseA": [
+    "The problem you want solved is \\"every new tool means reconfiguring everything\\"",
+    "You need to audit skill content before distributing it",
+    "You want to choose which skills go to which tool"
+   ],
+   "chooseB": [
+    "The team needs one set of execution conventions maintained by an admin in a Git repository",
+    "Members should pull the latest resources after initialising rather than syncing by hand",
+    "You need coverage of nine resource types, not just skills"
+   ],
+   "neither": "For a team of two or three, an AGENTS.md plus some verbal agreement is probably enough.",
+   "page": "https://www.goodthingure.com/compare/skillshare-vs-teamai/"
+  },
+  {
+   "slug": "skillhub-vs-mex",
+   "tools": [
+    "skillhub",
+    "mex"
+   ],
+   "title": "SkillHub vs MEX: skill registry or project memory",
+   "summary": "SkillHub governs which skills exist in an organisation and who may publish them. MEX governs the decisions and handoffs recorded for a project.",
+   "dimensions": [
+    {
+     "name": "What it manages",
+     "a": "Skill packages (versions, tags, namespaces)",
+     "b": "Project memory (architecture, decisions, handoffs, progress)"
+    },
+    {
+     "name": "Governance",
+     "a": "Namespace admin review plus platform admin gating of promotion",
+     "b": "Inbox proposals with human review"
+    },
+    {
+     "name": "Storage",
+     "a": "Self-hosted service, optionally S3 / MinIO",
+     "b": "Markdown under \`.mex/\` inside the repository"
+    },
+    {
+     "name": "Client coverage",
+     "a": "CLI + REST API + a ClawHub compatibility layer",
+     "b": "Full on Claude Code and Codex, instruction templates only elsewhere"
+    }
+   ],
+   "chooseA": [
+    "The organisation needs skill versioning, promotion approval and auditing",
+    "You need a private registry deployed behind the firewall",
+    "You need RBAC and download statistics"
+   ],
+   "chooseB": [
+    "You want architecture decisions and handoff records to travel with the code",
+    "You mainly use Claude Code or Codex",
+    "You need agents to read project memory and explain \\"why it was done this way\\""
+   ],
+   "neither": "If the team has no stable skill library yet, build the content up first and consider a registry later.",
+   "page": "https://www.goodthingure.com/compare/skillhub-vs-mex/"
+  },
+  {
+   "slug": "agor-vs-openwebui",
+   "tools": [
+    "agor",
+    "openwebui"
+   ],
+   "title": "Agor vs Open WebUI: a coding collaboration board or a general AI entry point",
+   "summary": "Agor is built around branch isolation and a spatial board for coding agents. Open WebUI is built around model access, knowledge bases and shared channels.",
+   "dimensions": [
+    {
+     "name": "Core scenario",
+     "a": "The team and their agents collaborating on one board",
+     "b": "A shared AI entry point with models and knowledge bases"
+    },
+    {
+     "name": "Agent support",
+     "a": "Drives the CLIs you already run (Claude, Codex, Gemini and others), each on its own git branch",
+     "b": "Model-centred, with no branch isolation around coding agents"
+    },
+    {
+     "name": "Licence",
+     "a": "BUSL-1.1",
+     "b": "Open WebUI License (with a branding clause)"
+    },
+    {
+     "name": "Deployment",
+     "a": "npm install, self-built",
+     "b": "Docker or an offline deployment"
+    }
+   ],
+   "chooseA": [
+    "Several people use coding agents at once and changes need branch isolation",
+    "You want to see on a board who is doing what, and review the diffs",
+    "You can accept BUSL-1.1"
+   ],
+   "chooseB": [
+    "What you want is a unified model entry point and knowledge-base Q&A",
+    "You need shared channels, notes and user-group permissions",
+    "You can accept the branding clause (no rebranding for more than 50 users in your own deployment)"
+   ],
+   "neither": "If the team just needs to share one model account, the official clients are less trouble.",
+   "page": "https://www.goodthingure.com/compare/agor-vs-openwebui/"
+  },
+  {
+   "slug": "buzz-vs-commonly",
+   "tools": [
+    "buzz",
+    "commonly"
+   ],
+   "title": "Buzz vs Commonly: a signed event log or named agent members",
+   "summary": "Buzz turns every action by a person or agent into one signed event log. Commonly turns each member's agent into a named member of a pod with an explicit owner.",
+   "dimensions": [
+    {
+     "name": "Underlying model",
+     "a": "Nostr relay with a signed event log",
+     "b": "Pods with named agent members"
+    },
+    {
+     "name": "Identity",
+     "a": "People and processes share one identity model and audit chain",
+     "b": "Each agent has an owner and is visible to members"
+    },
+    {
+     "name": "Version state",
+     "a": "This repository is the 0.X line; 1.0 has moved to block/buzz-app",
+     "b": "v3, and supports bringing your existing agents along"
+    },
+    {
+     "name": "Self-hosting scope",
+     "a": "Self-host the relay",
+     "b": "Self-hosting runs only the agents you bring along"
+    }
+   ],
+   "chooseA": [
+    "You need a single audit chain where every message and action can be signature-verified",
+    "You can accept the complexity of a Nostr relay",
+    "You are on 0.X and do not need the 1.0 plugin API"
+   ],
+   "chooseB": [
+    "Team members already run their own agents and want them in one pod",
+    "You need to invite by link and let people @ each other's agents",
+    "You need each agent to have a clear owner"
+   ],
+   "neither": "If it is team chat plus one bot, both of these are heavier than needed.",
+   "page": "https://www.goodthingure.com/compare/buzz-vs-commonly/"
+  },
+  {
+   "slug": "commonly-vs-tutti",
+   "tools": [
+    "commonly",
+    "tutti"
+   ],
+   "title": "Commonly vs Tutti: pod collaboration or real-time co-editing",
+   "summary": "Both talk about multiple people and multiple agents, but Commonly centres on pods. Tutti centres on a real-time collaboration space, and those capabilities ship only in the VM edition.",
+   "dimensions": [
+    {
+     "name": "Collaboration unit",
+     "a": "A pod (the team plus each member's agent)",
+     "b": "A workspace (single-user multi-agent in the open-source edition)"
+    },
+    {
+     "name": "Multi-user capability",
+     "a": "Invite links, @-mentioning other people's agents",
+     "b": "Unsupported in the open-source edition; group chat and simultaneous editing in the VM edition"
+    },
+    {
+     "name": "Licence",
+     "a": "Apache-2.0",
+     "b": "Apache-2.0 (open-source edition)"
+    },
+    {
+     "name": "How you get it",
+     "a": "Self-host or use commonly.me",
+     "b": "The open-source edition downloads directly; the VM edition needs an invite code"
+    }
+   ],
+   "chooseA": [
+    "You need to place each person's agent into the same collaboration unit as a named member",
+    "You can self-host and only run the agents you bring along",
+    "You need Apache-2.0"
+   ],
+   "chooseB": [
+    "You need real-time capabilities such as simultaneous editing and cross-device use, and accept using the VM edition",
+    "You have a VM invite code",
+    "You can accept that the open-source edition does not support multi-user collaboration"
+   ],
+   "neither": "If the multi-user collaboration you need is just a shared chat channel, none of this structure is necessary.",
+   "page": "https://www.goodthingure.com/compare/commonly-vs-tutti/"
+  },
+  {
+   "slug": "vibe-kanban-vs-codeg",
+   "tools": [
+    "vibe-kanban",
+    "codeg"
+   ],
+   "title": "Vibe Kanban vs Codeg: a worktree board or a session-aggregating workspace",
+   "summary": "Vibe Kanban coordinates agent execution through a board plus an isolated workspace per task. Codeg renders each CLI agent session as the same structured conversation and supports handoff. Note that Vibe Kanban is sunsetting.",
+   "dimensions": [
+    {
+     "name": "Core mechanism",
+     "a": "Kanban issues plus an isolated branch, terminal and dev server per task",
+     "b": "Cross-agent session aggregation, handoff and \`@\` delegation"
+    },
+    {
+     "name": "Agent count",
+     "a": "10+ coding agents",
+     "b": "About 20 built in, and any ACP agent can join"
+    },
+    {
+     "name": "Project state",
+     "a": "The README is marked sunsetting",
+     "b": "Active; the repository was renamed to spacering-net/codeg"
+    },
+    {
+     "name": "Clients",
+     "a": "Desktop and web",
+     "b": "Desktop, self-hosted server, Docker, iOS, Android, Telegram / Lark / WeChat"
+    }
+   ],
+   "chooseA": [
+    "You have not started yet, or can accept that the project will stop evolving",
+    "What you mainly need is a board plus branch-isolated review",
+    "You need built-in browser previews and device simulation"
+   ],
+   "chooseB": [
+    "You need several agents' historical sessions in one place, handing off between them",
+    "You need mobile or IM-channel access",
+    "You need a project you can keep maintaining"
+   ],
+   "neither": "Vibe Kanban is sunsetting, so a new project should not pick it; with Codeg, confirm you actually need the cross-device access.",
+   "page": "https://www.goodthingure.com/compare/vibe-kanban-vs-codeg/"
+  },
+  {
+   "slug": "mco-vs-hive",
+   "tools": [
+    "mco",
+    "hive"
+   ],
+   "title": "MCO vs Hive: parallel answers or an orchestrated team",
+   "summary": "MCO gives the same task to several agents and keeps the raw answers for a human to compare. Hive has an Orchestrator plan and delegate while workers implement, review and test.",
+   "dimensions": [
+    {
+     "name": "Orchestration",
+     "a": "Parallel fan-out, chained or by domain",
+     "b": "An Orchestrator plans, workers execute"
+    },
+    {
+     "name": "Output handling",
+     "a": "Answers kept verbatim, with no findings / severity / consensus",
+     "b": "Team protocol messaging, with the Orchestrator summarising"
+    },
+    {
+     "name": "Form",
+     "a": "CLI (Python 3.10+, distributed through npm)",
+     "b": "A browser workbench with local PTYs"
+    },
+    {
+     "name": "Licence",
+     "a": "MIT",
+     "b": "BUSL-1.1 (from 0.6.0-alpha.8)"
+    }
+   ],
+   "chooseA": [
+    "You want several agents to answer the same task independently so you can compare them",
+    "You need scriptable output such as dry-run and JSONL events",
+    "You need a permissive licence such as MIT"
+   ],
+   "chooseB": [
+    "You need an Orchestrator that keeps planning and delegating to workers",
+    "You can accept the additional terms of BUSL-1.1",
+    "You want a browser workbench rather than a terminal"
+   ],
+   "neither": "With a single agent, neither orchestration layer buys anything.",
+   "page": "https://www.goodthingure.com/compare/mco-vs-hive/"
+  },
+  {
+   "slug": "cli-continues-vs-multica",
+   "tools": [
+    "cli-continues",
+    "multica"
+   ],
+   "title": "cli-continues vs Multica: carrying context or dispatching tasks",
+   "summary": "Cli-continues solves \\"how do I carry this session into another tool\\". Multica solves \\"how do I hand a task to an agent and track it to completion\\".",
+   "dimensions": [
+    {
+     "name": "Problem solved",
+     "a": "Cross-tool session context handoff",
+     "b": "Task dispatch and execution tracking"
+    },
+    {
+     "name": "Coverage",
+     "a": "16 tools, 240 handoff paths",
+     "b": "Task records plus agent runtimes"
+    },
+    {
+     "name": "Persistence",
+     "a": "A one-off exported handoff document",
+     "b": "Task state and execution records kept long term"
+    },
+    {
+     "name": "Licence",
+     "a": "MIT",
+     "b": "Apache-2.0 with Part I additional conditions"
+    }
+   ],
+   "chooseA": [
+    "You hit a rate limit mid-debug and want the context carried over intact",
+    "You switch between several CLI tools",
+    "You only need a one-off handoff document"
+   ],
+   "chooseB": [
+    "You need to dispatch tasks to several agents and track who is doing what",
+    "You need to distinguish \\"task state\\" from \\"this run\\"",
+    "You can accept the Apache-2.0 additional conditions"
+   ],
+   "neither": "If the task can be finished inside one agent anyway, neither is necessary.",
+   "page": "https://www.goodthingure.com/compare/cli-continues-vs-multica/"
+  },
+  {
+   "slug": "backlog-vs-markplane",
+   "tools": [
+    "backlog",
+    "markplane"
+   ],
+   "title": "Backlog.md vs Markplane: three review checkpoints or a token budget",
+   "summary": "Backlog.md holds agent work at a size a human can read using three review checkpoints. Markplane compresses project state into a roughly 1000-token summary so the agent loads only what it needs.",
+   "dimensions": [
+    {
+     "name": "Core design",
+     "a": "Three review checkpoints: spec \u2192 plan \u2192 code",
+     "b": "A .context summary compressed to roughly 1000 tokens"
+    },
+    {
+     "name": "Form",
+     "a": "CLI + board + MCP",
+     "b": "Single binary + Web UI + MCP"
+    },
+    {
+     "name": "Maturity",
+     "a": "7.3k stars, with concrete bugs recorded in the issues",
+     "b": "193 stars with a single open issue"
+    },
+    {
+     "name": "Licence",
+     "a": "MIT",
+     "b": "Apache-2.0"
+    }
+   ],
+   "chooseA": [
+    "You need the agent to write a spec and implementation plan first, with humans reviewing before any code",
+    "You accept \\"one task = one context window = one PR\\"",
+    "You need a widely used tool"
+   ],
+   "chooseB": [
+    "Your bottleneck is that the agent does not understand project state and should read only a summary",
+    "You want files as the database, greppable and blameable",
+    "You can accept an early-stage project"
+   ],
+   "neither": "If your agents already work from an AGENTS.md plus task files, neither needs introducing in a hurry.",
+   "page": "https://www.goodthingure.com/compare/backlog-vs-markplane/"
+  },
+  {
+   "slug": "backlog-vs-its-a-plan",
+   "tools": [
+    "backlog",
+    "its-a-plan"
+   ],
+   "title": "Backlog.md vs It's a Plan: Markdown files or a self-hosted platform",
+   "summary": "Backlog.md writes tasks as Markdown inside the repository. It's a Plan is a self-hosted full issue tracker. Both let agents take tasks, at very different costs.",
+   "dimensions": [
+    {
+     "name": "Form",
+     "a": "CLI + board, where a task is a file in the repository",
+     "b": "A self-hosted web platform with its own database"
+    },
+    {
+     "name": "Deployment cost",
+     "a": "Zero infrastructure, one npm command",
+     "b": "Needs a server, a database and API keys"
+    },
+    {
+     "name": "Agent integration",
+     "a": "MCP and CLI",
+     "b": "REST API, webhooks, MCP"
+    },
+    {
+     "name": "Licence",
+     "a": "MIT",
+     "b": "AGPL-3.0"
+    },
+    {
+     "name": "Stability",
+     "a": "Mature, 7.3k stars",
+     "b": "The README states plainly there will be breaking changes before the first stable release"
+    }
+   ],
+   "chooseA": [
+    "You want tasks versioned with the code, answerable with grep and git blame",
+    "You accept the granularity of \\"one task = one context window = one PR\\"",
+    "You do not want to maintain a server and a database"
+   ],
+   "chooseB": [
+    "What you need is a complete system that can replace Linear / Jira",
+    "You need boards, cycles, custom fields and dashboards",
+    "You can self-host and accept AGPL-3.0"
+   ],
+   "neither": "If all you want is for agents to pick up a few tasks, GitHub Issues plus one agreed workflow may be less trouble.",
+   "page": "https://www.goodthingure.com/compare/backlog-vs-its-a-plan/"
+  },
+  {
+   "slug": "openwebui-vs-librechat",
+   "tools": [
+    "openwebui",
+    "librechat"
+   ],
+   "title": "Open WebUI vs LibreChat: team entry point or chat platform",
+   "summary": "Open WebUI organises collaboration around channels, notes and knowledge bases. LibreChat is chat-first and shares models, agents and file retrieval with named members. The licence difference matters more than the feature list.",
+   "dimensions": [
+    {
+     "name": "Positioning",
+     "a": "Self-hosted AI interface: models, knowledge bases, shared channels",
+     "b": "Self-hosted chat platform: models and agents shared with members"
+    },
+    {
+     "name": "Licence",
+     "a": "Open WebUI License: clause 4 restricts brand removal (50-user or written/enterprise exception)",
+     "b": "MIT, no branding clause"
+    },
+    {
+     "name": "Collaboration shape",
+     "a": "Shared channels, notes, knowledge bases and user groups",
+     "b": "Members and groups share agents, tools and file retrieval"
+    },
+    {
+     "name": "Maturity",
+     "a": "158k stars, a large project",
+     "b": "47k stars, fast release cadence in v0.8.8"
+    },
+    {
+     "name": "Known risks",
+     "a": "Side chat and attachment passing have issues; GitHub API returns NOASSERTION",
+     "b": "Agent Management API marked beta; attached workspaces marked highly experimental"
+    }
+   ],
+   "chooseA": [
+    "You need a shared knowledge base and channels for the team, not just a chat window",
+    "You can accept the branding clause: no logo changes, or keep end users under 50",
+    "You want a large project with plenty of surrounding material"
+   ],
+   "chooseB": [
+    "You need a licence with no additional clauses, such as MIT, so you can rebrand or redistribute",
+    "Your core need is sharing several models and agents with named members and groups",
+    "You can take a faster release cadence and beta capabilities"
+   ],
+   "neither": "If you only want a few colleagues to share one model account, the official clients are less trouble. Both of these require you to run a service and manage permissions yourself.",
+   "page": "https://www.goodthingure.com/compare/openwebui-vs-librechat/"
+  },
+  {
+   "slug": "openwebui-vs-anythingllm",
+   "tools": [
+    "openwebui",
+    "anythingllm"
+   ],
+   "title": "Open WebUI vs AnythingLLM: team entry point or document Q&A",
+   "summary": "Open WebUI is a shared AI entry point for the team, with channels, notes and knowledge bases inside it. AnythingLLM organises document Q&A around workspaces, each with its own documents, agents and tools. One is about collaboration, the other about material.",
+   "dimensions": [
+    {
+     "name": "Positioning",
+     "a": "Team AI entry point: models, knowledge bases and shared channels",
+     "b": "Workspace-based document Q&A: each workspace organises its own material"
+    },
+    {
+     "name": "Licence",
+     "a": "Open WebUI License: clause 4 restricts brand removal",
+     "b": "MIT, no additional clauses"
+    },
+    {
+     "name": "Multi-user",
+     "a": "Channels, notes and user-group permissions out of the box",
+     "b": "Multi-user accounts only in the Docker edition; desktop is single-user"
+    },
+    {
+     "name": "Setup cost",
+     "a": "Models and access permissions are yours to configure",
+     "b": "Agents, a vector store and embedding built in, usable immediately"
+    },
+    {
+     "name": "Telemetry",
+     "a": "The README does not emphasise default telemetry",
+     "b": "Anonymous telemetry on by default; disable with DISABLE_TELEMETRY=true"
+    }
+   ],
+   "chooseA": [
+    "The team needs a shared AI entry point, not just document lookup",
+    "You need channels, notes and user-group permissions as collaboration surfaces",
+    "You can live with the branding clause"
+   ],
+   "chooseB": [
+    "The core scenario is project material Q&A, isolated per workspace",
+    "You want a working vector store and embedding without assembling RAG yourself",
+    "Single-user or desktop-first, with multi-user needs deferred"
+   ],
+   "neither": "If the team needs neither a shared entry point nor document Q&A and only looks up the occasional PDF, a local model plus command-line retrieval is enough; neither platform is warranted.",
+   "page": "https://www.goodthingure.com/compare/openwebui-vs-anythingllm/"
+  },
+  {
+   "slug": "dify-vs-n8n",
+   "tools": [
+    "dify",
+    "n8n"
+   ],
+   "title": "Dify vs n8n: AI app development or workflow automation",
+   "summary": "Dify targets AI applications themselves: a workflow canvas, prompt IDE, RAG pipeline and agents with their own sandbox. n8n targets automation between systems, with 1500+ integrations linking existing business tools. Both licences carry additional conditions, but they differ.",
+   "dimensions": [
+    {
+     "name": "Positioning",
+     "a": "Visual AI application platform",
+     "b": "AI-native workflow automation platform"
+    },
+    {
+     "name": "Licence",
+     "a": "Dify Open Source License: Apache 2.0 plus conditions \u2014 no unauthorised multi-tenancy, no removing frontend LOGO",
+     "b": "Sustainable Use License: not OSI open source; .ee. code needs an Enterprise License"
+    },
+    {
+     "name": "Integration",
+     "a": "Hundreds of model providers; RAG from ingestion to retrieval",
+     "b": "1500+ integrations and 9000+ templates for existing systems"
+    },
+    {
+     "name": "Agent execution",
+     "a": "Agents carry a sandbox: run commands, install software, handle files",
+     "b": "Human approval steps and observability; switch between visual and code"
+    },
+    {
+     "name": "Customising",
+     "a": "The web directory falls under the LOGO clause; adapting needs care",
+     "b": "pnpm monorepo (cli/core/workflow/nodes-base/frontend), a higher bar"
+    }
+   ],
+   "chooseA": [
+    "What you are building is an AI application (chat, RAG, agent), not system integration",
+    "You need the full RAG chain from document ingestion to retrieval",
+    "You can accept Dify's two conditions on multi-tenancy and the LOGO"
+   ],
+   "chooseB": [
+    "The core need is connecting existing business systems, with AI as one step",
+    "You need a large set of ready-made integrations and templates",
+    "You can accept the Sustainable Use License and the .ee. code restrictions"
+   ],
+   "neither": "If you only want a model to process a piece of text, both platforms are too heavy \u2014 an API call does not need a canvas and an orchestrator.",
+   "page": "https://www.goodthingure.com/compare/dify-vs-n8n/"
+  },
+  {
+   "slug": "litellm-vs-bifrost",
+   "tools": [
+    "litellm",
+    "bifrost"
+   ],
+   "title": "LiteLLM vs Bifrost: Python ecosystem or Go binary",
+   "summary": "Both are model gateways that expose one OpenAI-compatible interface; the difference is the implementation route. LiteLLM is a Python SDK plus proxy covering 100+ models and endpoints. Bifrost is a single Go repository built around automatic fallback and load balancing. Both vendors dispute the benchmark numbers, so this page cites no performance claim from either.",
+   "dimensions": [
+    {
+     "name": "Implementation",
+     "a": "Python SDK and proxy, shipped as litellm and litellm-core",
+     "b": "Single Go repository (providers/mcp/agent/relay under core)"
+    },
+    {
+     "name": "Licence",
+     "a": "MIT",
+     "b": "Apache-2.0, but Custom Plugins and OIDC link to enterprise paths"
+    },
+    {
+     "name": "Endpoint coverage",
+     "a": "chat, responses, embeddings, images, audio, batches, rerank, a2a, messages",
+     "b": "One interface to OpenAI, Anthropic, Bedrock, Vertex, Azure and others"
+    },
+    {
+     "name": "Core capabilities",
+     "a": "Virtual keys, spend tracking, rate limits, load balancing",
+     "b": "Automatic fallback, load balancing, semantic cache, MCP"
+    },
+    {
+     "name": "Known risks",
+     "a": "The two distributions overlap, so only one installs per environment; the README's 8ms P95 needs your own measurement",
+     "b": "Fallback depends on provider consistency; custom plugins are an enterprise capability"
+    }
+   ],
+   "chooseA": [
+    "You work in the Python ecosystem and need both the SDK and the proxy",
+    "You need wide endpoint coverage (embeddings, rerank, batches and others)",
+    "You can accept the gateway as an architectural single point and plan high availability"
+   ],
+   "chooseB": [
+    "You want a single Go binary rather than maintaining a Python runtime",
+    "Automatic fallback and multi-provider failover are your first requirement",
+    "You can accept the split between core and enterprise capabilities"
+   ],
+   "neither": "If you use one provider with no failover or governance needs, a gateway just adds a hop and another failure point.",
+   "page": "https://www.goodthingure.com/compare/litellm-vs-bifrost/"
+  },
+  {
+   "slug": "langgraph-vs-mastra",
+   "tools": [
+    "langgraph",
+    "mastra"
+   ],
+   "title": "LangGraph vs Mastra: Python low-level orchestration or a TypeScript framework",
+   "summary": "LangGraph is low-level Python infrastructure where you model graphs, state and interrupts yourself, with debugging and deployment pointing at two separate LangSmith products. Mastra is a TypeScript-first application framework bundling model routing, agents, workflows and an MCP server. The stack largely settles the choice.",
+   "dimensions": [
+    {
+     "name": "Stack",
+     "a": "Python",
+     "b": "TypeScript (React / Next.js / Node.js)"
+    },
+    {
+     "name": "Abstraction",
+     "a": "Low-level: you model graphs, state and interrupt semantics",
+     "b": "A framework: routing, agents, workflows, human-in-the-loop and MCP built in"
+    },
+    {
+     "name": "Licence",
+     "a": "MIT",
+     "b": "Core open source; the ee/ directory is licensed separately (auth/ee, agent-builder/ee, editor/ee)"
+    },
+    {
+     "name": "Companion products",
+     "a": "Debugging points at LangSmith, deployment at LangSmith Deployments",
+     "b": "One model interface across 40+ providers"
+    },
+    {
+     "name": "Known risks",
+     "a": "14 durable-execution bugs await classification; 10 community fixes were auto-closed",
+     "b": "Observational Memory token counts creep upward; GraphRAG and reranker parameter validation have defects"
+    }
+   ],
+   "chooseA": [
+    "You are in the Python ecosystem and need fine control over state and interrupts",
+    "You can accept LangSmith as the debugging and deployment companion",
+    "You are willing to model graphs and persistence backends (checkpoint / postgres / sqlite) yourself"
+   ],
+   "chooseB": [
+    "You are on a TypeScript stack and do not want to add a Python service for this",
+    "You want framework-level packaging: routing, agents, workflows and human-in-the-loop all provided",
+    "You can accept the separately licensed ee/ directory"
+   ],
+   "neither": "If you call a model once to answer a question, both frameworks are overkill \u2014 use the official SDK. Their value lies in complex, long-running agents that need interruption and recovery.",
+   "page": "https://www.goodthingure.com/compare/langgraph-vs-mastra/"
+  },
+  {
+   "slug": "langfuse-vs-arize-phoenix",
+   "tools": [
+    "langfuse",
+    "arize-phoenix"
+   ],
+   "title": "Langfuse vs Arize Phoenix: MIT core or ELv2",
+   "summary": "Both are self-hosted LLM observability platforms that trace, evaluate and manage datasets. The real distinction is licensing: Langfuse's core is MIT Expat but enterprise features sit in four separately licensed ee directories, while Phoenix is Elastic License 2.0 throughout and forbids offering it as a hosted service to third parties.",
+   "dimensions": [
+    {
+     "name": "Licence",
+     "a": "Core MIT Expat; ee/, web/src/ee/, worker/src/ee/ and packages/shared/src/server/ee/ licensed separately",
+     "b": "Elastic License 2.0 (ELv2): no hosted service, licence notices may not be removed"
+    },
+    {
+     "name": "Positioning",
+     "a": "LLM observability and evaluation plus prompt versioning and an AI Gateway",
+     "b": "OpenTelemetry tracing, evaluation, datasets and experiments"
+    },
+    {
+     "name": "Tracing",
+     "a": "Built on OpenTelemetry",
+     "b": "OpenTelemetry, covering OpenAI Agents SDK, Claude Agent SDK, LangGraph, Vercel AI SDK and others"
+    },
+    {
+     "name": "Hosting",
+     "a": "Self-hosting means maintaining ClickHouse and queue components",
+     "b": "The README separates self-hosted Phoenix from the managed Arize AX platform"
+    },
+    {
+     "name": "Known risks",
+     "a": "Skill Management and AI Gateway marked beta; resolve cache returns stale context",
+     "b": "PXI boundary needs checking per version; Remote MCP Server exposes queries and needs access control"
+    }
+   ],
+   "chooseA": [
+    "You need prompt versioning with a Playground to iterate",
+    "You can accept a core-MIT project with separately licensed enterprise features",
+    "You need LLM-as-a-judge, code evaluators and human annotation"
+   ],
+   "chooseB": [
+    "You need vendor- and language-agnostic OpenTelemetry tracing across several SDKs and frameworks",
+    "You want a Remote MCP Server so Claude Code and Cursor can query traces and datasets directly",
+    "You can accept ELv2: you will not offer a hosted service built on it"
+   ],
+   "neither": "If you only want to see request latency in logs, ordinary APM is enough. These platforms are for trace trees, datasets and a closed evaluation loop.",
+   "page": "https://www.goodthingure.com/compare/langfuse-vs-arize-phoenix/"
+  },
+  {
+   "slug": "n8n-vs-activepieces",
+   "tools": [
+    "n8n",
+    "activepieces"
+   ],
+   "title": "n8n vs Activepieces: integration breadth or MCP tooling",
+   "summary": "n8n connects systems with 1500+ integrations and 9000+ templates, plus a visual canvas and human approval steps. Activepieces exposes all 280+ integrations as MCP tools that LLMs can call, with pieces distributed as TypeScript npm packages. Neither licence is standard open source, and they restrict different things.",
+   "dimensions": [
+    {
+     "name": "Licence",
+     "a": "Sustainable Use License: not OSI open source; .ee. code needs an Enterprise License",
+     "b": "Core MIT Expat; packages/ee/ and server/api/.../ee licensed separately"
+    },
+    {
+     "name": "Integration scale",
+     "a": "1500+ integrations and 9000+ templates",
+     "b": "280+ integrations, all exposed as MCP tools"
+    },
+    {
+     "name": "MCP support",
+     "a": "MCP tooling is not a headline capability",
+     "b": "Built-in MCP toolkit, connectable to Claude Desktop, Cursor, Windsurf"
+    },
+    {
+     "name": "Extending",
+     "a": "Visual canvas plus JavaScript, Python and npm packages",
+     "b": "Pieces are TypeScript npm packages with local hot reload"
+    },
+    {
+     "name": "Known risks",
+     "a": "The credential domain allowlist does not match internationalised domains",
+     "b": "An independent report scored MCP security 50/100; pieces are mostly community-contributed (60%)"
+    }
+   ],
+   "chooseA": [
+    "You need a large set of ready-made integrations covering existing systems",
+    "You need human approval steps and observability inside the flow",
+    "You can accept the Sustainable Use License restrictions"
+   ],
+   "chooseB": [
+    "The core goal is handing integrations to LLMs as MCP tools",
+    "Your team works in TypeScript and wants pieces you can customise and debug locally",
+    "You prefer an MIT core licence, with enterprise features still licensed separately"
+   ],
+   "neither": "If there are only two or three systems to connect and no approval or observability needs, a scheduled script is enough.",
+   "page": "https://www.goodthingure.com/compare/n8n-vs-activepieces/"
+  },
+  {
+   "slug": "budibase-vs-tooljet",
+   "tools": [
+    "budibase",
+    "tooljet"
+   ],
+   "title": "Budibase vs ToolJet: GPLv3 low-code or AGPL application platform",
+   "summary": "Both are low-code platforms for internal apps; they differ in licensing and agent paths. Budibase can be considered GPLv3 overall, but apps built with it do not bundle GPLv3 code. ToolJet is AGPL-3.0, so offering a modified version as a network service triggers source obligations. ToolJet also ships a built-in MCP server that lets coding agents generate pages directly.",
+   "dimensions": [
+    {
+     "name": "Licence",
+     "a": "The LICENSE says \\"you can consider Budibase to be GPLv3 licensed overall\\"; each package has its own licence file",
+     "b": "AGPL-3.0: offering a modified version as a network service triggers source-release obligations"
+    },
+    {
+     "name": "Key distinction",
+     "a": "Apps built with Budibase do not bundle GPLv3 code and are not bound by GPLv3",
+     "b": "Modifying ToolJet and serving it triggers AGPL source obligations"
+    },
+    {
+     "name": "Agent path",
+     "a": "Agents depend on workflows and app definitions inside the platform; they can create records and route approvals",
+     "b": "A built-in MCP server lets coding agents generate pages, queries and components"
+    },
+    {
+     "name": "Scale",
+     "a": "28k stars, a monorepo",
+     "b": "41k stars, 80+ components and 90+ data sources"
+    },
+    {
+     "name": "Known risks",
+     "a": "Local tests are slow and memory-hungry",
+     "b": "MCP is currently beta; the MCP path uses your own model subscription rather than ToolJet AI credits"
+    }
+   ],
+   "chooseA": [
+    "You can accept GPLv3 but need apps built on the platform not to be bound by it",
+    "The core scenario is agents handling requests, routing approvals and updating business apps",
+    "You need fine-grained access control and self-hosting"
+   ],
+   "chooseB": [
+    "You can accept the network-service obligations of AGPL-3.0",
+    "You want coding agents to build pages over MCP, then let colleagues keep editing",
+    "You need a large set of responsive components and data sources"
+   ],
+   "neither": "If the internal app is one or two forms and an approval flow, a ready-made form tool or a small service you write yourself is less trouble.",
+   "page": "https://www.goodthingure.com/compare/budibase-vs-tooljet/"
+  },
+  {
+   "slug": "mem0-vs-graphiti",
+   "tools": [
+    "mem0",
+    "graphiti"
+   ],
+   "title": "Mem0 vs Graphiti: extracted facts or a temporal graph",
+   "summary": "Mem0 extracts facts from conversations and retrieves them with several signals; since April 2026 it uses single-pass ADD-only extraction. Graphiti builds facts into a temporal graph, tracking how they change and keeping provenance. One is a memory component, the other a context graph engine.",
+   "dimensions": [
+    {
+     "name": "Positioning",
+     "a": "Memory component: single call extracts facts",
+     "b": "Temporal context graph: tracks how facts change"
+    },
+    {
+     "name": "Storage",
+     "a": "Extracted facts with vector retrieval, multi-signal (semantic + BM25 + entity)",
+     "b": "Requires a graph database and embedding models"
+    },
+    {
+     "name": "Update semantics",
+     "a": "ADD-only: memories accumulate rather than overwrite; ranking decides what is currently true",
+     "b": "Incremental updates that keep historical versions and provenance"
+    },
+    {
+     "name": "Licence",
+     "a": "Apache-2.0",
+     "b": "Apache-2.0"
+    },
+    {
+     "name": "Known risks",
+     "a": "README benchmark scores reflect managed-platform optimisations; stale records can still be recalled",
+     "b": "Extraction depends on the model and can pull entities wrong; paper results do not transfer to your dataset"
+    }
+   ],
+   "chooseA": [
+    "You want to add a memory layer to an existing app for preferences and state",
+    "You can accept append-only memories where ranking decides what is valid",
+    "You do not want to introduce a graph database"
+   ],
+   "chooseB": [
+    "You need to track what is true now versus what was true before, with provenance",
+    "You need incremental updates and historical queries without recomputing the graph",
+    "You have the engineering capacity to run a graph database"
+   ],
+   "neither": "If you only want a chat assistant to remember a few things, the host tool's own session memory is enough. Both of these require you to run storage and an extraction pipeline.",
+   "page": "https://www.goodthingure.com/compare/mem0-vs-graphiti/"
+  },
+  {
+   "slug": "langgraph-vs-haystack",
+   "tools": [
+    "langgraph",
+    "haystack"
+   ],
+   "title": "LangGraph vs Haystack: orchestration graph or assembled RAG pipeline",
+   "summary": "LangGraph hands you the graph and the state to model, focusing on durable execution and interrupt recovery. Haystack provides assemblable retrieval components and lifecycle hooks, focusing on explicit context engineering. Both are frameworks, not platforms.",
+   "dimensions": [
+    {
+     "name": "Focus",
+     "a": "Stateful orchestration: durable execution, human-in-the-loop, memory",
+     "b": "Retrieval pipeline: ranking, filtering, composition, structuring, routing"
+    },
+    {
+     "name": "Stack",
+     "a": "Python",
+     "b": "Python"
+    },
+    {
+     "name": "Licence",
+     "a": "MIT",
+     "b": "Apache-2.0"
+    },
+    {
+     "name": "Observability",
+     "a": "Debugging points at LangSmith, a separate product",
+     "b": "Lifecycle hooks: before_llm, before_tool, on_exit"
+    },
+    {
+     "name": "Known risks",
+     "a": "14 durable-execution bugs await classification",
+     "b": "Non-Latin scripts are not split by sentence; Pipeline.connect has limits on Literal outputs"
+    }
+   ],
+   "chooseA": [
+    "The hard part is state and interrupt recovery for long-running agents",
+    "You can accept LangSmith as the debugging companion",
+    "You will model the graph structure yourself"
+   ],
+   "chooseB": [
+    "The hard part is retrieval quality: splitting, ranking, filtering, composition",
+    "You need explicit lifecycle hooks to control each step",
+    "You want sync and async pipelines with token-by-token streaming"
+   ],
+   "neither": "If you only look up an answer inside one document, calling a model plus one vector search is enough; no framework needed.",
+   "page": "https://www.goodthingure.com/compare/langgraph-vs-haystack/"
+  },
+  {
+   "slug": "maxkb-vs-dify",
+   "tools": [
+    "maxkb",
+    "dify"
+   ],
+   "title": "MaxKB vs Dify: a GPL-3.0 Q&A system or a conditioned app platform",
+   "summary": "MaxKB combines a RAG pipeline, a workflow engine and MCP tool calls into an embeddable Q&A system under GPL-3.0. Dify is a broader visual application platform under Apache 2.0 with two additional conditions. They restrict different things: distribution obligations versus multi-tenancy and branding.",
+   "dimensions": [
+    {
+     "name": "Licence",
+     "a": "GPL-3.0: distributing a modified version requires releasing it under the same licence",
+     "b": "Dify Open Source License: Apache 2.0 plus additional conditions"
+    },
+    {
+     "name": "Where it bites",
+     "a": "At distribution",
+     "b": "Unauthorised multi-tenant operation; removing the frontend LOGO"
+    },
+    {
+     "name": "Positioning",
+     "a": "Embeddable Q&A system: RAG, workflows and MCP",
+     "b": "Visual AI application development: canvas, prompt IDE, RAG and sandboxed agents"
+    },
+    {
+     "name": "Known risks",
+     "a": "The default admin password MaxKB@123.. must be changed immediately; retrieval scores degrade after bulk writes",
+     "b": "Hybrid search Weighted Score has a semantic problem; the interactive design is covered by an appearance patent"
+    }
+   ],
+   "chooseA": [
+    "You can accept GPL-3.0 and will release modifications under the same licence",
+    "What you need is a Q&A system embeddable into a business application",
+    "You are not operating a multi-tenant service"
+   ],
+   "chooseB": [
+    "You need broader application development: prompt IDE, sandboxed agents, many providers",
+    "You cannot accept GPL-3.0 distribution obligations",
+    "You can accept Dify's two additional conditions"
+   ],
+   "neither": "If all you need is a search box over internal documents, a vector store plus a frontend is enough; no platform required.",
+   "page": "https://www.goodthingure.com/compare/maxkb-vs-dify/"
+  },
+  {
+   "slug": "dify-vs-coze-studio",
+   "tools": [
+    "dify",
+    "coze-studio"
+   ],
+   "title": "Dify vs Coze Studio: how open, and how security is handled",
+   "summary": "Both are one-stop AI agent development platforms with a visual canvas. Dify carries two additional licence conditions; Coze Studio open-sourced only its core engine and requires security reports through a private channel, not public GitHub issues.",
+   "dimensions": [
+    {
+     "name": "Licence",
+     "a": "Dify Open Source License: Apache 2.0 plus additional conditions",
+     "b": "Apache-2.0"
+    },
+    {
+     "name": "Open-source scope",
+     "a": "Core plus several product lines; no ee directory",
+     "b": "The README says only the core engine is completely open, not the whole commercial product"
+    },
+    {
+     "name": "Stack",
+     "a": "Python backend with React frontend",
+     "b": "Go backend with React frontend, microservices and DDD"
+    },
+    {
+     "name": "Security reporting",
+     "a": "The README does not mandate a private channel",
+     "b": "Requires ByteDance's security centre or email; public GitHub issues are forbidden"
+    },
+    {
+     "name": "Known risks",
+     "a": "Hybrid search Weighted Score issue; appearance patent",
+     "b": "Docker compose pull fails on images and minio permissions; DDD layering raises the bar for customising"
+    }
+   ],
+   "chooseA": [
+    "You need the Python ecosystem and broader model integration",
+    "You can accept the two additional conditions on multi-tenancy and the LOGO",
+    "You want a larger body of community material"
+   ],
+   "chooseB": [
+    "You prefer simpler licence terms, namely standard Apache-2.0",
+    "You can accept that only the core engine is open source",
+    "You have a private security reporting channel available"
+   ],
+   "neither": "If you only want to tune prompts without a canvas, plugins or workflows, calling the API directly is less trouble.",
+   "page": "https://www.goodthingure.com/compare/dify-vs-coze-studio/"
+  },
+  {
+   "slug": "langfuse-vs-opik",
+   "tools": [
+    "langfuse",
+    "opik"
+   ],
+   "title": "Langfuse vs Opik: prompt versioning or dataset experiments",
+   "summary": "Both are LLM observability and evaluation platforms covering tracing, evaluation and datasets. Langfuse adds prompt versioning and an AI Gateway; Opik leans toward dataset experiments and online guardrails, with CI integration through PyTest.",
+   "dimensions": [
+    {
+     "name": "Licence",
+     "a": "Core MIT Expat; four ee directories licensed separately",
+     "b": "Apache-2.0"
+    },
+    {
+     "name": "Emphasis",
+     "a": "Prompt versioning, Playground and an AI Gateway",
+     "b": "Dataset experiments, online evaluation and guardrails"
+    },
+    {
+     "name": "Evaluation",
+     "a": "LLM-as-a-judge, code evaluators, human annotation",
+     "b": "LLM-as-a-judge and PyTest integration"
+    },
+    {
+     "name": "Self-hosting cost",
+     "a": "Requires maintaining ClickHouse and a queue",
+     "b": "Covers four capability areas, so the configuration surface is wide"
+    },
+    {
+     "name": "Known risks",
+     "a": "Skill Management and AI Gateway marked beta; resolve cache returns stale context",
+     "b": "The LLM-as-a-judge span records the configured model; the LlamaIndex handler removes chunks"
+    }
+   ],
+   "chooseA": [
+    "You need prompt version management and a Playground to iterate",
+    "You can accept an MIT core with separately licensed enterprise features",
+    "You want an AI Gateway included"
+   ],
+   "chooseB": [
+    "You care more about dataset experiments and online guardrails",
+    "Your team knows PyTest and wants evaluation in CI",
+    "You prefer simpler licensing, namely Apache-2.0"
+   ],
+   "neither": "If you only record latency and cost per call, ordinary APM or logging covers it.",
+   "page": "https://www.goodthingure.com/compare/langfuse-vs-opik/"
+  },
+  {
+   "slug": "litellm-vs-portkey-ai-gateway",
+   "tools": [
+    "litellm",
+    "portkey-ai-gateway"
+   ],
+   "title": "LiteLLM vs Portkey Gateway: MCP is not in the open-source repo",
+   "summary": "Both are AI gateways for unified routing. LiteLLM covers 100+ models and many endpoints under MIT. Portkey's plugin ecosystem centres on request transformation and security guardrails, but its MCP Gateway is not in the open-source repository and the repo has been quiet for over five months.",
+   "dimensions": [
+    {
+     "name": "Licence",
+     "a": "MIT",
+     "b": "MIT"
+    },
+    {
+     "name": "MCP support",
+     "a": "An MCP client factory is in the core, with a known SSL configuration issue",
+     "b": "MCP Gateway is not in the open-source repo; none of the 21 plugin directories implements mcp"
+    },
+    {
+     "name": "Endpoint coverage",
+     "a": "chat, responses, embeddings, images, audio, batches, rerank, a2a, messages",
+     "b": "Centred on routing and request transformation"
+    },
+    {
+     "name": "Maintenance",
+     "a": "Actively maintained",
+     "b": "Last commit 2026-05-25, over five months ago"
+    },
+    {
+     "name": "Known risks",
+     "a": "litellm and litellm-core cannot be installed together; the 8ms P95 needs your own measurement",
+     "b": "Enterprise features sit in a separate section; plugins do not cover MCP server management"
+    }
+   ],
+   "chooseA": [
+    "You need wide endpoint coverage and a mature Python ecosystem",
+    "You want MCP inside the open-source repository",
+    "You care about steady maintenance"
+   ],
+   "chooseB": [
+    "You need a plugin chain around request transformation and security guardrails",
+    "You do not need open-source MCP management, or you have solved it separately",
+    "You can accept a slower maintenance cadence"
+   ],
+   "neither": "If you use one provider, a gateway only adds a hop.",
+   "page": "https://www.goodthingure.com/compare/litellm-vs-portkey-ai-gateway/"
+  },
+  {
+   "slug": "litellm-vs-higress",
+   "tools": [
+    "litellm",
+    "higress"
+   ],
+   "title": "LiteLLM vs Higress: Python gateway or Istio data plane",
+   "summary": "LiteLLM is a model gateway in the Python ecosystem, covering 100+ models and many endpoints. Higress is built on Istio and Envoy, extended with Wasm plugins, and serves as both an AI gateway and an MCP server host. The operations bar differs sharply.",
+   "dimensions": [
+    {
+     "name": "Foundation",
+     "a": "Python SDK and proxy",
+     "b": "Istio and Envoy, with Wasm plugins"
+    },
+    {
+     "name": "Licence",
+     "a": "MIT",
+     "b": "Apache-2.0"
+    },
+    {
+     "name": "Operations bar",
+     "a": "A Python runtime, comparatively light to deploy",
+     "b": "Requires Kubernetes and cloud-native infrastructure"
+    },
+    {
+     "name": "Scope",
+     "a": "Model routing, keys, spend, rate limits, load balancing",
+     "b": "AI Gateway, MCP server hosting and general gateway plugins"
+    },
+    {
+     "name": "Known risks",
+     "a": "The two distributions cannot coexist; benchmarks need your own measurement",
+     "b": "v2.2.5 still ships an Envoy version affected by CVE-2026-111497"
+    }
+   ],
+   "chooseA": [
+    "You have no Kubernetes, or do not want to introduce it for a gateway",
+    "Your focus is model routing, spend and rate limiting",
+    "You can accept a Python runtime"
+   ],
+   "chooseB": [
+    "You already run Kubernetes and cloud-native infrastructure",
+    "You need to manage LLM APIs and MCP APIs together",
+    "You can follow CVEs and upgrade promptly"
+   ],
+   "neither": "If one application calls one provider, the official SDK is simplest.",
+   "page": "https://www.goodthingure.com/compare/litellm-vs-higress/"
+  }
+ ],
+ "scenes": [
+  {
+   "slug": "claude-code-to-codex",
+   "title": "Switching from Claude Code to Codex: how to hand over context, and what will not come along",
+   "summary": "When a session breaks, what gets lost is not the code but what the team was in the middle of. Four steps: confirm the workspace state, export the session context, write the judgements down as a task file, and have the newcomer restate before touching code.",
+   "steps": [
+    "Check the workspace state before exporting the session",
+    "Export the session context",
+    "Write the judgements down as a task file",
+    "Have the new tool restate first, then start"
+   ],
+   "limits": [
+    "The exported context is a readable record, not the model's internal state, so behaviour will not be identical after switching",
+    "Session formats change with client versions, so handoff tools can break",
+    "A tool can carry the file list, not your judgement about the code"
+   ],
+   "page": "https://www.goodthingure.com/scenes/claude-code-to-codex/"
+  },
+  {
+   "slug": "parallel-agent-review",
+   "title": "Several agents editing code in parallel: how to review, with branch isolation and raw answers kept",
+   "summary": "Give the same task to several agents and you get diffs that conflict. Four steps: an independent worktree each, raw answers kept with no auto-merge, review by difference, and record why you chose what you chose.",
+   "steps": [
+    "Give each agent its own working directory",
+    "Keep the raw answers and do no automatic merging",
+    "Review by difference, not by file",
+    "Record why you chose this one"
+   ],
+   "limits": [
+    "The cost of parallel agents is linear: three agents means three sets of model calls and three review passes",
+    "A tool can isolate branches; it cannot judge which change is better",
+    "The gain from several agents is different perspectives, not finishing sooner"
+   ],
+   "page": "https://www.goodthingure.com/scenes/parallel-agent-review/"
+  },
+  {
+   "slug": "team-shared-skills",
+   "title": "How a team manages skills together: three layers from everyone-for-themselves to something governable",
+   "summary": "A pile of skills and nobody knows who maintains them. Three layers: solve per-person sync across tools first, put team conventions in a Git repository, and bring in a registry only when approval is needed.",
+   "steps": [
+    "Solve \\"one person, several tools\\" first",
+    "Put team conventions in a Git repository",
+    "Bring in a registry only when approval is needed",
+    "Prune regularly; do not only add"
+   ],
+   "limits": [
+    "A successful sync does not mean the member sees it: the client may need a new session",
+    "Tools do not judge whether skill content is right; only the team can review that",
+    "The heavier the governance, the slower the updates: approval flows mean urgent fixes take a separate path"
+   ],
+   "page": "https://www.goodthingure.com/scenes/team-shared-skills/"
+  },
+  {
+   "slug": "agent-task-tracking",
+   "title": "Tracking progress after handing a task to an agent: separate task state from this run",
+   "summary": "After handing a task to an agent you do not know what it is doing or where it is stuck. Four steps: separate the task from the run, bring progress back to the task record, see who is blocked at a glance, and review against acceptance criteria.",
+   "steps": [
+    "Separate the task from the run first",
+    "Bring progress back to the task rather than leaving it in the terminal",
+    "See who is blocked at a glance",
+    "Review against acceptance criteria, not \\"does it look right\\""
+   ],
+   "limits": [
+    "Execution consumes the connected machine and the underlying tool quota, and returned results may contain code",
+    "Self-hosting means providing a database and a runtime, so operations cost more than a single-machine tool",
+    "A tool can show state; it cannot judge whether the result is correct"
+   ],
+   "page": "https://www.goodthingure.com/scenes/agent-task-tracking/"
+  },
+  {
+   "slug": "session-recovery",
+   "title": "Continuing after a session breaks: what can be recovered and what you must write down",
+   "summary": "Quota runs out, the machine restarts, SSH drops \u2014 sessions always break. What can be recovered, what you must write down yourself, and four steps for picking up where you left off.",
+   "steps": [
+    "Confirm what can be recovered and what cannot",
+    "Leave a readable handoff before it breaks",
+    "Use a session export when continuing in another tool",
+    "Restate before touching anything after resuming"
+   ],
+   "limits": [
+    "No tool can keep a process alive across a restart",
+    "A session export is a snapshot and does not contain the model's internal state",
+    "The longer the record, the less likely it is read; one screen is the ceiling"
+   ],
+   "page": "https://www.goodthingure.com/scenes/session-recovery/"
+  }
+ ]
+}`);
   }
 });
 
@@ -17043,23 +21856,25 @@ var StdioServerTransport = class {
 import { readFileSync, existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
-var HERE = dirname(fileURLToPath(import.meta.url));
-var CANDIDATES = [
-  join(HERE, "..", "data", "catalog.json"),
-  // src/server.js → ../data
-  join(HERE, "data", "catalog.json"),
-  // dist/server.mjs → ./data
-  join(HERE, "..", "..", "data", "catalog.json")
-  // 兜底：仓库根
-];
-var CATALOG_PATH = CANDIDATES.find((p) => existsSync(p));
-if (!CATALOG_PATH) {
-  console.error(
-    "Cannot find data/catalog.json. Looked in:\n  " + CANDIDATES.join("\n  ")
-  );
-  process.exit(1);
+await Promise.resolve().then(() => (init_inline_catalog(), inline_catalog_exports)).catch(() => {
+});
+var CATALOG = globalThis.__INLINE_CATALOG__ ?? loadFromDisk();
+function loadFromDisk() {
+  const HERE = dirname(fileURLToPath(import.meta.url));
+  const CANDIDATES = [
+    join(HERE, "..", "data", "catalog.json"),
+    join(HERE, "data", "catalog.json"),
+    join(HERE, "..", "..", "data", "catalog.json")
+  ];
+  const found = CANDIDATES.find((p) => existsSync(p));
+  if (!found) {
+    console.error(
+      "Cannot find data/catalog.json. Looked in:\n  " + CANDIDATES.join("\n  ")
+    );
+    process.exit(1);
+  }
+  return JSON.parse(readFileSync(found, "utf8"));
 }
-var CATALOG = JSON.parse(readFileSync(CATALOG_PATH, "utf8"));
 var TOOLS = CATALOG.tools;
 var COMPARISONS = CATALOG.comparisons;
 var SCENES = CATALOG.scenes;

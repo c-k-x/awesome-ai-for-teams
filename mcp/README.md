@@ -17,18 +17,20 @@ because that is what the source list records.
 
 ## Install
 
-This package lives in a subdirectory of a larger repository, and `npm install
-github:…` always reads the **root** `package.json`. So clone once, install the
-two dependencies, and point your MCP client at the absolute path:
+Pick whichever suits you. Option A needs **no clone and no `npm install`**.
+
+### Option A — single file, no dependencies
+
+Download two files and point your client at the bundled server:
 
 ```bash
-git clone https://github.com/c-k-x/awesome-ai-for-teams.git
-cd awesome-ai-for-teams/mcp
-npm install
+mkdir -p ~/mcp/awesome-ai-for-teams && cd ~/mcp/awesome-ai-for-teams
+curl -fsSLO https://raw.githubusercontent.com/c-k-x/awesome-ai-for-teams/main/mcp/dist/server.mjs
+mkdir -p data
+curl -fsSL https://raw.githubusercontent.com/c-k-x/awesome-ai-for-teams/main/mcp/data/catalog.json -o data/catalog.json
 ```
 
-Then add this to your MCP client config, replacing the path with the real
-absolute path on your machine:
+Then in your MCP client config, replacing the path with your real absolute path:
 
 **Claude Desktop** — `~/Library/Application Support/Claude/claude_desktop_config.json`
 (macOS) or `%APPDATA%\Claude\claude_desktop_config.json` (Windows):
@@ -38,21 +40,34 @@ absolute path on your machine:
   "mcpServers": {
     "awesome-ai-for-teams": {
       "command": "node",
-      "args": ["/Users/you/awesome-ai-for-teams/mcp/src/server.js"]
+      "args": ["/Users/you/mcp/awesome-ai-for-teams/server.mjs"]
     }
   }
 }
 ```
 
-**Cursor** — `.cursor/mcp.json` or Settings → MCP: same block.
+**Cursor** — `.cursor/mcp.json` or Settings → MCP: the same block.
 
-To update the data later:
+`dist/server.mjs` bundles the MCP SDK, so `node_modules` is not needed. It reads
+`data/catalog.json` relative to its own location, which is why the two files sit
+next to each other in the layout above.
+
+### Option B — clone, for editing or contributing
 
 ```bash
-cd awesome-ai-for-teams && git pull
+git clone https://github.com/c-k-x/awesome-ai-for-teams.git
+cd awesome-ai-for-teams/mcp
+npm install          # only needed for the unbundled src/server.js
 ```
 
-The catalog is a plain JSON file, so a pull is enough — no reinstall needed.
+Point your client at `…/awesome-ai-for-teams/mcp/src/server.js` instead.
+
+### Updating the data
+
+The catalog is one JSON file. Re-run the `curl` for `data/catalog.json` and
+restart your MCP client — no reinstall, no rebuild.
+
+If you cloned, `git pull` is enough.
 
 ## Tools
 

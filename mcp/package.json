@@ -13,6 +13,7 @@
   },
   "scripts": {
     "start": "node src/server.js",
+    "bundle": "node scripts/bundle.mjs",
     "test": "node test/smoke.mjs"
   },
   "dependencies": {

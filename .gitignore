@@ -3,3 +3,6 @@
 # 本机项目技能，不提交到公开仓库
 /.agents/skills/
 /.claude/skills/
+
+# MCP server 的本地依赖
+/mcp/node_modules/

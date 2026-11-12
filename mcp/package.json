@@ -1,0 +1,21 @@
+{
+  "name": "awesome-ai-for-teams-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MCP server over the awesome-ai-for-teams catalog: fit, limits, licence terms and open issue numbers for 78 AI tools.",
+  "license": "CC0-1.0",
+  "type": "module",
+  "bin": {
+    "awesome-ai-for-teams-mcp": "src/server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node test/smoke.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  }
+}

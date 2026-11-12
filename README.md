@@ -226,6 +226,7 @@ Help teammates and assistants reuse organizational knowledge, rules, skills, and
 - [DataHub](https://github.com/datahub-project/datahub) - Maintain shared data ownership, lineage, and discussions in a metadata graph that supports human discovery and AI context. DataHub Cloud is a separate managed service.
 - [DocsGPT](https://github.com/arc53/DocsGPT) - Turn shared documents and meeting material into searchable knowledge with agents, member roles, and team-scoped sharing.
 - [Dust](https://dust.tt/) - Connect company knowledge and business tools to shared agents so teammates can reuse common answers and working methods.
+- [Enhanciar](https://enhanciar.in/) - Ask questions across connected Slack, Gmail, Drive, Notion, Jira, Linear, and GitHub with a source link on each answer, then review drafted replies, tickets, and docs in an approval queue before anything runs; hosted and paid, with your own model key.
 - [Glean Independent Agents](https://www.glean.com/blog/introducing-independent-agents) - Use connected company knowledge for ongoing investigations, feedback processing, and follow-up with human review.
 - [LibreChat](https://github.com/danny-avila/LibreChat) - Use multiple model providers in a self-hostable chat platform and share assistants with tools and file search with selected users and groups.
 - [MaxKB](https://github.com/1Panel-dev/MaxKB) - Build internal assistants from document ingestion, knowledge retrieval, and workflows, then embed them in existing business systems for colleagues.

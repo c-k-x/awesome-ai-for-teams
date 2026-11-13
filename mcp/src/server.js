@@ -77,8 +77,9 @@ function matches(t, query) {
   );
 }
 
+// 版本号与 package.json 保持一致，客户端据此判断是否需要更新缓存
 const server = new Server(
-  { name: 'awesome-ai-for-teams', version: '1.0.0' },
+  { name: 'awesome-ai-for-teams', version: '1.2.2' },
   { capabilities: { tools: {} } }
 );
 

@@ -21899,7 +21899,7 @@ function matches(t, query) {
   return t.name.toLowerCase().includes(q) || t.summary.toLowerCase().includes(q) || t.category.toLowerCase().includes(q) || t.limits.some((x) => x.toLowerCase().includes(q)) || t.fitsWhen.some((x) => x.toLowerCase().includes(q)) || t.topics.some((x) => x.toLowerCase().includes(q));
 }
 var server = new Server(
-  { name: "awesome-ai-for-teams", version: "1.0.0" },
+  { name: "awesome-ai-for-teams", version: "1.2.2" },
   { capabilities: { tools: {} } }
 );
 server.setRequestHandler(ListToolsRequestSchema, async () => ({

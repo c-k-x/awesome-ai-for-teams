@@ -13,8 +13,9 @@ Find tools to share project knowledge, coordinate coding agents, reuse team prac
 
 > **Beyond this list:** [www.goodthingure.com](https://www.goodthingure.com) carries per-tool pages with GitHub stars, licence terms, limitations and open issue numbers — 78 tools, 28 side-by-side comparisons, and 5 step-by-step scenarios. Every page states when it fits, when it does not, and the source it was verified against. There is also a [Chinese edition](https://www.goodthingure.com/zh/) with the same content.
 
-> **Use it from an AI client:** this repository doubles as an MCP server. Add
-> `{"command": "npx", "args": ["-y", "github:c-k-x/awesome-ai-for-teams"]}` to your
+> **Use it from an AI client:** this repository doubles as an MCP server, published
+> on npm and in the [official MCP Registry](https://registry.modelcontextprotocol.io/?q=io.github.c-k-x%2Fawesome-ai-for-teams).
+> Add `{"command": "npx", "args": ["-y", "awesome-ai-for-teams"]}` to your
 > Claude Desktop or Cursor config and the agent can query fit, limits, licence terms
 > and open issue numbers directly. See [mcp/README.md](mcp/README.md).
 

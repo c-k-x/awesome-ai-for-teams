@@ -13,8 +13,10 @@
 
 > **清单之外的补充：** [www.goodthingure.com](https://www.goodthingure.com/zh/) 上有每个工具的详情页，附 GitHub Star 数、许可条款、限制与 open issue 编号——78 个工具、28 组逐对比较、5 个分步场景。每页都写明适用条件、不适用的情况，以及核实依据。英文版内容相同。
 
-> **在 AI 客户端里直接用：** 这个仓库同时是一个 MCP server。在 Claude Desktop 或 Cursor 的配置里加上
-> `{"command": "npx", "args": ["-y", "github:c-k-x/awesome-ai-for-teams"]}`，
+> **在 AI 客户端里直接用：** 这个仓库同时是一个 MCP server，已发布到 npm 和
+> [MCP 官方注册表](https://registry.modelcontextprotocol.io/?q=io.github.c-k-x%2Fawesome-ai-for-teams)。
+> 在 Claude Desktop 或 Cursor 的配置里加上
+> `{"command": "npx", "args": ["-y", "awesome-ai-for-teams"]}`，
 > Agent 就能直接查询适用条件、限制、许可条款与 open issue 编号。详见 [mcp/README.md](mcp/README.md)。
 
 ## 从团队要解决的问题开始

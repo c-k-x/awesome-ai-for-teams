@@ -24,7 +24,7 @@ because that is what the source list records.
   "mcpServers": {
     "awesome-ai-for-teams": {
       "command": "npx",
-      "args": ["-y", "github:c-k-x/awesome-ai-for-teams"]
+      "args": ["-y", "awesome-ai-for-teams"]
     }
   }
 }
@@ -34,11 +34,14 @@ because that is what the source list records.
 (macOS) or `%APPDATA%\Claude\claude_desktop_config.json` (Windows).
 **Cursor** — `.cursor/mcp.json` or Settings → MCP.
 
-`npx` clones the repository once and caches it. `dist/server.mjs` bundles both
-the MCP SDK and the catalog, so there is no `npm install` step and no sibling
-data file to keep in place.
+`dist/server.mjs` bundles both the MCP SDK and the catalog, so there is no
+`npm install` step and no sibling data file to keep in place.
 
-To pick up new data later, clear the npx cache for this package:
+Published on npm as `awesome-ai-for-teams@1.2.1` and listed in the
+[official MCP Registry](https://registry.modelcontextprotocol.io/?q=io.github.c-k-x%2Fawesome-ai-for-teams)
+as `io.github.c-k-x/awesome-ai-for-teams`.
+
+To pick up a newer version later, clear the npx cache for this package:
 
 ```bash
 npx clear-npx-cache        # or: rm -rf ~/.npm/_npx

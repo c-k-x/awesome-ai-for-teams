@@ -7,11 +7,13 @@
 
 [English](README.md) | 简体中文
 
-**为小型开发团队和技术负责人精选 AI 工具与实践资源。**
+**78 个 AI 工具，每个都核过它的仓库：它不肯做什么、代价多少、现在哪里有问题。**
 
-查找用于共享项目知识、协调编程 Agent、复用团队方法，以及管理模型接入与用量的工具。涵盖托管产品、可自建工具、开发组件和学习资源。
+多数「awesome AI」清单给你一个名字和一句介绍。够你找到工具，不够你选中工具。这里的每一条都写明**适用条件、不适用的情况、限制、许可条款和 open issue 编号**——依据是该项目的 README、源码树与 issue 列表，核实日期和来源都记着。
 
-> **清单之外的补充：** [www.goodthingure.com](https://www.goodthingure.com/zh/) 上有每个工具的详情页，附 GitHub Star 数、许可条款、限制与 open issue 编号——78 个工具、28 组逐对比较、5 个分步场景。每页都写明适用条件、不适用的情况，以及核实依据。英文版内容相同。
+清单偏向团队一起用的方向（共享记忆、编程 Agent、任务交接、模型接入），因为在那里选错的代价最大。条目本身对个人开发者一样有用。
+
+> **清单之外的补充：** [www.goodthingure.com](https://www.goodthingure.com/zh/) 上有每个工具的详情页，附 GitHub Star 数、许可条款、限制与 open issue 编号——78 个工具、29 组逐对比较、5 个分步场景。每页都写明适用条件、不适用的情况，以及核实依据。英文版内容相同。
 
 > **在 AI 客户端里直接用：** 这个仓库同时是一个 MCP server，已发布到 npm 和
 > [MCP 官方注册表](https://registry.modelcontextprotocol.io/?q=io.github.c-k-x%2Fawesome-ai-for-teams)。

@@ -7,11 +7,19 @@
 
 English | [简体中文](README.zh-CN.md)
 
-**AI tools and practical resources for small engineering teams and tech leads.**
+**78 AI tools, each checked against its repository for what it refuses to do, what it costs, and what is currently broken.**
 
-Find tools to share project knowledge, coordinate coding agents, reuse team practices, and manage model access and usage. Includes hosted products, self-hostable tools, developer components, and learning resources.
+Most "awesome AI" lists give you a name and a one-liner. That is enough to find a tool and not enough to choose one. Every entry here states **when it fits, when it does not, its limits, its licence terms, and its open issue numbers** — verified against the project's own README, source tree and issue tracker, with the date and the source recorded.
 
-> **Beyond this list:** [www.goodthingure.com](https://www.goodthingure.com) carries per-tool pages with GitHub stars, licence terms, limitations and open issue numbers — 78 tools, 28 side-by-side comparisons, and 5 step-by-step scenarios. Every page states when it fits, when it does not, and the source it was verified against. There is also a [Chinese edition](https://www.goodthingure.com/zh/) with the same content.
+The list leans towards tools teams run together (shared memory, coding agents, task handoff, model access), because that is where choosing badly costs the most. The entries themselves are useful whatever your team size.
+
+> **Beyond this list:** [www.goodthingure.com](https://www.goodthingure.com) carries a page per tool with stars, licence terms, limitations and open issue numbers — 78 tools, 29 side-by-side comparisons, and 5 step-by-step scenarios. Every page states when it fits, when it does not, and the source it was verified against. There is also a [Chinese edition](https://www.goodthingure.com/zh/) with the same content.
+
+> **Use it from an AI client:** this repository doubles as an MCP server, published
+> on npm and in the [official MCP Registry](https://registry.modelcontextprotocol.io/?q=io.github.c-k-x%2Fawesome-ai-for-teams).
+> Add `{"command": "npx", "args": ["-y", "awesome-ai-for-teams"]}` to your
+> Claude Desktop or Cursor config and the agent can query fit, limits, licence terms
+> and open issue numbers directly. See [mcp/README.md](mcp/README.md).
 
 > **Use it from an AI client:** this repository doubles as an MCP server, published
 > on npm and in the [official MCP Registry](https://registry.modelcontextprotocol.io/?q=io.github.c-k-x%2Fawesome-ai-for-teams).

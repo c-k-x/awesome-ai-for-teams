@@ -1,12 +1,11 @@
 {
   "name": "awesome-ai-for-teams",
-  "version": "1.0.0",
-  "private": true,
+  "version": "1.2.1",
   "description": "MCP server for the awesome-ai-for-teams list: 78 verified AI tools with fit, limits, licence terms and open issue numbers.",
   "license": "CC0-1.0",
   "type": "module",
   "bin": {
-    "awesome-ai-for-teams-mcp": "mcp/dist/server.mjs"
+    "awesome-ai-for-teams": "mcp/dist/server.mjs"
   },
   "files": [
     "mcp/dist/server.mjs",
@@ -24,6 +23,10 @@
     "mcp",
     "modelcontextprotocol",
     "ai-tools",
-    "awesome-list"
-  ]
+    "awesome-list",
+    "claude",
+    "cursor",
+    "engineering-teams"
+  ],
+  "mcpName": "io.github.c-k-x/awesome-ai-for-teams"
 }

@@ -254,6 +254,7 @@
 - [Observal](https://github.com/Observal/Observal) - 组织集中注册技能、代理和 MCP，审核版本并用使用反馈改善共享资产。
 - [Potpie](https://github.com/potpie-ai/potpie) - 将代码、PR、任务和团队决策组织为可检索的上下文图，让不同编码助手复用项目背景与工程经验。
 - [Rulesync](https://github.com/dyoshikawa/rulesync) - 从统一来源生成不同编码助手的技能、规则与 MCP 配置，让团队维护一套配置；支持的功能因目标客户端而异。
+- [SageOx](https://sageox.ai) - 将编码智能体的会话和团队讨论记录到共享的团队历史中，再通过开源的 ox CLI 或 MCP 把相关决策和既有工作加载到每位成员的智能体会话里；共享历史为托管服务，目前不支持自托管。
 - [SkillHub](https://github.com/iflytek/skillhub) - 团队命名空间、Owner/Admin/Member、技能版本和晋升审批，把个人技能沉淀成组织受控资产；被分发技能仍适用各自许可。
 - [SkillKit](https://github.com/rohitg00/skillkit) - 通过纳入 Git 管理的团队清单共享技能源，并为不同编码助手转换技能格式；目标客户端的兼容性需分别核对。
 - [SkillPort](https://github.com/gotalab/skillport) - 校验和管理技能包，通过 CLI 或 MCP 提供搜索与按需加载，供团队复用技能库；接口仍在开发中。
